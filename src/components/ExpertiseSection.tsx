@@ -42,7 +42,7 @@ const ExpertiseSection = () => {
   ];
 
   return (
-    <section id="expertise" className="py-24 bg-gradient-subtle">
+    <section id="expertise" className="min-h-screen flex items-center py-24 bg-gradient-subtle">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="heading-section mb-6">

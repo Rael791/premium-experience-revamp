@@ -25,7 +25,7 @@ const ProblemsSection = () => {
   ];
 
   return (
-    <section className="py-24 bg-gradient-subtle">
+    <section className="min-h-screen flex items-center py-24 bg-gradient-subtle">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in-up">
           <h2 className="heading-section mb-6">
@@ -64,13 +64,23 @@ const ProblemsSection = () => {
         </div>
 
         <div className="text-center mt-16 animate-fade-in-up">
-          <div className="glass-effect rounded-xl p-8 max-w-2xl mx-auto">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Wir schließen genau diese Lücken
-            </h3>
-            <p className="text-lg text-primary font-medium">
-              strategisch • skalierbar • nachhaltig
-            </p>
+          <div className="relative overflow-hidden bg-gradient-hero rounded-2xl p-12 max-w-3xl mx-auto border border-primary/20 shadow-premium">
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20"></div>
+            <div className="relative z-10">
+              <h3 className="text-4xl font-bold text-background mb-6 drop-shadow-lg">
+                Wir schließen genau diese Lücken
+              </h3>
+              <div className="flex flex-wrap justify-center gap-4">
+                {["strategisch", "skalierbar", "nachhaltig"].map((word, idx) => (
+                  <span 
+                    key={idx}
+                    className="inline-block bg-background/20 backdrop-blur-sm text-background font-bold text-xl px-6 py-3 rounded-full border border-background/30 shadow-lg"
+                  >
+                    {word}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

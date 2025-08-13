@@ -87,7 +87,7 @@ const ServicesSection = () => {
   ];
 
   return (
-    <section id="leistungen" className="py-24">
+    <section id="leistungen" className="min-h-screen flex items-center py-24">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">

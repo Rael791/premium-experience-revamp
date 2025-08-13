@@ -52,7 +52,7 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="kontakt" className="py-24 bg-gradient-subtle">
+    <section id="kontakt" className="min-h-screen flex items-center py-24 bg-gradient-subtle">
       <div className="container mx-auto px-6">
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">

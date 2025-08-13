@@ -3,7 +3,7 @@ import { Globe, Award, Target, Eye } from "lucide-react";
 
 const AboutSection = () => {
   return (
-    <section id="ueber-uns" className="py-24">
+    <section id="ueber-uns" className="min-h-screen flex items-center py-24">
       <div className="container mx-auto px-6">
         {/* Company Introduction */}
         <div className="max-w-6xl mx-auto">
@@ -12,7 +12,7 @@ const AboutSection = () => {
               Wer wir sind
             </h2>
             <div className="max-w-4xl mx-auto">
-              <h3 className="text-3xl font-bold text-primary mb-8">Wir sind IQOIQ</h3>
+              <h3 className="text-3xl font-bold text-primary mb-8">Wir sind IQONIQ</h3>
               <p className="text-premium leading-relaxed">
                 eine Boutique-Beratung, die Technologie, Management-Exzellenz und kulturelle Intelligenz zu einer Einheit formt. 
                 Gegründet von einem Experten mit über zehn Jahren Erfahrung in EDI, eProcurement und internationalem Projektmanagement, 
@@ -97,7 +97,7 @@ const AboutSection = () => {
           {/* CTA */}
           <div className="text-center mt-16">
             <div className="bg-gradient-hero rounded-2xl p-8 text-background">
-              <h3 className="text-2xl font-bold mb-4">RSL INTEGRATE ist nicht Add-on, sondern Grundlage.</h3>
+              <h3 className="text-2xl font-bold mb-4">IQONIQ ist nicht Add-on, sondern Grundlage.</h3>
               <p className="text-lg mb-6 opacity-90">Für resiliente, digitale und globale Lieferketten.</p>
               <Button variant="outline" size="lg" className="bg-background text-foreground hover:bg-background/90">
                 Mehr über unsere Philosophie erfahren
