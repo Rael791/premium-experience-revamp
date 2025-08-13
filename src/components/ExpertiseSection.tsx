@@ -113,9 +113,12 @@ const ExpertiseSection = () => {
                       variant="outline" 
                       size="lg" 
                       className={`group/btn hover:border-${area.color}/40 hover:text-${area.color}`}
+                      asChild
                     >
-                      Mehr erfahren
-                      <span className="ml-2 transform group-hover/btn:translate-x-1 transition-transform">→</span>
+                      <a href={`/expertise/${area.title.toLowerCase().replace(/\s+/g, '-').replace('&', 'und')}`}>
+                        Mehr erfahren
+                        <span className="ml-2 transform group-hover/btn:translate-x-1 transition-transform">→</span>
+                      </a>
                     </Button>
                   </div>
                 </div>

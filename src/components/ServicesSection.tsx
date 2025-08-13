@@ -138,9 +138,12 @@ const ServicesSection = () => {
                   <Button 
                     variant="outline" 
                     className={`w-full group/btn hover:border-${service.color}/40`}
+                    asChild
                   >
-                    Detailberatung anfordern
-                    <span className="ml-2 transform group-hover/btn:translate-x-1 transition-transform">→</span>
+                    <a href={`/services/${service.category.toLowerCase().replace(/\s+/g, '-')}`}>
+                      Detailberatung anfordern
+                      <span className="ml-2 transform group-hover/btn:translate-x-1 transition-transform">→</span>
+                    </a>
                   </Button>
                 </div>
               </div>

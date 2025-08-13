@@ -21,7 +21,7 @@ const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-6 text-center">
-        <div className="max-w-5xl mx-auto space-y-8 animate-fade-in-up">
+        <div className="max-w-4xl mx-auto space-y-6 animate-fade-in-up">
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 glass-effect rounded-full px-6 py-3 text-sm font-medium">
             <Sparkles className="w-4 h-4 text-primary" />
@@ -29,14 +29,14 @@ const HeroSection = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="heading-hero">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
             Wir machen aus <br />
             <span className="text-primary">Datenaustausch</span><br />
             Geschäftsintelligenz.
           </h1>
 
           {/* Subheadline */}
-          <p className="text-premium max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
             Wenn EDI nicht nur laufen, sondern skalieren muss – ohne Ausfall, ohne Kompromisse. 
             Strategische, skalierbare und nachhaltige Lösungen für globale Wettbewerbsfähigkeit.
           </p>
