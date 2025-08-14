@@ -16,6 +16,7 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
+    { href: "/", label: "Home" },
     { href: "#ueber-uns", label: "Über uns" },
     { href: "#expertise", label: "Expertise" },
     { href: "#leistungen", label: "Leistungen" },
@@ -30,7 +31,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="text-2xl font-bold">
-            <span className="gradient-shift">IQOIQ</span>
+            <a href="/" className="gradient-shift">IQONIQ</a>
           </div>
 
           {/* Desktop Navigation */}

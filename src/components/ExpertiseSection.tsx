@@ -1,9 +1,9 @@
 import { Code, ShoppingCart, Globe2, Users2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import ediImage from "@/assets/edi-systems.jpg";
-import eprocurementImage from "@/assets/eprocurement-dashboard.jpg";
-import interculturalImage from "@/assets/intercultural-meeting.jpg";
-import leadershipImage from "@/assets/leadership-team.jpg";
+import businessTeamImage from "@/assets/business-team-1.jpg";
+import businessOfficeImage from "@/assets/business-office-1.jpg";
+import businessMeetingImage from "@/assets/business-meeting-1.jpg";
+import businessStrategyImage from "@/assets/business-strategy-1.jpg";
 
 const ExpertiseSection = () => {
   const expertiseAreas = [
@@ -11,7 +11,7 @@ const ExpertiseSection = () => {
       icon: Code,
       title: "EDI Excellence",
       description: "Architektur, Skalierung, Performance – wir machen Ihre EDI-Landschaft zukunftsfähig.",
-      image: ediImage,
+      image: businessOfficeImage,
       color: "primary",
       features: ["Systemarchitektur & Migration", "Datenqualitäts-Frameworks", "Performance-Monitoring", "Business Rules Engine"]
     },
@@ -19,7 +19,7 @@ const ExpertiseSection = () => {
       icon: ShoppingCart,
       title: "eProcurement Mastery",
       description: "Vom operativen Einkauf zur strategischen Wertschöpfung.",
-      image: eprocurementImage,
+      image: businessStrategyImage,
       color: "accent",
       features: ["Prozessdesign & Automatisierung", "Lieferanten-Onboarding", "Compliance-Strategien", "Self-Service-Portale"]
     },
@@ -27,7 +27,7 @@ const ExpertiseSection = () => {
       icon: Globe2,
       title: "Interkulturelle Integration",
       description: "Geschäftsprozesse und Kommunikation, die in jeder Kultur funktionieren.",
-      image: interculturalImage,
+      image: businessMeetingImage,
       color: "secondary",
       features: ["Cross-Cultural Process Design", "Stakeholder-Management", "DACH ↔ GCC Projektkommunikation", "Kulturelle Compliance"]
     },
@@ -35,7 +35,7 @@ const ExpertiseSection = () => {
       icon: Users2,
       title: "Leadership & Transformation",
       description: "Befähigung Ihrer Schlüsselrollen, komplexe Veränderungen zu steuern.",
-      image: leadershipImage,
+      image: businessTeamImage,
       color: "primary",
       features: ["Executive Sparring", "Projektsteuerung", "Agile Transformation", "Training & Empowerment"]
     }
@@ -136,8 +136,8 @@ const ExpertiseSection = () => {
             <p className="text-muted-foreground mb-6">
               Lassen Sie uns in einem strategischen Erstgespräch erkunden, wie unsere Expertise Ihr Unternehmen voranbringt.
             </p>
-            <Button variant="hero" size="xl">
-              Strategisches Erstgespräch vereinbaren
+            <Button variant="hero" size="xl" asChild>
+              <a href="#kontakt">Strategisches Erstgespräch vereinbaren</a>
             </Button>
           </div>
         </div>

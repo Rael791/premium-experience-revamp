@@ -3,6 +3,10 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Code, ShoppingCart, Globe2, Users2 } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ediHero from "@/assets/edi-hero.jpg";
+import procurementHero from "@/assets/procurement-hero.jpg";
+import interculturalHero from "@/assets/intercultural-hero.jpg";
+import leadershipHero from "@/assets/leadership-hero.jpg";
 
 const ExpertiseDetail = () => {
   const { slug } = useParams();
@@ -13,6 +17,7 @@ const ExpertiseDetail = () => {
       title: "EDI Excellence",
       subtitle: "Architektur, Skalierung, Performance – wir machen Ihre EDI-Landschaft zukunftsfähig",
       description: "EDI ist das Rückgrat moderner Geschäftsprozesse. Doch nur wenige Unternehmen schöpfen das volle Potenzial ihrer EDI-Infrastruktur aus. Wir bringen Ihre EDI-Landschaft auf Enterprise-Level.",
+      heroImage: ediHero,
       sections: [
         {
           title: "Systemarchitektur & Migration",
@@ -36,6 +41,7 @@ const ExpertiseDetail = () => {
       title: "eProcurement Mastery",
       subtitle: "Vom operativen Einkauf zur strategischen Wertschöpfung",
       description: "eProcurement ist mehr als digitaler Einkauf – es ist ein strategischer Hebel für Kosteneinsparungen, Compliance und Lieferantenbeziehungen. Wir transformieren Ihre Beschaffung.",
+      heroImage: procurementHero,
       sections: [
         {
           title: "Prozessdesign & Automatisierung",
@@ -59,6 +65,7 @@ const ExpertiseDetail = () => {
       title: "Interkulturelle Integration",
       subtitle: "Geschäftsprozesse und Kommunikation, die in jeder Kultur funktionieren",
       description: "Erfolgreiche internationale Projekte erfordern mehr als technische Exzellenz – sie brauchen kulturelle Intelligenz. Wir überbrücken kulturelle und organisatorische Unterschiede.",
+      heroImage: interculturalHero,
       sections: [
         {
           title: "Cross-Cultural Process Design",
@@ -82,6 +89,7 @@ const ExpertiseDetail = () => {
       title: "Leadership & Transformation",
       subtitle: "Befähigung Ihrer Schlüsselrollen, komplexe Veränderungen zu steuern",
       description: "Digitale Transformation gelingt nur mit den richtigen Führungskompetenzen. Wir entwickeln Ihre Leaders zu Transformation Champions.",
+      heroImage: leadershipHero,
       sections: [
         {
           title: "Executive Sparring",
@@ -116,8 +124,17 @@ const ExpertiseDetail = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-subtle">
-          <div className="container mx-auto px-6">
+        <section 
+          className="py-24 relative"
+          style={{
+            backgroundImage: `url(${expertise.heroImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundAttachment: 'fixed'
+          }}
+        >
+          <div className="absolute inset-0 bg-background/85 backdrop-blur-sm"></div>
+          <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-4xl mx-auto">
               <Link to="/#expertise" className="inline-flex items-center text-primary hover:text-primary/80 mb-8 group">
                 <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
@@ -173,8 +190,8 @@ const ExpertiseDetail = () => {
                 <p className="text-lg mb-6 opacity-90">
                   Lassen Sie uns in einem strategischen Gespräch erkunden, wie wir Ihnen helfen können.
                 </p>
-                <Button variant="outline" size="lg" className="bg-background text-foreground hover:bg-background/90">
-                  Strategisches Erstgespräch vereinbaren
+                <Button variant="outline" size="lg" className="bg-background text-foreground hover:bg-background/90" asChild>
+                  <a href="/#kontakt">Strategisches Erstgespräch vereinbaren</a>
                 </Button>
               </div>
             </div>

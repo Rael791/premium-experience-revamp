@@ -1,14 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Linkedin, Calendar, Phone, Globe } from "lucide-react";
+import ContactForm from "./ContactForm";
 
 const ContactSection = () => {
   const contactMethods = [
     {
       icon: Mail,
       title: "Email",
-      value: "hello@rsl-integrate.com",
+      value: "contact@iqoniq.com",
       description: "Direkter Kontakt für alle Anfragen",
-      action: "mailto:hello@rsl-integrate.com"
+      action: "mailto:contact@iqoniq.com"
     },
     {
       icon: MapPin,
@@ -28,8 +29,8 @@ const ContactSection = () => {
       icon: Calendar,
       title: "Terminbuchung",
       value: "Strategisches Erstgespräch",
-      description: "30 Min kostenlose Beratung",
-      action: "#booking"
+      description: "Direkter Terminbuchung",
+      action: "#kontakt"
     }
   ];
 
@@ -65,24 +66,9 @@ const ContactSection = () => {
         </div>
 
         <div className="max-w-6xl mx-auto">
-          {/* Main CTA */}
-          <div className="text-center mb-16">
-            <div className="bg-gradient-hero rounded-3xl p-12 text-background mb-8">
-              <h3 className="text-4xl font-bold mb-4">Strategisches Erstgespräch</h3>
-              <p className="text-xl mb-8 opacity-90">
-                30 Minuten kostenlose Beratung – Analyse Ihrer Herausforderungen und erste strategische Empfehlungen
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button variant="outline" size="xl" className="bg-background text-foreground hover:bg-background/90">
-                  <Calendar className="w-5 h-5 mr-2" />
-                  Termin direkt buchen
-                </Button>
-                <Button variant="ghost" size="xl" className="text-background hover:bg-background/20">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Rückruf anfordern
-                </Button>
-              </div>
-            </div>
+          {/* Contact Form */}
+          <div className="mb-16">
+            <ContactForm />
           </div>
 
           {/* Contact Methods */}
@@ -172,7 +158,7 @@ const ContactSection = () => {
               <p className="text-lg text-muted-foreground mb-6">
                 Bereit, Ihre EDI- und eProcurement-Landschaft auf das nächste Level zu bringen?
               </p>
-              <Button variant="hero" size="xl" className="shadow-premium">
+              <Button variant="hero" size="xl" className="shadow-premium" onClick={() => document.querySelector('#kontakt')?.scrollIntoView({ behavior: 'smooth' })}>
                 <Calendar className="w-5 h-5 mr-2" />
                 Jetzt Strategisches Erstgespräch vereinbaren
               </Button>

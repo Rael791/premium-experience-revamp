@@ -1,10 +1,23 @@
 import { Button } from "@/components/ui/button";
 import { Globe, Award, Target, Eye } from "lucide-react";
+import aboutBackground from "@/assets/about-background.jpg";
 
 const AboutSection = () => {
   return (
-    <section id="ueber-uns" className="min-h-screen flex items-center py-24">
-      <div className="container mx-auto px-6">
+    <section 
+      id="ueber-uns" 
+      className="min-h-screen flex items-center py-24 relative"
+      style={{
+        backgroundImage: `url(${aboutBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
+      {/* Background Overlay */}
+      <div className="absolute inset-0 bg-background/90 backdrop-blur-sm"></div>
+      
+      <div className="container mx-auto px-6 relative z-10">
         {/* Company Introduction */}
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in-up">
@@ -99,8 +112,8 @@ const AboutSection = () => {
             <div className="bg-gradient-hero rounded-2xl p-8 text-background">
               <h3 className="text-2xl font-bold mb-4">IQONIQ ist nicht Add-on, sondern Grundlage.</h3>
               <p className="text-lg mb-6 opacity-90">Für resiliente, digitale und globale Lieferketten.</p>
-              <Button variant="outline" size="lg" className="bg-background text-foreground hover:bg-background/90">
-                Mehr über unsere Philosophie erfahren
+              <Button variant="outline" size="lg" className="bg-background text-foreground hover:bg-background/90" asChild>
+                <a href="/philosophie">Mehr über unsere Philosophie erfahren</a>
               </Button>
             </div>
           </div>

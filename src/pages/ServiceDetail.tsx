@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowLeft, Database, ShoppingBag, Globe, TrendingUp } from "lucide-react";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import ediHero from "@/assets/edi-hero.jpg";
+import procurementHero from "@/assets/procurement-hero.jpg";
 
 const ServiceDetail = () => {
   const { slug } = useParams();
@@ -13,6 +15,7 @@ const ServiceDetail = () => {
       title: "EDI Excellence Services",
       subtitle: "Comprehensive EDI solutions from architecture to optimization",
       description: "Transform your EDI landscape with our proven methodologies and deep technical expertise.",
+      heroImage: ediHero,
       services: [
         {
           name: "EDI Architecture Assessment",
@@ -42,6 +45,7 @@ const ServiceDetail = () => {
       title: "eProcurement Mastery Services",
       subtitle: "Strategic procurement transformation and optimization",
       description: "Revolutionize your procurement processes with intelligent automation and strategic insights.",
+      heroImage: procurementHero,
       services: [
         {
           name: "Procurement Process Optimization",
@@ -82,8 +86,17 @@ const ServiceDetail = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-16 bg-gradient-subtle">
-          <div className="container mx-auto px-6">
+        <section 
+          className="py-24 relative"
+          style={{
+            backgroundImage: `url(${service.heroImage})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundAttachment: 'fixed'
+          }}
+        >
+          <div className="absolute inset-0 bg-background/85 backdrop-blur-sm"></div>
+          <div className="container mx-auto px-6 relative z-10">
             <div className="max-w-4xl mx-auto">
               <Link to="/#leistungen" className="inline-flex items-center text-primary hover:text-primary/80 mb-8 group">
                 <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
@@ -115,7 +128,11 @@ const ServiceDetail = () => {
               
               <div className="space-y-8">
                 {service.services.map((item, idx) => (
-                  <div key={idx} className="glass-effect rounded-2xl p-8">
+                  <div key={idx} className={`group relative overflow-hidden rounded-2xl p-8 hover-lift transition-all duration-500 ${
+                    idx % 3 === 0 ? 'bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20' :
+                    idx % 3 === 1 ? 'bg-gradient-to-br from-accent/5 to-accent/10 border border-accent/20' :
+                    'bg-gradient-to-br from-secondary/5 to-secondary/10 border border-secondary/20'
+                  }`}>
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                       {/* Service Info */}
                       <div className="lg:col-span-2">
@@ -162,8 +179,8 @@ const ServiceDetail = () => {
                 <p className="text-lg mb-6 opacity-90">
                   Lassen Sie uns besprechen, wie wir Ihnen bei Ihren spezifischen Herausforderungen helfen können.
                 </p>
-                <Button variant="outline" size="lg" className="bg-background text-foreground hover:bg-background/90">
-                  Detailberatung anfordern
+                <Button variant="outline" size="lg" className="bg-background text-foreground hover:bg-background/90" asChild>
+                  <a href="/#kontakt">Detailberatung anfordern</a>
                 </Button>
               </div>
             </div>
