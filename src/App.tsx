@@ -4,7 +4,10 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
-import ExpertiseDetail from "./pages/ExpertiseDetail";
+import EDIExcellenceDetail from "./pages/EDIExcellenceDetail";
+import EProcurementDetail from "./pages/EProcurementDetail";
+import InterculturalDetail from "./pages/InterculturalDetail";
+import LeadershipDetail from "./pages/LeadershipDetail";
 import ServiceDetail from "./pages/ServiceDetail";
 import Philosophy from "./pages/Philosophy";
 import NotFound from "./pages/NotFound";
@@ -19,8 +22,11 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route path="/expertise/:slug" element={<ExpertiseDetail />} />
-          <Route path="/services/:slug" element={<ServiceDetail />} />
+        <Route path="/expertise/edi-excellence" element={<EDIExcellenceDetail />} />
+        <Route path="/expertise/eprocurement-mastery" element={<EProcurementDetail />} />
+        <Route path="/expertise/interkulturelle-integration" element={<InterculturalDetail />} />
+        <Route path="/expertise/leadership-und-transformation" element={<LeadershipDetail />} />
+        <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/philosophie" element={<Philosophy />} />
           <Route path="*" element={<NotFound />} />
         </Routes>

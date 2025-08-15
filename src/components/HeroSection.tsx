@@ -29,14 +29,14 @@ const HeroSection = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mt-20 mb-20">
             Wir machen aus <br />
             <span className="text-primary">Datenaustausch</span><br />
             Geschäftsintelligenz.
           </h1>
 
           {/* Subheadline */}
-          <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-20">
             Wenn EDI nicht nur laufen, sondern skalieren muss – ohne Ausfall, ohne Kompromisse. 
             Strategische, skalierbare und nachhaltige Lösungen für globale Wettbewerbsfähigkeit.
           </p>
