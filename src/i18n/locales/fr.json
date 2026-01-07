@@ -1,0 +1,420 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "expertise": "Expertise",
+    "services": "Services",
+    "contact": "Contact",
+    "cta": "Consultation Stratégique"
+  },
+  "hero": {
+    "badge": "Conseil Boutique pour l'Excellence Digitale",
+    "headline1": "Nous transformons",
+    "headline2": "l'Échange de Données",
+    "headline3": "en Intelligence Business.",
+    "subheadline": "Quand l'EDI doit non seulement fonctionner, mais évoluer – sans interruption, sans compromis. Des solutions stratégiques, évolutives et durables pour une compétitivité mondiale.",
+    "cta_primary": "Consultation Stratégique",
+    "cta_secondary": "Découvrir Notre Expertise",
+    "keypoints": {
+      "point1_title": "DACH → GCC",
+      "point1_desc": "Expérience de Projets Internationaux",
+      "point2_title": "10+ Ans",
+      "point2_desc": "Expertise EDI & eProcurement",
+      "point3_title": "4 Langages",
+      "point3_desc": "Technologie, Business, Culture, Leadership"
+    }
+  },
+  "problems": {
+    "title": "Les Lacunes que",
+    "title_highlight": "Personne ne Comble",
+    "title_suffix": "– Jusqu'à Maintenant",
+    "description": "L'approvisionnement digital et l'EDI sont devenus obligatoires. Mais alors que tout le monde parle d'intégration, presque personne ne parle de ce qui fait vraiment échouer les projets :",
+    "problem1_title": "Des Systèmes qui S'effondrent sous la Croissance",
+    "problem1_desc": "Le manque de scalabilité entraîne des défaillances critiques aux moments décisifs",
+    "problem2_title": "Des Processus Incompatibles",
+    "problem2_desc": "Des workflows incompatibles bloquent la transformation digitale",
+    "problem3_title": "Des Données Auxquelles Personne ne Fait Confiance",
+    "problem3_desc": "Une mauvaise qualité des données compromet la prise de décision et la conformité",
+    "problem4_title": "Des Cultures qui ne se Connectent Pas",
+    "problem4_desc": "Les malentendus interculturels retardent les projets internationaux",
+    "solution": "Nous Comblons Exactement Ces Lacunes",
+    "keywords": {
+      "strategic": "stratégique",
+      "scalable": "évolutif",
+      "sustainable": "durable"
+    }
+  },
+  "about": {
+    "title": "Qui Nous Sommes",
+    "company_name": "Nous sommes IQONIQ",
+    "description": "un cabinet de conseil boutique qui unit technologie, excellence managériale et intelligence culturelle. Fondé par un expert avec plus de dix ans d'expérience en EDI, eProcurement et gestion de projets internationaux, forgé à l'intersection de l'IT, des achats, de la logistique et de la stratégie C-level.",
+    "geographic": {
+      "intro": "Notre travail s'étend de la",
+      "dach": "Région DACH",
+      "to": "aux",
+      "gcc": "États du GCC",
+      "suffix": "– connectant la précision allemande avec une vision internationale.",
+      "languages": "Nous parlons couramment quatre langues : Technologie, Business, Culture et Leadership."
+    },
+    "mission": {
+      "title": "Mission",
+      "description": "Nous permettons aux entreprises de concevoir leur approvisionnement digital de manière à ce qu'il ne fonctionne pas seulement, mais crée des avantages stratégiques – à travers les marchés, les systèmes et les cultures.",
+      "highlight": "Des avantages stratégiques grâce à l'excellence digitale"
+    },
+    "vision": {
+      "title": "Vision",
+      "description": "Un monde des affaires où l'EDI et l'eProcurement ne sont pas vus comme des obligations techniques, mais comme des leviers de compétitivité mondiale – et où l'intelligence culturelle est aussi évidente que l'intégration système.",
+      "highlight": "Compétitivité mondiale grâce à l'intelligence culturelle"
+    },
+    "differentiators_title": "Ce Qui Nous Distingue",
+    "differentiators": [
+      "Nous construisons des architectures EDI structurées, pas des solutions de contournement",
+      "Nous parlons système, processus et humain simultanément",
+      "Nous naviguons avec assurance entre conformité, technologie et culture",
+      "Nous combinons expertise métier et tact international"
+    ],
+    "cta_title": "IQONIQ n'est pas un ajout, mais une fondation.",
+    "cta_subtitle": "Pour des chaînes d'approvisionnement résilientes, digitales et mondiales.",
+    "cta_button": "En savoir plus sur notre philosophie"
+  },
+  "expertise": {
+    "title": "Notre",
+    "title_highlight": "Expertise",
+    "description": "Quatre compétences clés qui font passer votre approvisionnement digital au niveau supérieur. De l'excellence technique à l'intelligence culturelle.",
+    "areas": {
+      "edi": {
+        "title": "Excellence EDI",
+        "description": "Architecture, évolutivité, performance – nous rendons votre paysage EDI pérenne.",
+        "features": ["Architecture Système & Migration", "Frameworks Qualité des Données", "Monitoring Performance", "Moteur de Règles Métier"]
+      },
+      "eprocurement": {
+        "title": "Maîtrise eProcurement",
+        "description": "Des achats opérationnels à la création de valeur stratégique.",
+        "features": ["Conception de Processus & Automatisation", "Onboarding Fournisseurs", "Stratégies de Conformité", "Portails Self-Service"]
+      },
+      "intercultural": {
+        "title": "Intégration Interculturelle",
+        "description": "Des processus métier et une communication qui fonctionnent dans chaque culture.",
+        "features": ["Conception de Processus Cross-Culturels", "Gestion des Parties Prenantes", "Communication Projet DACH ↔ GCC", "Conformité Culturelle"]
+      },
+      "leadership": {
+        "title": "Leadership & Transformation",
+        "description": "Permettre à vos rôles clés de gérer des changements complexes.",
+        "features": ["Sparring Exécutif", "Pilotage de Projet", "Transformation Agile", "Formation & Autonomisation"]
+      }
+    },
+    "learn_more": "En savoir plus",
+    "cta_title": "Prêt pour le Niveau Supérieur ?",
+    "cta_description": "Explorons ensemble lors d'une consultation stratégique initiale comment notre expertise peut faire avancer votre entreprise.",
+    "cta_button": "Planifier une Consultation Stratégique"
+  },
+  "services": {
+    "title": "Nos",
+    "title_highlight": "Services",
+    "description": "Une expertise complète dans quatre domaines stratégiques. Chaque service est conçu pour un impact maximum et un succès durable.",
+    "categories": {
+      "edi": {
+        "title": "Excellence EDI",
+        "services": [
+          "Architecture Système & Stratégies de Migration",
+          "Frameworks Qualité des Données & Règles Métier",
+          "Monitoring, Visualisation KPI, Analyse d'Erreurs",
+          "Optimisation Performance & Évolutivité"
+        ]
+      },
+      "eprocurement": {
+        "title": "Maîtrise eProcurement",
+        "services": [
+          "Conception de Processus & Automatisation",
+          "Onboarding Fournisseurs & Portails Self-Service",
+          "Stratégies Conformité & eFacturation",
+          "Analytique des Dépenses & Transparence des Coûts"
+        ]
+      },
+      "intercultural": {
+        "title": "Intégration Interculturelle",
+        "services": [
+          "Conception de Processus Cross-Culturels",
+          "Gestion Interculturelle des Parties Prenantes",
+          "Communication Projet entre DACH & GCC",
+          "Gestion du Changement à Travers les Frontières Culturelles"
+        ]
+      },
+      "leadership": {
+        "title": "Leadership & Transformation",
+        "services": [
+          "Sparring Exécutif & Pilotage de Projet",
+          "Formation pour Rôles EDI/eProcurement Internes",
+          "Méthodes Agiles pour Équipes Achats et IT",
+          "Feuilles de Route Transformation Digitale"
+        ]
+      }
+    },
+    "request_consultation": "Demander une Consultation Détaillée",
+    "highlights_title": "Pourquoi Nos Services Sont Différents",
+    "highlights": {
+      "compliance": {
+        "title": "Conformité d'Abord",
+        "description": "Toutes les solutions répondent aux normes de conformité les plus élevées"
+      },
+      "agile": {
+        "title": "Mise en Œuvre Agile",
+        "description": "Itérations rapides, progrès mesurables"
+      },
+      "change": {
+        "title": "Facilitation du Changement",
+        "description": "Autonomiser vos équipes pour un succès durable"
+      },
+      "roi": {
+        "title": "Focus ROI",
+        "description": "Résultats business mesurables dès le jour 1"
+      }
+    },
+    "process_title": "Notre Processus Éprouvé",
+    "process": {
+      "step1": {
+        "number": "01",
+        "title": "Analyse Stratégique",
+        "description": "Évaluation approfondie de votre paysage actuel"
+      },
+      "step2": {
+        "number": "02",
+        "title": "Conception de la Feuille de Route",
+        "description": "Stratégie de transformation sur mesure"
+      },
+      "step3": {
+        "number": "03",
+        "title": "Mise en Œuvre Agile",
+        "description": "Implémentation itérative avec feedback continu"
+      },
+      "step4": {
+        "number": "04",
+        "title": "Durabilité",
+        "description": "Transfert de connaissances et autonomisation des équipes"
+      }
+    },
+    "cta_title": "Prêt pour la Transformation ?",
+    "cta_description": "Explorons ensemble comment nos services peuvent faire passer votre entreprise au niveau supérieur.",
+    "cta_button": "Planifier une Consultation Stratégique"
+  },
+  "contact": {
+    "title": "Parlons",
+    "title_highlight": "Ensemble",
+    "description": "Là où les autres s'arrêtent, nous commençons. Prêt pour une conversation stratégique sur votre avenir ?",
+    "methods": {
+      "email": {
+        "title": "Email",
+        "value": "contact@iqoniq.com",
+        "description": "Contact direct pour toutes demandes"
+      },
+      "location": {
+        "title": "Localisations",
+        "value": "À distance & Sur site",
+        "description": "DACH, GCC & NA"
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "value": "@rachids",
+        "description": "Connectez-vous avec nous"
+      },
+      "booking": {
+        "title": "Prise de Rendez-vous",
+        "value": "Consultation Stratégique",
+        "description": "Réservation directe de rendez-vous"
+      }
+    },
+    "global_presence": "Présence Mondiale",
+    "regions": {
+      "dach": {
+        "name": "Région DACH",
+        "countries": ["Allemagne", "Autriche", "Suisse"],
+        "focus": "Précision Allemande & Excellence Ingénierie"
+      },
+      "gcc": {
+        "name": "États du GCC",
+        "countries": ["EAU", "Arabie Saoudite", "Qatar", "Koweït"],
+        "focus": "Intelligence Culturelle & Expansion Internationale"
+      },
+      "na": {
+        "name": "Amérique du Nord",
+        "countries": ["USA", "Canada"],
+        "focus": "Solutions Technologiques Évolutives"
+      }
+    },
+    "countries_label": "Pays :",
+    "focus_label": "Focus :",
+    "why_title": "Pourquoi une Conversation avec Nous est Votre Prochaine Étape Stratégique",
+    "benefits": {
+      "insights": {
+        "title": "Insights Immédiats",
+        "description": "Dès la première conversation, vous recevez des insights précieux sur le potentiel d'optimisation"
+      },
+      "strategy": {
+        "title": "Stratégie Sur Mesure",
+        "description": "Pas de solutions standard – chaque recommandation est basée sur votre situation spécifique"
+      },
+      "international": {
+        "title": "Expertise Internationale",
+        "description": "Bénéficiez de notre expérience sur les marchés DACH, GCC et nord-américains"
+      }
+    },
+    "final_cta": "Prêt à faire passer votre paysage EDI et eProcurement au niveau supérieur ?",
+    "final_button": "Planifier une Consultation Stratégique Maintenant"
+  },
+  "contact_form": {
+    "title": "Planifier une Consultation Stratégique",
+    "description": "Discutons de vos défis spécifiques et développons ensemble la solution optimale.",
+    "first_name": "Prénom *",
+    "first_name_placeholder": "Votre prénom",
+    "last_name": "Nom *",
+    "last_name_placeholder": "Votre nom",
+    "email": "Email *",
+    "email_placeholder": "votre.email@entreprise.com",
+    "phone": "Téléphone",
+    "phone_placeholder": "+33 1 23 45 67 89",
+    "company": "Entreprise *",
+    "company_placeholder": "Votre entreprise",
+    "topic": "Sujet de Consultation *",
+    "topic_placeholder": "Sélectionnez votre sujet principal",
+    "topics": {
+      "edi": "Excellence EDI",
+      "eprocurement": "Maîtrise eProcurement",
+      "intercultural": "Intégration Interculturelle",
+      "leadership": "Leadership & Transformation",
+      "strategic": "Conseil Stratégique",
+      "other": "Autre"
+    },
+    "preferred_date": "Date Préférée",
+    "preferred_time": "Heure",
+    "time_placeholder": "Sélectionnez l'heure préférée",
+    "message": "Votre Message",
+    "message_placeholder": "Décrivez brièvement votre situation actuelle et vos objectifs...",
+    "submit": "Demander un Rendez-vous",
+    "required_fields": "* Champs obligatoires. Vos données seront traitées de manière confidentielle et non partagées avec des tiers.",
+    "success": "Demande envoyée avec succès ! Nous vous contacterons dans les 24 heures."
+  },
+  "footer": {
+    "description": "Cabinet de conseil boutique pour l'Excellence EDI, la Maîtrise eProcurement et l'intégration interculturelle. Solutions stratégiques pour une compétitivité mondiale.",
+    "expertise_title": "Expertise",
+    "company_title": "Entreprise",
+    "about": "À propos",
+    "services": "Services",
+    "contact": "Contact",
+    "strategic_consultation": "Consultation Stratégique",
+    "copyright": "Tous droits réservés.",
+    "privacy": "Confidentialité",
+    "imprint": "Mentions légales",
+    "terms": "CGV",
+    "tagline": "IQONIQ n'est pas un ajout, mais une fondation. Pour des chaînes d'approvisionnement résilientes, digitales et mondiales."
+  },
+  "philosophy": {
+    "back": "Retour à l'Accueil",
+    "title": "Notre",
+    "title_highlight": "Philosophie",
+    "description": "Pourquoi IQONIQ n'est pas qu'un autre partenaire de conseil, mais la base stratégique de votre succès digital.",
+    "indispensable_title": "Pourquoi Nous Sommes",
+    "indispensable_highlight": "Indispensables",
+    "indispensable_description": "Dans un monde plein de solutions standard et de conseil superficiel, nous créons une valeur réelle, mesurable et durable.",
+    "unique_factors": {
+      "boutique": {
+        "title": "Approche Boutique",
+        "description": "Pas de traitement de masse, mais des solutions sur mesure pour vos défis spécifiques.",
+        "metric": "100% solutions individuelles"
+      },
+      "executive": {
+        "title": "Expertise Niveau Exécutif",
+        "description": "Accès direct au conseil senior sans niveaux hiérarchiques ni consultants juniors.",
+        "metric": "Sparring C-Level"
+      },
+      "technology": {
+        "title": "Technologie + Management",
+        "description": "Combinaison rare d'expertise technique approfondie et de compréhension managériale stratégique.",
+        "metric": "10+ ans d'expérience combinée"
+      },
+      "international": {
+        "title": "Portée Internationale",
+        "description": "Présence locale en Europe et partenariats établis au Moyen-Orient.",
+        "metric": "Expertise DACH + GCC"
+      }
+    },
+    "pillars_title": "Les Quatre",
+    "pillars_highlight": "Piliers",
+    "pillars_suffix": "de Notre Philosophie",
+    "pillars_description": "Notre approche repose sur quatre principes fondamentaux qui façonnent chacun de nos projets.",
+    "pillars": {
+      "precision": {
+        "title": "Précision Stratégique",
+        "description": "Nous n'agissons pas seulement opérationnellement, nous pensons stratégiquement. Chaque décision technique est prise en tenant compte de vos objectifs business.",
+        "details": [
+          "Analyse d'impact business avant chaque implémentation",
+          "Architectures de solutions orientées ROI",
+          "Développement de feuille de route stratégique",
+          "Communication compatible C-level"
+        ]
+      },
+      "innovation": {
+        "title": "État d'Esprit Innovant",
+        "description": "Nous regardons au-delà de l'horizon et trouvons des solutions que d'autres négligent. L'innovation naît à l'intersection de différentes disciplines.",
+        "details": [
+          "Meilleures pratiques cross-industries",
+          "Évaluation des technologies émergentes",
+          "Ateliers d'innovation disruptive",
+          "Conception d'architecture pérenne"
+        ]
+      },
+      "compliance": {
+        "title": "Conformité & Sécurité",
+        "description": "Dans un monde plein de réglementations et de cybermenaces, la conformité n'est pas un ajout mais le fondement de toutes nos solutions.",
+        "details": [
+          "Traitement des données conforme au RGPD",
+          "Conformité SOX pour les entreprises internationales",
+          "Cybersécurité by design",
+          "Piste d'audit et documentation"
+        ]
+      },
+      "cultural": {
+        "title": "Intelligence Culturelle",
+        "description": "Les affaires mondiales nécessitent une compréhension culturelle. Nous naviguons avec assurance entre les standards allemands et les coutumes internationales.",
+        "details": [
+          "Expertise culture business DACH-GCC",
+          "Équipes de projet multiculturelles",
+          "Standards de conformité internationaux",
+          "Gestion du changement cross-culturel"
+        ]
+      }
+    },
+    "how_we_work_title": "Comment Nous",
+    "how_we_work_highlight": "Travaillons",
+    "how_we_work_description": "Notre approche est façonnée par des principes qui ont fait leurs preuves sur une décennie de projets internationaux.",
+    "principles": {
+      "understand": {
+        "principle": "Comprendre Avant d'Agir",
+        "description": "Nous investissons du temps pour comprendre votre logique métier avant de proposer des solutions techniques."
+      },
+      "transparency": {
+        "principle": "Transparence en Tout",
+        "description": "Communication claire sur les défis, les risques et les délais réalistes."
+      },
+      "sustainability": {
+        "principle": "Focus sur la Durabilité",
+        "description": "Des solutions qui fonctionnent non seulement aujourd'hui mais créent encore de la valeur dans 5 ans."
+      },
+      "sensitivity": {
+        "principle": "Sensibilité Culturelle",
+        "description": "Prise en compte des pratiques commerciales locales et des spécificités réglementaires."
+      }
+    },
+    "goal_title": "Notre",
+    "goal_highlight": "Objectif",
+    "goal_quote": "\"Nous ne voulons pas être le plus grand partenaire de conseil – nous voulons être le décisif.\"",
+    "goal_description": "Notre succès ne se mesure pas au nombre de nos projets, mais à l'impact stratégique que nous réalisons pour nos clients. Nous créons des fondations sur lesquelles les entreprises peuvent bâtir pendant des années.",
+    "stats": {
+      "years": "Années d'Expertise",
+      "continents": "Continents",
+      "solutions": "Solutions Individuelles"
+    },
+    "contact_title": "Prêt pour une Vraie",
+    "contact_highlight": "Transformation",
+    "contact_description": "Explorons lors d'une consultation stratégique initiale comment notre philosophie peut faire avancer votre entreprise."
+  }
+}

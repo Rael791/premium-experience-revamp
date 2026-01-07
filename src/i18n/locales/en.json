@@ -1,0 +1,420 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "expertise": "Expertise",
+    "services": "Services",
+    "contact": "Contact",
+    "cta": "Strategic Consultation"
+  },
+  "hero": {
+    "badge": "Boutique Consulting for Digital Excellence",
+    "headline1": "We Transform",
+    "headline2": "Data Exchange",
+    "headline3": "Into Business Intelligence.",
+    "subheadline": "When EDI needs to not just run, but scale – without downtime, without compromise. Strategic, scalable, and sustainable solutions for global competitiveness.",
+    "cta_primary": "Strategic Consultation",
+    "cta_secondary": "Discover Our Expertise",
+    "keypoints": {
+      "point1_title": "DACH → GCC",
+      "point1_desc": "International Project Experience",
+      "point2_title": "10+ Years",
+      "point2_desc": "EDI & eProcurement Expertise",
+      "point3_title": "4 Languages",
+      "point3_desc": "Technology, Business, Culture, Leadership"
+    }
+  },
+  "problems": {
+    "title": "The Gaps That",
+    "title_highlight": "No One Closes",
+    "title_suffix": "– Until Now",
+    "description": "Digital procurement and EDI have become mandatory. But while everyone talks about integration, almost no one talks about what really makes projects fail:",
+    "problem1_title": "Systems That Collapse Under Growth",
+    "problem1_desc": "Lack of scalability leads to critical failures at decisive moments",
+    "problem2_title": "Incompatible Processes",
+    "problem2_desc": "Incompatible workflows block digital transformation",
+    "problem3_title": "Data No One Trusts",
+    "problem3_desc": "Poor data quality undermines decision-making and compliance",
+    "problem4_title": "Cultures That Don't Connect",
+    "problem4_desc": "Intercultural misunderstandings delay international projects",
+    "solution": "We Close Exactly These Gaps",
+    "keywords": {
+      "strategic": "strategic",
+      "scalable": "scalable",
+      "sustainable": "sustainable"
+    }
+  },
+  "about": {
+    "title": "Who We Are",
+    "company_name": "We are IQONIQ",
+    "description": "a boutique consultancy that unites technology, management excellence, and cultural intelligence into one. Founded by an expert with over ten years of experience in EDI, eProcurement, and international project management, forged at the intersection of IT, procurement, logistics, and C-level strategy.",
+    "geographic": {
+      "intro": "Our work reaches from the",
+      "dach": "DACH Region",
+      "to": "to the",
+      "gcc": "GCC States",
+      "suffix": "– connecting German precision with international vision.",
+      "languages": "We speak four languages fluently: Technology, Business, Culture, and Leadership."
+    },
+    "mission": {
+      "title": "Mission",
+      "description": "We empower companies to design their digital procurement in a way that not only works, but creates strategic advantages – across markets, systems, and cultures.",
+      "highlight": "Strategic advantages through digital excellence"
+    },
+    "vision": {
+      "title": "Vision",
+      "description": "A business world where EDI and eProcurement are seen not as technical obligations, but as levers for global competitiveness – and where cultural intelligence is as self-evident as system integration.",
+      "highlight": "Global competitiveness through cultural intelligence"
+    },
+    "differentiators_title": "What Sets Us Apart",
+    "differentiators": [
+      "We build structured EDI architectures, not workarounds",
+      "We speak system, process, and people simultaneously",
+      "We navigate confidently between compliance, technology, and culture",
+      "We combine domain expertise with international tact"
+    ],
+    "cta_title": "IQONIQ is not an add-on, but a foundation.",
+    "cta_subtitle": "For resilient, digital, and global supply chains.",
+    "cta_button": "Learn More About Our Philosophy"
+  },
+  "expertise": {
+    "title": "Our",
+    "title_highlight": "Expertise",
+    "description": "Four core competencies that take your digital procurement to the next level. From technical excellence to cultural intelligence.",
+    "areas": {
+      "edi": {
+        "title": "EDI Excellence",
+        "description": "Architecture, scaling, performance – we make your EDI landscape future-proof.",
+        "features": ["System Architecture & Migration", "Data Quality Frameworks", "Performance Monitoring", "Business Rules Engine"]
+      },
+      "eprocurement": {
+        "title": "eProcurement Mastery",
+        "description": "From operational purchasing to strategic value creation.",
+        "features": ["Process Design & Automation", "Supplier Onboarding", "Compliance Strategies", "Self-Service Portals"]
+      },
+      "intercultural": {
+        "title": "Intercultural Integration",
+        "description": "Business processes and communication that work in every culture.",
+        "features": ["Cross-Cultural Process Design", "Stakeholder Management", "DACH ↔ GCC Project Communication", "Cultural Compliance"]
+      },
+      "leadership": {
+        "title": "Leadership & Transformation",
+        "description": "Empowering your key roles to manage complex changes.",
+        "features": ["Executive Sparring", "Project Steering", "Agile Transformation", "Training & Empowerment"]
+      }
+    },
+    "learn_more": "Learn More",
+    "cta_title": "Ready for the Next Level?",
+    "cta_description": "Let's explore in a strategic initial consultation how our expertise can advance your business.",
+    "cta_button": "Schedule Strategic Consultation"
+  },
+  "services": {
+    "title": "Our",
+    "title_highlight": "Services",
+    "description": "Comprehensive expertise in four strategic areas. Every service designed for maximum impact and sustainable success.",
+    "categories": {
+      "edi": {
+        "title": "EDI Excellence",
+        "services": [
+          "System Architecture & Migration Strategies",
+          "Data Quality Frameworks & Business Rules",
+          "Monitoring, KPI Visualization, Error Analysis",
+          "Performance Optimization & Scaling"
+        ]
+      },
+      "eprocurement": {
+        "title": "eProcurement Mastery",
+        "services": [
+          "Process Design & Automation",
+          "Supplier Onboarding & Self-Service Portals",
+          "Compliance & eInvoicing Strategies",
+          "Spend Analytics & Cost Transparency"
+        ]
+      },
+      "intercultural": {
+        "title": "Intercultural Integration",
+        "services": [
+          "Cross-Cultural Process Design",
+          "Intercultural Stakeholder Management",
+          "Project Communication between DACH & GCC",
+          "Change Management Across Cultural Boundaries"
+        ]
+      },
+      "leadership": {
+        "title": "Leadership & Transformation",
+        "services": [
+          "Executive Sparring & Project Steering",
+          "Training for Internal EDI/eProcurement Roles",
+          "Agile Methods for Procurement and IT Teams",
+          "Digital Transformation Roadmaps"
+        ]
+      }
+    },
+    "request_consultation": "Request Detailed Consultation",
+    "highlights_title": "Why Our Services Are Different",
+    "highlights": {
+      "compliance": {
+        "title": "Compliance-First",
+        "description": "All solutions meet the highest compliance standards"
+      },
+      "agile": {
+        "title": "Agile Implementation",
+        "description": "Fast iterations, measurable progress"
+      },
+      "change": {
+        "title": "Change Enablement",
+        "description": "Empowering your teams for sustainable success"
+      },
+      "roi": {
+        "title": "ROI Focus",
+        "description": "Measurable business results from day 1"
+      }
+    },
+    "process_title": "Our Proven Process",
+    "process": {
+      "step1": {
+        "number": "01",
+        "title": "Strategic Analysis",
+        "description": "In-depth assessment of your current landscape"
+      },
+      "step2": {
+        "number": "02",
+        "title": "Roadmap Design",
+        "description": "Tailored transformation strategy"
+      },
+      "step3": {
+        "number": "03",
+        "title": "Agile Implementation",
+        "description": "Iterative implementation with continuous feedback"
+      },
+      "step4": {
+        "number": "04",
+        "title": "Sustainability",
+        "description": "Knowledge transfer and team empowerment"
+      }
+    },
+    "cta_title": "Ready for Transformation?",
+    "cta_description": "Let's explore together how our services can take your company to the next level.",
+    "cta_button": "Schedule Strategic Consultation"
+  },
+  "contact": {
+    "title": "Let's",
+    "title_highlight": "Talk",
+    "description": "Where others stop, we begin. Ready for a strategic conversation about your future?",
+    "methods": {
+      "email": {
+        "title": "Email",
+        "value": "contact@iqoniq.com",
+        "description": "Direct contact for all inquiries"
+      },
+      "location": {
+        "title": "Locations",
+        "value": "Remote & On-site",
+        "description": "DACH, GCC & NA"
+      },
+      "linkedin": {
+        "title": "LinkedIn",
+        "value": "@rachids",
+        "description": "Connect with us"
+      },
+      "booking": {
+        "title": "Appointment Booking",
+        "value": "Strategic Consultation",
+        "description": "Direct appointment booking"
+      }
+    },
+    "global_presence": "Global Presence",
+    "regions": {
+      "dach": {
+        "name": "DACH Region",
+        "countries": ["Germany", "Austria", "Switzerland"],
+        "focus": "German Precision & Engineering Excellence"
+      },
+      "gcc": {
+        "name": "GCC States",
+        "countries": ["UAE", "Saudi Arabia", "Qatar", "Kuwait"],
+        "focus": "Cultural Intelligence & International Expansion"
+      },
+      "na": {
+        "name": "North America",
+        "countries": ["USA", "Canada"],
+        "focus": "Scalable Technology Solutions"
+      }
+    },
+    "countries_label": "Countries:",
+    "focus_label": "Focus:",
+    "why_title": "Why a Conversation With Us Is Your Next Strategic Step",
+    "benefits": {
+      "insights": {
+        "title": "Immediate Insights",
+        "description": "Already in the first conversation, you receive valuable insights into optimization potential"
+      },
+      "strategy": {
+        "title": "Tailored Strategy",
+        "description": "No standard solutions – every recommendation is based on your specific situation"
+      },
+      "international": {
+        "title": "International Expertise",
+        "description": "Benefit from our experience in DACH, GCC, and North American markets"
+      }
+    },
+    "final_cta": "Ready to take your EDI and eProcurement landscape to the next level?",
+    "final_button": "Schedule Strategic Consultation Now"
+  },
+  "contact_form": {
+    "title": "Schedule Strategic Consultation",
+    "description": "Let's discuss your specific challenges and develop the optimal solution together.",
+    "first_name": "First Name *",
+    "first_name_placeholder": "Your first name",
+    "last_name": "Last Name *",
+    "last_name_placeholder": "Your last name",
+    "email": "Email *",
+    "email_placeholder": "your.email@company.com",
+    "phone": "Phone",
+    "phone_placeholder": "+1 123 456 7890",
+    "company": "Company *",
+    "company_placeholder": "Your company",
+    "topic": "Consultation Topic *",
+    "topic_placeholder": "Select your main topic",
+    "topics": {
+      "edi": "EDI Excellence",
+      "eprocurement": "eProcurement Mastery",
+      "intercultural": "Intercultural Integration",
+      "leadership": "Leadership & Transformation",
+      "strategic": "Strategic Consulting",
+      "other": "Other"
+    },
+    "preferred_date": "Preferred Date",
+    "preferred_time": "Time",
+    "time_placeholder": "Select preferred time",
+    "message": "Your Message",
+    "message_placeholder": "Briefly describe your current situation and goals...",
+    "submit": "Request Appointment",
+    "required_fields": "* Required fields. Your data will be treated confidentially and not shared with third parties.",
+    "success": "Request sent successfully! We will contact you within 24 hours."
+  },
+  "footer": {
+    "description": "Boutique consultancy for EDI Excellence, eProcurement Mastery, and intercultural integration. Strategic solutions for global competitiveness.",
+    "expertise_title": "Expertise",
+    "company_title": "Company",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact",
+    "strategic_consultation": "Strategic Consultation",
+    "copyright": "All rights reserved.",
+    "privacy": "Privacy",
+    "imprint": "Imprint",
+    "terms": "Terms",
+    "tagline": "IQONIQ is not an add-on, but a foundation. For resilient, digital, and global supply chains."
+  },
+  "philosophy": {
+    "back": "Back to Home",
+    "title": "Our",
+    "title_highlight": "Philosophy",
+    "description": "Why IQONIQ is not just another consulting partner, but the strategic foundation for your digital success.",
+    "indispensable_title": "Why We Are",
+    "indispensable_highlight": "Indispensable",
+    "indispensable_description": "In a world full of standard solutions and superficial consulting, we create real, measurable, and sustainable value.",
+    "unique_factors": {
+      "boutique": {
+        "title": "Boutique Approach",
+        "description": "No mass processing, but tailored solutions for your specific challenges.",
+        "metric": "100% individual solutions"
+      },
+      "executive": {
+        "title": "Executive-Level Expertise",
+        "description": "Direct access to senior consulting without hierarchy levels and junior consultants.",
+        "metric": "C-Level Sparring"
+      },
+      "technology": {
+        "title": "Technology + Management",
+        "description": "Rare combination of deep technical expertise and strategic management understanding.",
+        "metric": "10+ years combined experience"
+      },
+      "international": {
+        "title": "International Reach",
+        "description": "Local presence in Europe and established partnerships in the Middle East.",
+        "metric": "DACH + GCC Expertise"
+      }
+    },
+    "pillars_title": "The Four",
+    "pillars_highlight": "Pillars",
+    "pillars_suffix": "of Our Philosophy",
+    "pillars_description": "Our approach is based on four fundamental principles that shape every one of our projects.",
+    "pillars": {
+      "precision": {
+        "title": "Strategic Precision",
+        "description": "We don't just operate operationally, we think strategically. Every technical decision is made against the backdrop of your business goals.",
+        "details": [
+          "Business impact analysis before every implementation",
+          "ROI-oriented solution architectures",
+          "Strategic roadmap development",
+          "C-level compatible communication"
+        ]
+      },
+      "innovation": {
+        "title": "Innovative Mindset",
+        "description": "We look beyond the horizon and find solutions that others overlook. Innovation arises at the intersection of different disciplines.",
+        "details": [
+          "Cross-industry best practices",
+          "Emerging technology assessment",
+          "Disruptive innovation workshops",
+          "Future-proof architecture design"
+        ]
+      },
+      "compliance": {
+        "title": "Compliance & Security",
+        "description": "In a world full of regulations and cyber threats, compliance is not an add-on but the fundamental foundation of all our solutions.",
+        "details": [
+          "GDPR-compliant data processing",
+          "SOX compliance for international corporations",
+          "Cyber security by design",
+          "Audit trail and documentation"
+        ]
+      },
+      "cultural": {
+        "title": "Cultural Intelligence",
+        "description": "Global business requires cultural understanding. We navigate confidently between German standards and international customs.",
+        "details": [
+          "DACH-GCC business culture expertise",
+          "Multicultural project teams",
+          "International compliance standards",
+          "Cross-cultural change management"
+        ]
+      }
+    },
+    "how_we_work_title": "How We",
+    "how_we_work_highlight": "Work",
+    "how_we_work_description": "Our approach is shaped by principles that have proven themselves over a decade of international projects.",
+    "principles": {
+      "understand": {
+        "principle": "Understand Before Acting",
+        "description": "We invest time in understanding your business logic before proposing technical solutions."
+      },
+      "transparency": {
+        "principle": "Transparency in Everything",
+        "description": "Clear communication about challenges, risks, and realistic timelines."
+      },
+      "sustainability": {
+        "principle": "Focus on Sustainability",
+        "description": "Solutions that not only work today but still create value in 5 years."
+      },
+      "sensitivity": {
+        "principle": "Cultural Sensitivity",
+        "description": "Consideration of local business practices and regulatory specifics."
+      }
+    },
+    "goal_title": "Our",
+    "goal_highlight": "Goal",
+    "goal_quote": "\"We don't want to be the biggest consulting partner – we want to be the decisive one.\"",
+    "goal_description": "Our success is not measured by the number of our projects, but by the strategic impact we achieve for our clients. We create foundations on which companies can build for years.",
+    "stats": {
+      "years": "Years of Expertise",
+      "continents": "Continents",
+      "solutions": "Individual Solutions"
+    },
+    "contact_title": "Ready for Real",
+    "contact_highlight": "Transformation",
+    "contact_description": "Let's explore in a strategic initial consultation how our philosophy can advance your company."
+  }
+}
