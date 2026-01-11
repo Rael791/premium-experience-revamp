@@ -1,20 +1,23 @@
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Mail, MapPin, Linkedin, Calendar, Phone, Globe } from "lucide-react";
 import ContactForm from "./ContactForm";
 
 const ContactSection = () => {
+  const { t } = useTranslation();
+
   const contactMethods = [
     {
       icon: Mail,
-      title: "Email",
+      title: t("contact.email"),
       value: "contact@iqoniq.com",
-      description: "Direkter Kontakt für alle Anfragen",
+      description: t("contact.email_desc"),
       action: "mailto:contact@iqoniq.com"
     },
     {
       icon: MapPin,
-      title: "Standorte",
-      value: "Remote & vor Ort",
+      title: t("contact.locations"),
+      value: t("contact.locations_value"),
       description: "DACH, GCC & NA",
       action: null
     },
@@ -22,33 +25,33 @@ const ContactSection = () => {
       icon: Linkedin,
       title: "LinkedIn",
       value: "@rachids",
-      description: "Vernetzen Sie sich mit uns",
+      description: t("contact.linkedin_desc"),
       action: "https://linkedin.com/in/rachids"
     },
     {
       icon: Calendar,
-      title: "Terminbuchung",
-      value: "Strategisches Erstgespräch",
-      description: "Direkter Terminbuchung",
+      title: t("contact.booking"),
+      value: t("contact.booking_value"),
+      description: t("contact.booking_desc"),
       action: "#kontakt"
     }
   ];
 
   const regions = [
     {
-      name: "DACH Region",
-      countries: ["Deutschland", "Österreich", "Schweiz"],
-      focus: "Deutsche Präzision & Engineering Excellence"
+      name: t("contact.region_dach"),
+      countries: [t("contact.germany"), t("contact.austria"), t("contact.switzerland")],
+      focus: t("contact.dach_focus")
     },
     {
-      name: "GCC Staaten",
+      name: t("contact.region_gcc"),
       countries: ["UAE", "Saudi Arabia", "Qatar", "Kuwait"],
-      focus: "Kulturelle Intelligenz & Internationale Expansion"
+      focus: t("contact.gcc_focus")
     },
     {
-      name: "North America",
+      name: t("contact.region_na"),
       countries: ["USA", "Canada"],
-      focus: "Skalierbare Technologielösungen"
+      focus: t("contact.na_focus")
     }
   ];
 
@@ -58,10 +61,10 @@ const ContactSection = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="heading-section mb-6">
-            Lassen Sie uns <span className="text-primary">sprechen</span>
+            {t("contact.title")} <span className="text-primary">{t("contact.title_highlight")}</span>
           </h2>
           <p className="text-premium max-w-2xl mx-auto">
-            Dort, wo andere aufhören, fangen wir an. Bereit für ein strategisches Gespräch über Ihre Zukunft?
+            {t("contact.subtitle")}
           </p>
         </div>
 
@@ -94,7 +97,7 @@ const ContactSection = () => {
           {/* Global Presence */}
           <div className="mb-16">
             <h3 className="text-2xl font-bold text-center text-foreground mb-8">
-              Globale Präsenz
+              {t("contact.global_presence")}
             </h3>
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
               {regions.map((region, idx) => (
@@ -105,7 +108,7 @@ const ContactSection = () => {
                   </div>
                   <div className="space-y-3">
                     <div>
-                      <p className="text-sm text-muted-foreground mb-2">Länder:</p>
+                      <p className="text-sm text-muted-foreground mb-2">{t("contact.countries")}:</p>
                       <div className="flex flex-wrap gap-2">
                         {region.countries.map((country, countryIdx) => (
                           <span key={countryIdx} className="text-xs bg-primary/10 text-primary px-2 py-1 rounded">
@@ -115,7 +118,7 @@ const ContactSection = () => {
                       </div>
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground mb-1">Fokus:</p>
+                      <p className="text-sm text-muted-foreground mb-1">{t("contact.focus")}:</p>
                       <p className="text-sm text-foreground">{region.focus}</p>
                     </div>
                   </div>
@@ -127,21 +130,21 @@ const ContactSection = () => {
           {/* Why Contact Us */}
           <div className="text-center">
             <h3 className="text-2xl font-bold text-foreground mb-8">
-              Warum ein Gespräch mit uns Ihr nächster strategischer Schritt ist
+              {t("contact.why_contact_title")}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
               {[
                 {
-                  title: "Sofortige Insights",
-                  description: "Bereits im Erstgespräch erhalten Sie wertvolle Einblicke in Optimierungspotentiale"
+                  title: t("contact.benefit1_title"),
+                  description: t("contact.benefit1_desc")
                 },
                 {
-                  title: "Maßgeschneiderte Strategie",
-                  description: "Keine Standard-Lösungen – jede Empfehlung basiert auf Ihrer spezifischen Situation"
+                  title: t("contact.benefit2_title"),
+                  description: t("contact.benefit2_desc")
                 },
                 {
-                  title: "Internationale Expertise",
-                  description: "Profitieren Sie von unserer Erfahrung in DACH, GCC und nordamerikanischen Märkten"
+                  title: t("contact.benefit3_title"),
+                  description: t("contact.benefit3_desc")
                 }
               ].map((benefit, idx) => (
                 <div key={idx} className="glass-effect rounded-lg p-6">
@@ -156,11 +159,11 @@ const ContactSection = () => {
           <div className="text-center mt-16">
             <div className="max-w-2xl mx-auto">
               <p className="text-lg text-muted-foreground mb-6">
-                Bereit, Ihre EDI- und eProcurement-Landschaft auf das nächste Level zu bringen?
+                {t("contact.final_cta_text")}
               </p>
               <Button variant="hero" size="xl" className="shadow-premium" onClick={() => document.querySelector('#kontakt')?.scrollIntoView({ behavior: 'smooth' })}>
                 <Calendar className="w-5 h-5 mr-2" />
-                Jetzt Strategisches Erstgespräch vereinbaren
+                {t("contact.final_cta_button")}
               </Button>
             </div>
           </div>

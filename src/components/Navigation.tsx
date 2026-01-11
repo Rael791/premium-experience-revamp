@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const Navigation = () => {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -16,11 +19,11 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { href: "/", label: "Home" },
-    { href: "#ueber-uns", label: "Über uns" },
-    { href: "#expertise", label: "Expertise" },
-    { href: "#leistungen", label: "Leistungen" },
-    { href: "#kontakt", label: "Kontakt" },
+    { href: "/", label: t("nav.home") },
+    { href: "#ueber-uns", label: t("nav.about") },
+    { href: "#expertise", label: t("nav.expertise") },
+    { href: "#leistungen", label: t("nav.services") },
+    { href: "#kontakt", label: t("nav.contact") },
   ];
 
   return (
@@ -45,8 +48,9 @@ const Navigation = () => {
                 {item.label}
               </a>
             ))}
+            <LanguageSwitcher />
             <Button variant="hero" size="lg" asChild>
-              <a href="#kontakt">Strategisches Erstgespräch</a>
+              <a href="#kontakt">{t("nav.cta")}</a>
             </Button>
           </div>
 
@@ -72,9 +76,12 @@ const Navigation = () => {
                 {item.label}
               </a>
             ))}
+            <div className="py-2">
+              <LanguageSwitcher />
+            </div>
             <Button variant="hero" size="lg" className="w-full" asChild>
               <a href="#kontakt" onClick={() => setIsMobileMenuOpen(false)}>
-                Strategisches Erstgespräch
+                {t("nav.cta")}
               </a>
             </Button>
           </div>
