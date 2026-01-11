@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { Code, ShoppingCart, Globe2, Users2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import businessTeamImage from "@/assets/business-team-1.jpg";
@@ -6,38 +7,64 @@ import businessMeetingImage from "@/assets/business-meeting-1.jpg";
 import businessStrategyImage from "@/assets/business-strategy-1.jpg";
 
 const ExpertiseSection = () => {
+  const { t } = useTranslation();
+
   const expertiseAreas = [
     {
       icon: Code,
-      title: "EDI Excellence",
-      description: "Architektur, Skalierung, Performance – wir machen Ihre EDI-Landschaft zukunftsfähig.",
+      title: t("expertise.edi_title"),
+      description: t("expertise.edi_desc"),
       image: businessOfficeImage,
       color: "primary",
-      features: ["Systemarchitektur & Migration", "Datenqualitäts-Frameworks", "Performance-Monitoring", "Business Rules Engine"]
+      features: [
+        t("expertise.edi_feature1"),
+        t("expertise.edi_feature2"),
+        t("expertise.edi_feature3"),
+        t("expertise.edi_feature4")
+      ],
+      link: "/expertise/edi-excellence"
     },
     {
       icon: ShoppingCart,
-      title: "eProcurement Mastery",
-      description: "Vom operativen Einkauf zur strategischen Wertschöpfung.",
+      title: t("expertise.eprocurement_title"),
+      description: t("expertise.eprocurement_desc"),
       image: businessStrategyImage,
       color: "accent",
-      features: ["Prozessdesign & Automatisierung", "Lieferanten-Onboarding", "Compliance-Strategien", "Self-Service-Portale"]
+      features: [
+        t("expertise.eprocurement_feature1"),
+        t("expertise.eprocurement_feature2"),
+        t("expertise.eprocurement_feature3"),
+        t("expertise.eprocurement_feature4")
+      ],
+      link: "/expertise/eprocurement-mastery"
     },
     {
       icon: Globe2,
-      title: "Interkulturelle Integration",
-      description: "Geschäftsprozesse und Kommunikation, die in jeder Kultur funktionieren.",
+      title: t("expertise.intercultural_title"),
+      description: t("expertise.intercultural_desc"),
       image: businessMeetingImage,
       color: "secondary",
-      features: ["Cross-Cultural Process Design", "Stakeholder-Management", "DACH ↔ GCC Projektkommunikation", "Kulturelle Compliance"]
+      features: [
+        t("expertise.intercultural_feature1"),
+        t("expertise.intercultural_feature2"),
+        t("expertise.intercultural_feature3"),
+        t("expertise.intercultural_feature4")
+      ],
+      link: "/expertise/interkulturelle-integration"
     },
     {
       icon: Users2,
-      title: "Leadership & Transformation",
-      description: "Befähigung Ihrer Schlüsselrollen, komplexe Veränderungen zu steuern.",
+      title: t("expertise.leadership_title"),
+      description: t("expertise.leadership_desc"),
       image: businessTeamImage,
       color: "primary",
-      features: ["Executive Sparring", "Projektsteuerung", "Agile Transformation", "Training & Empowerment"]
+      features: [
+        t("expertise.leadership_feature1"),
+        t("expertise.leadership_feature2"),
+        t("expertise.leadership_feature3"),
+        t("expertise.leadership_feature4")
+      ],
+      link: "/expertise/leadership-und-transformation"
     }
   ];
 
@@ -46,11 +73,10 @@ const ExpertiseSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="heading-section mb-6">
-            Unsere <span className="text-primary">Expertise</span>
+            {t("expertise.title")} <span className="text-primary">{t("expertise.title_highlight")}</span>
           </h2>
           <p className="text-premium max-w-3xl mx-auto">
-            Vier Kernkompetenzen, die Ihre digitale Beschaffung auf das nächste Level bringen. 
-            Von technischer Exzellenz bis zu kultureller Intelligenz.
+            {t("expertise.subtitle")}
           </p>
         </div>
 
@@ -115,8 +141,8 @@ const ExpertiseSection = () => {
                       className={`group/btn hover:border-${area.color}/40 hover:text-${area.color}`}
                       asChild
                     >
-                      <a href={`/expertise/${area.title.toLowerCase().replace(/\s+/g, '-').replace('&', 'und')}`}>
-                        Mehr erfahren
+                      <a href={area.link}>
+                        {t("expertise.learn_more")}
                         <span className="ml-2 transform group-hover/btn:translate-x-1 transition-transform">→</span>
                       </a>
                     </Button>
@@ -131,13 +157,13 @@ const ExpertiseSection = () => {
         <div className="text-center mt-16 animate-fade-in-up">
           <div className="max-w-2xl mx-auto glass-effect rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Bereit für die nächste Stufe?
+              {t("expertise.cta_title")}
             </h3>
             <p className="text-muted-foreground mb-6">
-              Lassen Sie uns in einem strategischen Erstgespräch erkunden, wie unsere Expertise Ihr Unternehmen voranbringt.
+              {t("expertise.cta_subtitle")}
             </p>
             <Button variant="hero" size="xl" asChild>
-              <a href="#kontakt">Strategisches Erstgespräch vereinbaren</a>
+              <a href="#kontakt">{t("expertise.cta_button")}</a>
             </Button>
           </div>
         </div>
