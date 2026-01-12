@@ -13,22 +13,20 @@
     "headline2": "Data Exchange",
     "headline3": "Into Business Intelligence.",
     "subheadline": "When EDI needs to not just run, but scale – without downtime, without compromise. Strategic, scalable, and sustainable solutions for global competitiveness.",
-    "cta_primary": "Strategic Consultation",
-    "cta_secondary": "Discover Our Expertise",
-    "keypoints": {
-      "point1_title": "DACH → GCC",
-      "point1_desc": "International Project Experience",
-      "point2_title": "10+ Years",
-      "point2_desc": "EDI & eProcurement Expertise",
-      "point3_title": "4 Languages",
-      "point3_desc": "Technology, Business, Culture, Leadership"
-    }
+    "cta1": "Strategic Consultation",
+    "cta2": "Discover Our Expertise",
+    "keypoint1_title": "DACH → GCC",
+    "keypoint1_desc": "International Project Experience",
+    "keypoint2_title": "10+ Years",
+    "keypoint2_desc": "EDI & eProcurement Expertise",
+    "keypoint3_title": "4 Languages",
+    "keypoint3_desc": "Technology, Business, Culture, Leadership"
   },
   "problems": {
     "title": "The Gaps That",
     "title_highlight": "No One Closes",
-    "title_suffix": "– Until Now",
-    "description": "Digital procurement and EDI have become mandatory. But while everyone talks about integration, almost no one talks about what really makes projects fail:",
+    "title_end": "– Until Now",
+    "subtitle": "Digital procurement and EDI have become mandatory. But while everyone talks about integration, almost no one talks about what really makes projects fail:",
     "problem1_title": "Systems That Collapse Under Growth",
     "problem1_desc": "Lack of scalability leads to critical failures at decisive moments",
     "problem2_title": "Incompatible Processes",
@@ -37,12 +35,10 @@
     "problem3_desc": "Poor data quality undermines decision-making and compliance",
     "problem4_title": "Cultures That Don't Connect",
     "problem4_desc": "Intercultural misunderstandings delay international projects",
-    "solution": "We Close Exactly These Gaps",
-    "keywords": {
-      "strategic": "strategic",
-      "scalable": "scalable",
-      "sustainable": "sustainable"
-    }
+    "cta_title": "We Close Exactly These Gaps",
+    "cta_word1": "strategic",
+    "cta_word2": "scalable",
+    "cta_word3": "sustainable"
   },
   "about": {
     "title": "Who We Are",
@@ -416,5 +412,526 @@
     "contact_title": "Ready for Real",
     "contact_highlight": "Transformation",
     "contact_description": "Let's explore in a strategic initial consultation how our philosophy can advance your company."
+  },
+  "edi_detail": {
+    "back": "Back to Expertise",
+    "title": "EDI Excellence Services",
+    "subtitle": "Strategic EDI Transformation for Sustainable Competitive Advantages",
+    "description": "From legacy modernization to implementing future-proof EDI architectures – we transform your data landscape strategically, scalably, and sustainably.",
+    "why_title": "Why EDI Excellence is Essential",
+    "why_description": "In a digitalized world, EDI is the invisible engine of your business success. Unreliable systems don't just cost money – they jeopardize customer relationships and growth opportunities.",
+    "stats": {
+      "cost": "Average annual cost of EDI failures",
+      "outdated": "Companies with outdated EDI systems",
+      "partners": "Business partners prefer automated processes",
+      "availability": "Expected availability of modern EDI systems"
+    },
+    "services_title": "Our EDI Excellence Services in Detail",
+    "services": {
+      "architecture": {
+        "name": "EDI Architecture Assessment",
+        "description": "Comprehensive evaluation of your EDI infrastructure for strategic decisions",
+        "duration": "2-4 Weeks",
+        "investment": "€15,000 - €25,000",
+        "what": "Complete analysis of your existing EDI landscape with focus on scalability, performance, and future readiness.",
+        "why": "90% of companies have hidden inefficiencies in their EDI infrastructure that can cost millions.",
+        "how": "Structured 4-phase methodology: Discovery → Analysis → Design → Roadmap with documented best practices.",
+        "whatHappens": [
+          "30-50% reduction in EDI transaction costs",
+          "Elimination of system failures and data loss",
+          "Scalable architecture for 10x growth",
+          "Automated monitoring and alerting"
+        ],
+        "whatNotHappens": [
+          "No quick-fix solutions without strategic vision",
+          "No vendor lock-in or proprietary technologies",
+          "No undocumented 'black box' implementations"
+        ],
+        "kpis": [
+          "99.9% availability of EDI systems",
+          "< 2 seconds transaction time",
+          "50% reduction in operating costs",
+          "100% compliance with industry standards"
+        ],
+        "deliverables": [
+          "Current State Assessment Report (150+ pages)",
+          "Technical Architecture Blueprint",
+          "ROI Calculation and Business Case",
+          "3-Year Transformation Roadmap",
+          "Vendor-neutral Technology Recommendations",
+          "Risk Assessment & Mitigation Plan"
+        ]
+      },
+      "rules": {
+        "name": "Business Rules Engine Implementation",
+        "description": "Intelligent automation for data validation and business logic",
+        "duration": "6-12 Weeks",
+        "investment": "€35,000 - €75,000",
+        "what": "Implementation of a robust business rules engine for automated decision-making and data processing.",
+        "why": "Manual data validation costs an average of 40 hours per week and leads to 15% error rate.",
+        "how": "Agile development with weekly reviews: Requirements → Design → Development → Testing → Go-Live.",
+        "whatHappens": [
+          "95% automation of data validation",
+          "Real-time processing of business rules",
+          "Dynamic adjustment without system downtime",
+          "Complete audit trails for compliance"
+        ],
+        "whatNotHappens": [
+          "No rigid, hard-to-change rule systems",
+          "No loss of business control to IT",
+          "No performance degradation due to rule processing"
+        ],
+        "kpis": [
+          "95% reduction in manual validation",
+          "< 100ms rule processing time",
+          "99.8% rule accuracy",
+          "< 4 hours for rule changes"
+        ],
+        "deliverables": [
+          "Business Rules Framework Setup",
+          "Rule Editor for Business Departments",
+          "Performance Monitoring Dashboard",
+          "Integration into Existing EDI Systems",
+          "User Training & Documentation",
+          "24/7 Support Setup for First 3 Months"
+        ]
+      },
+      "migration": {
+        "name": "EDI Migration & Integration",
+        "description": "Seamless migration to modern EDI platforms without business interruption",
+        "duration": "12-20 Weeks",
+        "investment": "€50,000 - €150,000",
+        "what": "Zero-downtime migration of existing EDI systems to modern, cloud-based platforms with complete data integrity.",
+        "why": "Legacy EDI systems cause 65% more failures and 3x higher maintenance costs than modern solutions.",
+        "how": "Phased Migration Approach: Parallel Operation → Stepwise Migration → Validation → Cutover → Decommissioning.",
+        "whatHappens": [
+          "Zero downtime during entire migration",
+          "100% data integrity and consistency",
+          "Modern cloud-native architecture",
+          "Dramatically improved performance and scalability"
+        ],
+        "whatNotHappens": [
+          "No business interruptions or data losses",
+          "No vendor lock-in to proprietary systems",
+          "No overpriced 'rip-and-replace' approaches"
+        ],
+        "kpis": [
+          "0 downtime during migration",
+          "100% data integrity",
+          "60% better performance",
+          "40% cost savings in year 1"
+        ],
+        "deliverables": [
+          "Detailed Migration Plan",
+          "Parallel System Setup & Testing",
+          "Automated Migration Scripts",
+          "Rollback Strategies for Each Step",
+          "Post-Migration Performance Optimization",
+          "3-Month Hypercare Support"
+        ]
+      }
+    },
+    "cta_title": "Ready for EDI Excellence?",
+    "cta_description": "Transform your EDI landscape with proven strategies and cutting-edge technology. Let's discuss your specific challenges.",
+    "cta_button": "Schedule EDI Strategy Discussion"
+  },
+  "eprocurement_detail": {
+    "back": "Back to Expertise",
+    "title": "eProcurement Mastery Services",
+    "subtitle": "Strategic Transformation of Your Procurement Processes",
+    "description": "From operational efficiency to strategic value creation – we transform your procurement into a true competitive advantage through digitalization and automation.",
+    "why_title": "The Strategic Value of eProcurement Excellence",
+    "why_description": "Modern procurement is far more than cost savings – it's a strategic lever for growth, innovation, and competitive advantages in global markets.",
+    "stats": {
+      "savings": "Average annual savings",
+      "time": "Time reduction in procurement processes",
+      "digital": "Suppliers prefer digital processes",
+      "ebit": "EBIT improvement through optimized procurement"
+    },
+    "services_title": "eProcurement Mastery Services in Detail",
+    "labels": {
+      "duration": "Project Duration",
+      "investment": "Investment",
+      "what": "What",
+      "why": "Why",
+      "how": "How",
+      "whatHappens": "What Happens",
+      "whatNotHappens": "What Doesn't Happen",
+      "kpis": "Measurable KPIs",
+      "deliverables": "Deliverables"
+    },
+    "services": {
+      "process": {
+        "name": "Procurement Process Optimization",
+        "description": "End-to-end optimization of your procurement processes for maximum efficiency",
+        "duration": "8-16 Weeks",
+        "investment": "€25,000 - €50,000",
+        "what": "Complete redesign of your procurement workflows with focus on automation, compliance, and user experience.",
+        "why": "Manual procurement processes cost an average of €180 per order and take 12-15 days.",
+        "how": "Design Thinking Approach: Stakeholder Interviews → Process Mapping → Workflow Design → Prototyping → Implementation.",
+        "whatHappens": [
+          "80% reduction in procurement time",
+          "Fully automated approval workflows",
+          "Real-time transparency for all stakeholders",
+          "Integration into existing ERP systems"
+        ],
+        "whatNotHappens": [
+          "No complex systems that nobody understands",
+          "No loss of business control",
+          "No vendor-dependent isolated solutions"
+        ],
+        "kpis": [
+          "80% faster procurement processes",
+          "95% automatic approvals",
+          "60% fewer manual activities",
+          "99% compliance rate"
+        ],
+        "deliverables": [
+          "Current State Process Analysis",
+          "Future State Process Design",
+          "Workflow Automation Setup",
+          "User Training & Change Management",
+          "Integration Testing & Go-Live Support",
+          "Performance Monitoring Dashboard"
+        ]
+      },
+      "supplier": {
+        "name": "Supplier Portal & Self-Service",
+        "description": "Modern supplier portals for seamless B2B collaboration",
+        "duration": "10-14 Weeks",
+        "investment": "€40,000 - €80,000",
+        "what": "Implementation of intuitive self-service portals for suppliers with automated onboarding and collaboration processes.",
+        "why": "73% of suppliers prefer self-service options and are willing to pay 15% more for better digital experiences.",
+        "how": "User-Centered Design: Supplier Journey Mapping → Portal Design → API Development → Testing → Phased Rollout.",
+        "whatHappens": [
+          "Automated supplier onboarding in 24h",
+          "Self-service for 90% of all supplier requests",
+          "Real-time collaboration and document exchange",
+          "Automated compliance and certification management"
+        ],
+        "whatNotHappens": [
+          "No complicated registration processes",
+          "No manual support for standard requests",
+          "No proprietary data formats or interfaces"
+        ],
+        "kpis": [
+          "24h onboarding time for new suppliers",
+          "90% self-service rate",
+          "75% reduction in support tickets",
+          "50% faster contract processing"
+        ],
+        "deliverables": [
+          "Supplier Portal Platform Setup",
+          "Automated Onboarding Workflows",
+          "Document Management System",
+          "API Integration Framework",
+          "Mobile-Responsive Design",
+          "24/7 Support & Monitoring"
+        ]
+      },
+      "analytics": {
+        "name": "Spend Analytics & Intelligence",
+        "description": "Data-driven procurement strategies through advanced analytics",
+        "duration": "6-10 Weeks",
+        "investment": "€30,000 - €60,000",
+        "what": "Implementation of a comprehensive spend analytics platform for strategic procurement decisions and cost optimization.",
+        "why": "Companies with advanced spend analytics achieve 12% better cost performance and 15% higher supplier performance.",
+        "how": "Data-Driven Approach: Data Assessment → Analytics Platform Setup → Dashboard Development → Insight Generation → Action Planning.",
+        "whatHappens": [
+          "360° transparency over all procurement costs",
+          "Predictive analytics for cost optimization",
+          "Automated risk monitoring & alerting",
+          "Strategic sourcing recommendations"
+        ],
+        "whatNotHappens": [
+          "No static reports without actionable insights",
+          "No data silos between departments",
+          "No black-box analytics without traceability"
+        ],
+        "kpis": [
+          "12% cost savings in first year",
+          "95% data accuracy",
+          "< 2 seconds dashboard load times",
+          "100% coverage of all spend categories"
+        ],
+        "deliverables": [
+          "Spend Analytics Platform Setup",
+          "Interactive Executive Dashboards",
+          "Automated Report Generation",
+          "Predictive Models & Algorithms",
+          "User Training & Best Practices",
+          "Continuous Improvement Process"
+        ]
+      }
+    },
+    "cta_title": "Ready for Procurement Excellence?",
+    "cta_description": "Transform your procurement into a strategic competitive advantage. Let's discuss your optimization potential.",
+    "cta_button": "Schedule Strategy Discussion"
+  },
+  "intercultural_detail": {
+    "back": "Back to Expertise",
+    "title": "Intercultural Integration Services",
+    "subtitle": "Leading Global Projects to Success with Cultural Intelligence",
+    "description": "When technology meets culture, the most complex challenges arise. We bridge these gaps with proven cultural intelligence and deep understanding of DACH and GCC markets.",
+    "why_title": "Cultural Intelligence as Business Advantage",
+    "why_description": "In a globalized world, cultural competence is not just 'nice-to-have' – it's the decisive factor for sustainable international success.",
+    "stats": {
+      "failures": "Project failures due to cultural misunderstandings",
+      "compliance": "Average annual cultural compliance costs",
+      "success": "Higher success rate with culturally experienced teams",
+      "roi": "ROI with professional cultural management"
+    },
+    "services_title": "Intercultural Integration Services in Detail",
+    "labels": {
+      "duration": "Project Duration",
+      "investment": "Investment",
+      "what": "What",
+      "why": "Why",
+      "how": "How",
+      "whatHappens": "What Happens",
+      "whatNotHappens": "What Doesn't Happen",
+      "kpis": "Measurable KPIs",
+      "deliverables": "Deliverables"
+    },
+    "services": {
+      "process": {
+        "name": "Cross-Cultural Process Design",
+        "description": "Business processes that work and gain acceptance in every culture",
+        "duration": "6-12 Weeks",
+        "investment": "€20,000 - €45,000",
+        "what": "Development of culturally sensitive business processes that meet both local requirements and global standards.",
+        "why": "78% of global project failures arise from cultural misunderstandings and inappropriate process designs.",
+        "how": "Cultural Intelligence Framework: Cultural Analysis → Stakeholder Mapping → Process Localization → Pilot Testing → Rollout.",
+        "whatHappens": [
+          "95% acceptance of new processes in all cultures",
+          "Seamless DACH ↔ GCC integration",
+          "60% reduced implementation time",
+          "Higher employee satisfaction and compliance"
+        ],
+        "whatNotHappens": [
+          "No 'one-size-fits-all' processes",
+          "No cultural conflicts or resistance",
+          "No loss of local expertise and autonomy"
+        ],
+        "kpis": [
+          "95% cultural acceptance rate",
+          "60% faster process implementation",
+          "40% fewer culture-related conflicts",
+          "25% higher project success rate"
+        ],
+        "deliverables": [
+          "Cultural Assessment Report",
+          "Localized Process Design",
+          "Stakeholder Communication Framework",
+          "Cultural Training Materials",
+          "Implementation Roadmap",
+          "Success Metrics & Monitoring"
+        ]
+      },
+      "project": {
+        "name": "DACH ↔ GCC Project Management",
+        "description": "Professional management of complex projects between DACH and GCC regions",
+        "duration": "Project-dependent",
+        "investment": "€8,000 - €15,000/month",
+        "what": "End-to-end project management for international implementations with focus on cultural sensitivity and local expertise.",
+        "why": "International projects have 67% higher success rates with culturally experienced project managers.",
+        "how": "Agile International PM: Cultural Kickoff → Bi-Cultural Teams → Continuous Cultural Alignment → Localized Change Management.",
+        "whatHappens": [
+          "On-time delivery despite cultural complexity",
+          "Effective communication across time zones",
+          "Local team empowerment and ownership",
+          "Sustainable knowledge transfer"
+        ],
+        "whatNotHappens": [
+          "No cultural misunderstandings or conflicts",
+          "No micromanagement from headquarters",
+          "No 'lost in translation' problems"
+        ],
+        "kpis": [
+          "100% on-time delivery record",
+          "90% stakeholder satisfaction",
+          "< 5% culture-related escalations",
+          "85% local team retention"
+        ],
+        "deliverables": [
+          "Bi-Cultural Project Setup",
+          "Communication Protocols",
+          "Regular Cultural Health Checks",
+          "Localized Training Programs",
+          "Knowledge Transfer Documentation",
+          "Post-Project Cultural Assessment"
+        ]
+      },
+      "compliance": {
+        "name": "Cultural Compliance & Governance",
+        "description": "Ensuring legal and cultural compliance in international operations",
+        "duration": "4-8 Weeks",
+        "investment": "€15,000 - €35,000",
+        "what": "Development of comprehensive compliance frameworks that consider both legal and cultural requirements.",
+        "why": "Non-compliance costs average €14.8M per company annually, of which 40% is culture-related.",
+        "how": "Compliance-by-Design: Legal Mapping → Cultural Assessment → Framework Development → Implementation → Monitoring.",
+        "whatHappens": [
+          "100% legal and cultural compliance",
+          "Automated compliance monitoring",
+          "Reduced regulatory risk",
+          "Enhanced stakeholder trust"
+        ],
+        "whatNotHappens": [
+          "No costly compliance violations",
+          "No cultural faux pas or PR crises",
+          "No expensive ad-hoc compliance fixes"
+        ],
+        "kpis": [
+          "100% compliance rate",
+          "Zero regulatory violations",
+          "90% reduction in compliance costs",
+          "< 24h issue resolution time"
+        ],
+        "deliverables": [
+          "Cultural Compliance Framework",
+          "Automated Monitoring System",
+          "Risk Assessment Matrix",
+          "Escalation Procedures",
+          "Training & Awareness Programs",
+          "Regular Compliance Reports"
+        ]
+      }
+    },
+    "cta_title": "Ready for Global Excellence?",
+    "cta_description": "Turn cultural diversity into your competitive advantage. Let's discuss how we can lead your international projects to success.",
+    "cta_button": "Schedule Cultural Intelligence Consultation"
+  },
+  "leadership_detail": {
+    "back": "Back to Expertise",
+    "title": "Leadership & Transformation Services",
+    "subtitle": "Executive Leadership for Complex Change Processes",
+    "description": "When transformation needs leadership, we create the bridge between vision and execution. With proven experience in executive sparring and change leadership.",
+    "why_title": "Leadership as Transformation Enabler",
+    "why_description": "In times of exponential change, leadership is the decisive factor between transformation success and transformation fatigue.",
+    "stats": {
+      "failures": "Transformations fail due to leadership",
+      "isolated": "CEOs feel isolated in critical decisions",
+      "bottleneck": "Organizations see leadership as critical bottleneck",
+      "roi": "ROI with professional leadership development"
+    },
+    "services_title": "Leadership & Transformation Services in Detail",
+    "labels": {
+      "duration": "Engagement Duration",
+      "investment": "Investment",
+      "what": "What",
+      "why": "Why",
+      "how": "How",
+      "whatHappens": "What Happens",
+      "whatNotHappens": "What Doesn't Happen",
+      "kpis": "Measurable KPIs",
+      "deliverables": "Deliverables"
+    },
+    "services": {
+      "sparring": {
+        "name": "Executive Sparring & Strategy",
+        "description": "Strategic sparring for C-level executives in complex transformations",
+        "duration": "3-12 Months",
+        "investment": "€12,000 - €25,000/month",
+        "what": "Trusted sparring partnership for executives in strategic decisions and transformation projects.",
+        "why": "87% of CEOs state they feel isolated in critical decisions and need external expertise.",
+        "how": "Executive Partnership Model: Strategic Assessment → Confidential Sparring Sessions → Decision Support → Implementation Guidance.",
+        "whatHappens": [
+          "Sound strategic decisions under uncertainty",
+          "40% accelerated decision-making",
+          "Higher implementation success rates",
+          "Strengthened executive presence and leadership competence"
+        ],
+        "whatNotHappens": [
+          "No standard consulting approaches or templates",
+          "No loss of executive autonomy",
+          "No dependency on external consultants"
+        ],
+        "kpis": [
+          "40% faster strategic decisions",
+          "85% implementation success rate",
+          "95% executive satisfaction",
+          "60% improved team alignment"
+        ],
+        "deliverables": [
+          "Strategic Assessment & Roadmap",
+          "Monthly Executive Sparring Sessions",
+          "Decision Framework & Tools",
+          "Implementation Support",
+          "Leadership Development Plan",
+          "Confidential Progress Reviews"
+        ]
+      },
+      "agile": {
+        "name": "Agile Transformation Leadership",
+        "description": "Leading and steering complex agile transformations in traditional organizations",
+        "duration": "6-18 Months",
+        "investment": "€18,000 - €35,000/month",
+        "what": "End-to-end steering of agile transformations with focus on cultural change and sustainable change.",
+        "why": "70% of agile transformations fail due to lack of leadership support and cultural resistance.",
+        "how": "Transformation Leadership Framework: Cultural Assessment → Leadership Alignment → Phased Rollout → Continuous Coaching.",
+        "whatHappens": [
+          "Successful agile transformation without cultural shock",
+          "60% improved time-to-market",
+          "Higher employee engagement and innovation",
+          "Sustainable agile mindset development"
+        ],
+        "whatNotHappens": [
+          "No 'agile theater' without real culture change",
+          "No relapse into old ways of working after go-live",
+          "No overwhelm of teams through too rapid change"
+        ],
+        "kpis": [
+          "70% transformation success rate",
+          "60% better time-to-market",
+          "80% employee engagement score",
+          "50% fewer escalations"
+        ],
+        "deliverables": [
+          "Agile Transformation Roadmap",
+          "Leadership Coaching Program",
+          "Cultural Change Management",
+          "Team Empowerment Framework",
+          "Performance Measurement System",
+          "Sustainability Assessment"
+        ]
+      },
+      "development": {
+        "name": "Leadership Development & Empowerment",
+        "description": "Developing leadership competencies for digital transformation and international collaboration",
+        "duration": "4-12 Months",
+        "investment": "€15,000 - €30,000/program",
+        "what": "Tailored leadership development programs for executives in digital and international contexts.",
+        "why": "93% of organizations see leadership as a critical bottleneck for digital transformation and international expansion.",
+        "how": "Competency-Based Development: Assessment → Individual Development Plans → Group Coaching → Peer Learning → Impact Measurement.",
+        "whatHappens": [
+          "Measurably improved leadership competencies",
+          "Higher team performance and retention",
+          "Better change management capabilities",
+          "Stronger international leadership presence"
+        ],
+        "whatNotHappens": [
+          "No generic leadership programs without practical relevance",
+          "No training without measurable business impact",
+          "No theoretical approaches without practical application"
+        ],
+        "kpis": [
+          "25% improvement in leadership assessment scores",
+          "90% participant satisfaction",
+          "40% better team performance",
+          "70% internal promotion rate"
+        ],
+        "deliverables": [
+          "Individual Leadership Assessment",
+          "Personalized Development Plans",
+          "Group Coaching Sessions",
+          "Peer Learning Framework",
+          "Mentoring Program Setup",
+          "Impact Measurement & ROI Analysis"
+        ]
+      }
+    },
+    "cta_title": "Ready for Leadership Excellence?",
+    "cta_description": "Make your leadership team the enabler for successful transformation. Let's discuss your leadership challenges.",
+    "cta_button": "Schedule Executive Sparring"
   }
 }
