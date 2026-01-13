@@ -1,4 +1,3 @@
-import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { 
   Database, 
@@ -13,55 +12,53 @@ import {
 } from "lucide-react";
 
 const ServicesSection = () => {
-  const { t } = useTranslation();
-
   const services = [
     {
-      category: t("services.edi_category"),
+      category: "EDI Excellence",
       icon: Database,
       color: "primary",
       gradient: "from-primary/20 to-primary-glow/10",
       services: [
-        t("services.edi_service1"),
-        t("services.edi_service2"),
-        t("services.edi_service3"),
-        t("services.edi_service4")
+        "Systemarchitektur & Migrationsstrategien",
+        "Datenqualitäts-Frameworks & Business Rules",
+        "Monitoring, KPI-Visualisierung, Fehleranalyse",
+        "Performance-Optimierung & Skalierung"
       ]
     },
     {
-      category: t("services.eprocurement_category"),
+      category: "eProcurement Mastery",
       icon: ShoppingBag,
       color: "accent",
       gradient: "from-accent/20 to-accent/10",
       services: [
-        t("services.eprocurement_service1"),
-        t("services.eprocurement_service2"),
-        t("services.eprocurement_service3"),
-        t("services.eprocurement_service4")
+        "Prozessdesign & Automatisierung",
+        "Lieferanten-Onboarding & Self-Service-Portale",
+        "Compliance & eInvoicing-Strategien",
+        "Spend-Analytics & Kostentransparenz"
       ]
     },
     {
-      category: t("services.intercultural_category"),
+      category: "Interkulturelle Integration",
       icon: Globe,
       color: "secondary",
       gradient: "from-secondary/20 to-secondary/10",
       services: [
-        t("services.intercultural_service1"),
-        t("services.intercultural_service2"),
-        t("services.intercultural_service3"),
-        t("services.intercultural_service4")
+        "Cross-Cultural Process Design",
+        "Interkulturelles Stakeholder-Management",
+        "Projektkommunikation zwischen DACH & GCC",
+        "Change Management über Kulturgrenzen"
       ]
     },
     {
-      category: t("services.leadership_category"),
+      category: "Leadership & Transformation",
       icon: TrendingUp,
       color: "primary",
       gradient: "from-primary/20 to-primary-glow/10",
       services: [
-        t("services.leadership_service1"),
-        t("services.leadership_service2"),
-        t("services.leadership_service3"),
-        t("services.leadership_service4")
+        "Executive Sparring & Projektsteuerung",
+        "Training für interne EDI-/eProcurement-Rollen",
+        "Agile Methoden für Beschaffungs- und IT-Teams",
+        "Digitale Transformation Roadmaps"
       ]
     }
   ];
@@ -69,23 +66,23 @@ const ServicesSection = () => {
   const highlights = [
     {
       icon: Shield,
-      title: t("services.highlight1_title"),
-      description: t("services.highlight1_desc")
+      title: "Compliance-First",
+      description: "Alle Lösungen erfüllen höchste Compliance-Standards"
     },
     {
       icon: Zap,
-      title: t("services.highlight2_title"),
-      description: t("services.highlight2_desc")
+      title: "Agile Umsetzung",
+      description: "Schnelle Iterationen, messbare Fortschritte"
     },
     {
       icon: Users,
-      title: t("services.highlight3_title"),
-      description: t("services.highlight3_desc")
+      title: "Change Enablement",
+      description: "Befähigung Ihrer Teams für nachhaltigen Erfolg"
     },
     {
       icon: Target,
-      title: t("services.highlight4_title"),
-      description: t("services.highlight4_desc")
+      title: "ROI-Fokus",
+      description: "Messbare Geschäftsresultate von Tag 1"
     }
   ];
 
@@ -95,10 +92,10 @@ const ServicesSection = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="heading-section mb-6">
-            {t("services.title")} <span className="text-primary">{t("services.title_highlight")}</span>
+            Unsere <span className="text-primary">Leistungen</span>
           </h2>
           <p className="text-premium max-w-3xl mx-auto">
-            {t("services.subtitle")}
+            Umfassende Expertise in vier strategischen Bereichen. Jede Leistung designed für maximale Wirkung und nachhaltigen Erfolg.
           </p>
         </div>
 
@@ -144,7 +141,7 @@ const ServicesSection = () => {
                     asChild
                   >
                     <a href={`/services/${service.category.toLowerCase().replace(/\s+/g, '-')}`}>
-                      {t("services.request_consultation")}
+                      Detailberatung anfordern
                       <span className="ml-2 transform group-hover/btn:translate-x-1 transition-transform">→</span>
                     </a>
                   </Button>
@@ -157,7 +154,7 @@ const ServicesSection = () => {
         {/* Service Highlights */}
         <div className="glass-effect rounded-2xl p-8 mb-16">
           <h3 className="text-2xl font-bold text-center text-foreground mb-8">
-            {t("services.why_different")}
+            Warum unsere Leistungen anders sind
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {highlights.map((highlight, idx) => (
@@ -175,14 +172,14 @@ const ServicesSection = () => {
         {/* Process Overview */}
         <div className="text-center animate-fade-in-up">
           <h3 className="text-2xl font-bold text-foreground mb-8">
-            {t("services.process_title")}
+            Unser bewährter Prozess
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {[
-              { step: "01", title: t("services.step1_title"), desc: t("services.step1_desc") },
-              { step: "02", title: t("services.step2_title"), desc: t("services.step2_desc") },
-              { step: "03", title: t("services.step3_title"), desc: t("services.step3_desc") },
-              { step: "04", title: t("services.step4_title"), desc: t("services.step4_desc") }
+              { step: "01", title: "Strategische Analyse", desc: "Tiefgehende Bewertung Ihrer aktuellen Landschaft" },
+              { step: "02", title: "Roadmap Design", desc: "Maßgeschneiderte Transformationsstrategie" },
+              { step: "03", title: "Agile Umsetzung", desc: "Iterative Implementierung mit kontinuierlichem Feedback" },
+              { step: "04", title: "Nachhaltigkeit", desc: "Knowledge Transfer und Empowerment Ihrer Teams" }
             ].map((phase, idx) => (
               <div key={idx} className="relative">
                 <div className="glass-effect rounded-xl p-6 hover-lift">
@@ -201,12 +198,12 @@ const ServicesSection = () => {
         {/* Final CTA */}
         <div className="text-center mt-16">
           <div className="bg-gradient-hero rounded-2xl p-8 text-background max-w-3xl mx-auto">
-            <h3 className="text-3xl font-bold mb-4">{t("services.final_cta_title")}</h3>
+            <h3 className="text-3xl font-bold mb-4">Bereit für Transformation?</h3>
             <p className="text-lg mb-6 opacity-90">
-              {t("services.final_cta_subtitle")}
+              Lassen Sie uns gemeinsam erkunden, wie unsere Leistungen Ihr Unternehmen auf die nächste Stufe bringen.
             </p>
             <Button variant="outline" size="xl" className="bg-background text-foreground hover:bg-background/90">
-              {t("services.final_cta_button")}
+              Strategisches Erstgespräch vereinbaren
             </Button>
           </div>
         </div>

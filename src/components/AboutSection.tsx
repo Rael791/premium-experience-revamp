@@ -1,11 +1,8 @@
-import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Globe, Award, Target, Eye } from "lucide-react";
 import aboutBackground from "@/assets/about-background.jpg";
 
 const AboutSection = () => {
-  const { t } = useTranslation();
-
   return (
     <section 
       id="ueber-uns" 
@@ -25,12 +22,14 @@ const AboutSection = () => {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="heading-section mb-6">
-              {t("about.title")}
+              Wer wir sind
             </h2>
             <div className="max-w-4xl mx-auto">
-              <h3 className="text-3xl font-bold text-primary mb-8">{t("about.subtitle")}</h3>
+              <h3 className="text-3xl font-bold text-primary mb-8">Wir sind IQONIQ</h3>
               <p className="text-premium leading-relaxed">
-                {t("about.description")}
+                eine Boutique-Beratung, die Technologie, Management-Exzellenz und kulturelle Intelligenz zu einer Einheit formt. 
+                Gegründet von einem Experten mit über zehn Jahren Erfahrung in EDI, eProcurement und internationalem Projektmanagement, 
+                gestählt in der Schnittmenge von IT, Einkauf, Logistik und C-Level-Strategie.
               </p>
             </div>
           </div>
@@ -41,11 +40,11 @@ const AboutSection = () => {
               <Globe className="w-12 h-12 text-primary" />
             </div>
             <p className="text-lg text-foreground leading-relaxed max-w-3xl mx-auto">
-              {t("about.reach_start")} <span className="text-primary font-semibold">{t("about.reach_dach")}</span> {t("about.reach_middle")}{" "}
-              <span className="text-accent font-semibold">{t("about.reach_gcc")}</span> {t("about.reach_end")}
+              Unsere Arbeit reicht von der <span className="text-primary font-semibold">DACH-Region</span> bis in die{" "}
+              <span className="text-accent font-semibold">GCC-Staaten</span> – und verbindet deutsche Präzision mit internationaler Weitsicht.
             </p>
             <div className="mt-6 text-primary font-medium">
-              {t("about.languages")}
+              Wir sprechen vier Sprachen fließend: Technologie, Wirtschaft, Kultur und Führung.
             </div>
           </div>
 
@@ -57,13 +56,14 @@ const AboutSection = () => {
               <div className="relative z-10">
                 <div className="flex items-center mb-6">
                   <Target className="w-8 h-8 text-primary mr-3" />
-                  <h3 className="text-2xl font-bold text-foreground">{t("about.mission_title")}</h3>
+                  <h3 className="text-2xl font-bold text-foreground">Mission</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  {t("about.mission_desc")}
+                  Wir befähigen Unternehmen, ihre digitale Beschaffung so zu gestalten, dass sie nicht nur funktioniert, 
+                  sondern strategische Vorteile schafft – über Märkte, Systeme und Kulturen hinweg.
                 </p>
                 <div className="mt-6 p-4 bg-primary/5 rounded-lg border-l-4 border-primary">
-                  <p className="text-primary font-medium">{t("about.mission_highlight")}</p>
+                  <p className="text-primary font-medium">Strategische Vorteile durch digitale Excellence</p>
                 </div>
               </div>
             </div>
@@ -74,13 +74,14 @@ const AboutSection = () => {
               <div className="relative z-10">
                 <div className="flex items-center mb-6">
                   <Eye className="w-8 h-8 text-accent mr-3" />
-                  <h3 className="text-2xl font-bold text-foreground">{t("about.vision_title")}</h3>
+                  <h3 className="text-2xl font-bold text-foreground">Vision</h3>
                 </div>
                 <p className="text-muted-foreground leading-relaxed text-lg">
-                  {t("about.vision_desc")}
+                  Eine Geschäftswelt, in der EDI und eProcurement nicht als technische Pflicht, sondern als Hebel für globale 
+                  Wettbewerbsfähigkeit gesehen werden – und in der kulturelle Intelligenz genauso selbstverständlich ist wie Systemintegration.
                 </p>
                 <div className="mt-6 p-4 bg-accent/5 rounded-lg border-l-4 border-accent">
-                  <p className="text-accent font-medium">{t("about.vision_highlight")}</p>
+                  <p className="text-accent font-medium">Globale Wettbewerbsfähigkeit durch kulturelle Intelligenz</p>
                 </div>
               </div>
             </div>
@@ -88,13 +89,13 @@ const AboutSection = () => {
 
           {/* Differentiators */}
           <div className="mt-16 text-center animate-fade-in-up">
-            <h3 className="text-2xl font-bold text-foreground mb-8">{t("about.differentiators_title")}</h3>
+            <h3 className="text-2xl font-bold text-foreground mb-8">Was uns unterscheidet</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                t("about.diff1"),
-                t("about.diff2"),
-                t("about.diff3"),
-                t("about.diff4")
+                "Wir bauen strukturierte EDI-Architekturen, keine Workarounds",
+                "Wir sprechen System, Prozess und Mensch gleichzeitig",
+                "Wir navigieren souverän zwischen Compliance, Technik und Kultur",
+                "Wir kombinieren Fachintelligenz mit internationalem Taktgefühl"
               ].map((point, idx) => (
                 <div key={idx} className="glass-effect rounded-lg p-6 hover-lift group">
                   <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
@@ -109,10 +110,10 @@ const AboutSection = () => {
           {/* CTA */}
           <div className="text-center mt-16">
             <div className="bg-gradient-hero rounded-2xl p-8 text-background">
-              <h3 className="text-2xl font-bold mb-4">{t("about.cta_title")}</h3>
-              <p className="text-lg mb-6 opacity-90">{t("about.cta_subtitle")}</p>
+              <h3 className="text-2xl font-bold mb-4">IQONIQ ist nicht Add-on, sondern Grundlage.</h3>
+              <p className="text-lg mb-6 opacity-90">Für resiliente, digitale und globale Lieferketten.</p>
               <Button variant="outline" size="lg" className="bg-background text-foreground hover:bg-background/90" asChild>
-                <a href="/philosophie">{t("about.cta_button")}</a>
+                <a href="/philosophie">Mehr über unsere Philosophie erfahren</a>
               </Button>
             </div>
           </div>

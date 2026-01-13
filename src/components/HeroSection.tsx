@@ -1,11 +1,8 @@
-import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
 import heroImage from "@/assets/hero-business-team.jpg";
 
 const HeroSection = () => {
-  const { t } = useTranslation();
-
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden pt-20">
       {/* Background Image with Overlay */}
@@ -28,40 +25,41 @@ const HeroSection = () => {
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 glass-effect rounded-full px-6 py-3 text-sm font-medium">
             <Sparkles className="w-4 h-4 text-primary" />
-            <span>{t("hero.badge")}</span>
+            <span>Boutique-Beratung für digitale Excellence</span>
           </div>
 
           {/* Main Headline */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mt-20 mb-20">
-            {t("hero.headline1")} <br />
-            <span className="text-primary">{t("hero.headline2")}</span><br />
-            {t("hero.headline3")}
+            Wir machen aus <br />
+            <span className="text-primary">Datenaustausch</span><br />
+            Geschäftsintelligenz.
           </h1>
 
           {/* Subheadline */}
           <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-20">
-            {t("hero.subheadline")}
+            Wenn EDI nicht nur laufen, sondern skalieren muss – ohne Ausfall, ohne Kompromisse. 
+            Strategische, skalierbare und nachhaltige Lösungen für globale Wettbewerbsfähigkeit.
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
             <Button variant="hero" size="xl" className="group" asChild>
               <a href="#kontakt">
-                {t("hero.cta1")}
+                Strategisches Erstgespräch
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>
             <Button variant="premium" size="xl" asChild>
-              <a href="#expertise">{t("hero.cta2")}</a>
+              <a href="#expertise">Unsere Expertise entdecken</a>
             </Button>
           </div>
 
           {/* Key Points */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-16 max-w-4xl mx-auto">
             {[
-              { title: t("hero.keypoint1_title"), desc: t("hero.keypoint1_desc") },
-              { title: t("hero.keypoint2_title"), desc: t("hero.keypoint2_desc") },
-              { title: t("hero.keypoint3_title"), desc: t("hero.keypoint3_desc") }
+              { title: "DACH → GCC", desc: "Internationale Projekterfahrung" },
+              { title: "10+ Jahre", desc: "EDI & eProcurement Expertise" },
+              { title: "4 Sprachen", desc: "Technologie, Wirtschaft, Kultur, Führung" }
             ].map((item, idx) => (
               <div key={idx} className="glass-effect rounded-lg p-6 hover-lift">
                 <div className="text-2xl font-bold text-primary mb-2">{item.title}</div>

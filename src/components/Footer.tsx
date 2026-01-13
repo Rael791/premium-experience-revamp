@@ -1,8 +1,6 @@
-import { useTranslation } from "react-i18next";
 import { Mail, MapPin, Linkedin } from "lucide-react";
 
 const Footer = () => {
-  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -12,10 +10,11 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="text-3xl font-bold mb-4">
-              <span className="gradient-shift">IQONIQ</span>
+              <span className="gradient-shift">IQOIQ</span>
             </div>
             <p className="text-muted-foreground leading-relaxed max-w-md">
-              {t("footer.description")}
+              Boutique-Beratung für EDI Excellence, eProcurement Mastery und interkulturelle Integration. 
+              Strategische Lösungen für globale Wettbewerbsfähigkeit.
             </p>
             <div className="mt-6 space-y-2">
               <div className="flex items-center space-x-3">
@@ -24,7 +23,7 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span className="text-muted-foreground">{t("footer.locations")}</span>
+                <span className="text-muted-foreground">Remote & vor Ort in DACH, GCC & NA</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Linkedin className="w-4 h-4 text-primary" />
@@ -37,23 +36,23 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">{t("footer.expertise")}</h3>
+            <h3 className="font-semibold text-foreground mb-4">Expertise</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#expertise" className="hover:text-primary transition-colors">{t("footer.edi")}</a></li>
-              <li><a href="#expertise" className="hover:text-primary transition-colors">{t("footer.eprocurement")}</a></li>
-              <li><a href="#expertise" className="hover:text-primary transition-colors">{t("footer.intercultural")}</a></li>
-              <li><a href="#expertise" className="hover:text-primary transition-colors">{t("footer.leadership")}</a></li>
+              <li><a href="#expertise" className="hover:text-primary transition-colors">EDI Excellence</a></li>
+              <li><a href="#expertise" className="hover:text-primary transition-colors">eProcurement Mastery</a></li>
+              <li><a href="#expertise" className="hover:text-primary transition-colors">Interkulturelle Integration</a></li>
+              <li><a href="#expertise" className="hover:text-primary transition-colors">Leadership & Transformation</a></li>
             </ul>
           </div>
 
           {/* Company */}
           <div>
-            <h3 className="font-semibold text-foreground mb-4">{t("footer.company")}</h3>
+            <h3 className="font-semibold text-foreground mb-4">Unternehmen</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#ueber-uns" className="hover:text-primary transition-colors">{t("footer.about")}</a></li>
-              <li><a href="#leistungen" className="hover:text-primary transition-colors">{t("footer.services")}</a></li>
-              <li><a href="#kontakt" className="hover:text-primary transition-colors">{t("footer.contact")}</a></li>
-              <li><a href="#kontakt" className="hover:text-primary transition-colors">{t("footer.consultation")}</a></li>
+              <li><a href="#ueber-uns" className="hover:text-primary transition-colors">Über uns</a></li>
+              <li><a href="#leistungen" className="hover:text-primary transition-colors">Leistungen</a></li>
+              <li><a href="#kontakt" className="hover:text-primary transition-colors">Kontakt</a></li>
+              <li><a href="#kontakt" className="hover:text-primary transition-colors">Strategisches Erstgespräch</a></li>
             </ul>
           </div>
         </div>
@@ -62,17 +61,17 @@ const Footer = () => {
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} IQONIQ / RSL INTEGRATE. {t("footer.rights")}
+              © {currentYear} IQOIQ / RSL INTEGRATE. Alle Rechte vorbehalten.
             </p>
             <div className="flex space-x-6 text-sm text-muted-foreground">
-              <a href="#" className="hover:text-primary transition-colors">{t("footer.privacy")}</a>
-              <a href="#" className="hover:text-primary transition-colors">{t("footer.imprint")}</a>
-              <a href="#" className="hover:text-primary transition-colors">{t("footer.terms")}</a>
+              <a href="#" className="hover:text-primary transition-colors">Datenschutz</a>
+              <a href="#" className="hover:text-primary transition-colors">Impressum</a>
+              <a href="#" className="hover:text-primary transition-colors">AGB</a>
             </div>
           </div>
           <div className="text-center mt-4">
             <p className="text-xs text-muted-foreground">
-              {t("footer.tagline")}
+              RSL INTEGRATE ist nicht Add-on, sondern Grundlage. Für resiliente, digitale und globale Lieferketten.
             </p>
           </div>
         </div>

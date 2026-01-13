@@ -1,29 +1,26 @@
-import { useTranslation } from "react-i18next";
 import { AlertTriangle, TrendingDown, Shield, Users } from "lucide-react";
 
 const ProblemsSection = () => {
-  const { t } = useTranslation();
-
   const problems = [
     {
       icon: TrendingDown,
-      title: t("problems.problem1_title"),
-      description: t("problems.problem1_desc")
+      title: "Systeme, die bei Wachstum kollabieren",
+      description: "Fehlende Skalierbarkeit führt zu kritischen Ausfällen in entscheidenden Momenten"
     },
     {
       icon: AlertTriangle,
-      title: t("problems.problem2_title"),
-      description: t("problems.problem2_desc")
+      title: "Prozesse, die nicht kompatibel sind",
+      description: "Inkompatible Workflows blockieren die digitale Transformation"
     },
     {
       icon: Shield,
-      title: t("problems.problem3_title"),
-      description: t("problems.problem3_desc")
+      title: "Daten, denen niemand traut",
+      description: "Mangelnde Datenqualität untergräbt Entscheidungsfindung und Compliance"
     },
     {
       icon: Users,
-      title: t("problems.problem4_title"),
-      description: t("problems.problem4_desc")
+      title: "Kulturen, die nicht zueinander finden",
+      description: "Interkulturelle Missverständnisse verzögern internationale Projekte"
     }
   ];
 
@@ -32,10 +29,11 @@ const ProblemsSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in-up">
           <h2 className="heading-section mb-6">
-            {t("problems.title")} <span className="text-primary">{t("problems.title_highlight")}</span> {t("problems.title_end")}
+            Die Lücken, die <span className="text-primary">niemand schließt</span> – bis jetzt
           </h2>
           <p className="text-premium">
-            {t("problems.subtitle")}
+            Digitale Beschaffung und EDI sind zum Pflichtprogramm geworden. Doch während alle von Integration sprechen, 
+            redet fast niemand über das, was Projekte wirklich scheitern lässt:
           </p>
         </div>
 
@@ -70,10 +68,10 @@ const ProblemsSection = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20"></div>
             <div className="relative z-10">
               <h3 className="text-4xl font-bold text-background mb-6 drop-shadow-lg">
-                {t("problems.cta_title")}
+                Wir schließen genau diese Lücken
               </h3>
               <div className="flex flex-wrap justify-center gap-4">
-                {[t("problems.cta_word1"), t("problems.cta_word2"), t("problems.cta_word3")].map((word, idx) => (
+                {["strategisch", "skalierbar", "nachhaltig"].map((word, idx) => (
                   <span 
                     key={idx}
                     className="inline-block bg-background/20 backdrop-blur-sm text-background font-bold text-xl px-6 py-3 rounded-full border border-background/30 shadow-lg"

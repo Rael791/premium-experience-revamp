@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
@@ -8,7 +7,6 @@ import { Calendar, Send, User, Mail, Phone, Building } from "lucide-react";
 import { toast } from "sonner";
 
 const ContactForm = () => {
-  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     firstName: "",
     lastName: "",
@@ -24,8 +22,11 @@ const ContactForm = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
-    toast.success(t("form.success_message"));
+    // Here you would integrate with your calendar system
+    // For now, we'll show a success message
+    toast.success("Anfrage erfolgreich gesendet! Wir melden uns innerhalb von 24 Stunden bei Ihnen.");
     
+    // Reset form
     setFormData({
       firstName: "",
       lastName: "",
@@ -44,12 +45,12 @@ const ContactForm = () => {
   };
 
   const topics = [
-    t("form.topic_edi"),
-    t("form.topic_eprocurement"),
-    t("form.topic_intercultural"),
-    t("form.topic_leadership"),
-    t("form.topic_strategy"),
-    t("form.topic_other")
+    "EDI Excellence",
+    "eProcurement Mastery",
+    "Interkulturelle Integration",
+    "Leadership & Transformation",
+    "Strategische Beratung",
+    "Sonstiges"
   ];
 
   const timeSlots = [
@@ -66,10 +67,10 @@ const ContactForm = () => {
       <div className="glass-effect rounded-2xl p-8">
         <div className="text-center mb-8">
           <h3 className="text-2xl font-bold text-foreground mb-4">
-            {t("form.title")}
+            Strategisches Erstgespräch vereinbaren
           </h3>
           <p className="text-muted-foreground">
-            {t("form.subtitle")}
+            Lassen Sie uns Ihre spezifischen Herausforderungen besprechen und gemeinsam die optimale Lösung entwickeln.
           </p>
         </div>
 
@@ -79,24 +80,24 @@ const ContactForm = () => {
             <div className="space-y-2">
               <label className="text-sm font-medium text-foreground flex items-center">
                 <User className="w-4 h-4 mr-2" />
-                {t("form.first_name")} *
+                Vorname *
               </label>
               <Input
                 required
                 value={formData.firstName}
                 onChange={(e) => handleInputChange("firstName", e.target.value)}
-                placeholder={t("form.first_name_placeholder")}
+                placeholder="Ihr Vorname"
               />
             </div>
             <div className="space-y-2">
               <label className="text-sm font-medium text-foreground">
-                {t("form.last_name")} *
+                Nachname *
               </label>
               <Input
                 required
                 value={formData.lastName}
                 onChange={(e) => handleInputChange("lastName", e.target.value)}
-                placeholder={t("form.last_name_placeholder")}
+                placeholder="Ihr Nachname"
               />
             </div>
           </div>
@@ -105,20 +106,20 @@ const ContactForm = () => {
             <div className="space-y-2">
               <label className="text-sm font-medium text-foreground flex items-center">
                 <Mail className="w-4 h-4 mr-2" />
-                {t("form.email_label")} *
+                E-Mail *
               </label>
               <Input
                 type="email"
                 required
                 value={formData.email}
                 onChange={(e) => handleInputChange("email", e.target.value)}
-                placeholder={t("form.email_placeholder")}
+                placeholder="ihre.email@unternehmen.de"
               />
             </div>
             <div className="space-y-2">
               <label className="text-sm font-medium text-foreground flex items-center">
                 <Phone className="w-4 h-4 mr-2" />
-                {t("form.phone_label")}
+                Telefon
               </label>
               <Input
                 value={formData.phone}
@@ -131,24 +132,24 @@ const ContactForm = () => {
           <div className="space-y-2">
             <label className="text-sm font-medium text-foreground flex items-center">
               <Building className="w-4 h-4 mr-2" />
-              {t("form.company")} *
+              Unternehmen *
             </label>
             <Input
               required
               value={formData.company}
               onChange={(e) => handleInputChange("company", e.target.value)}
-              placeholder={t("form.company_placeholder")}
+              placeholder="Ihr Unternehmen"
             />
           </div>
 
           {/* Topic Selection */}
           <div className="space-y-2">
             <label className="text-sm font-medium text-foreground">
-              {t("form.topic_label")} *
+              Beratungsthema *
             </label>
             <Select value={formData.topic} onValueChange={(value) => handleInputChange("topic", value)}>
               <SelectTrigger>
-                <SelectValue placeholder={t("form.topic_placeholder")} />
+                <SelectValue placeholder="Wählen Sie Ihr Hauptthema" />
               </SelectTrigger>
               <SelectContent>
                 {topics.map((topic) => (
@@ -165,7 +166,7 @@ const ContactForm = () => {
             <div className="space-y-2">
               <label className="text-sm font-medium text-foreground flex items-center">
                 <Calendar className="w-4 h-4 mr-2" />
-                {t("form.preferred_date")}
+                Wunschtermin
               </label>
               <Input
                 type="date"
@@ -176,11 +177,11 @@ const ContactForm = () => {
             </div>
             <div className="space-y-2">
               <label className="text-sm font-medium text-foreground">
-                {t("form.preferred_time")}
+                Uhrzeit
               </label>
               <Select value={formData.preferredTime} onValueChange={(value) => handleInputChange("preferredTime", value)}>
                 <SelectTrigger>
-                  <SelectValue placeholder={t("form.time_placeholder")} />
+                  <SelectValue placeholder="Wunschzeit auswählen" />
                 </SelectTrigger>
                 <SelectContent>
                   {timeSlots.map((slot) => (
@@ -196,12 +197,12 @@ const ContactForm = () => {
           {/* Message */}
           <div className="space-y-2">
             <label className="text-sm font-medium text-foreground">
-              {t("form.message_label")}
+              Ihre Nachricht
             </label>
             <Textarea
               value={formData.message}
               onChange={(e) => handleInputChange("message", e.target.value)}
-              placeholder={t("form.message_placeholder")}
+              placeholder="Beschreiben Sie kurz Ihre aktuelle Situation und Ihre Ziele..."
               rows={4}
             />
           </div>
@@ -209,11 +210,11 @@ const ContactForm = () => {
           {/* Submit Button */}
           <Button type="submit" size="lg" className="w-full group">
             <Send className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
-            {t("form.submit_button")}
+            Termin anfragen
           </Button>
 
           <p className="text-xs text-muted-foreground text-center">
-            {t("form.privacy_notice")}
+            * Pflichtfelder. Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.
           </p>
         </form>
       </div>
