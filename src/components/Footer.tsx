@@ -65,7 +65,8 @@ const Footer = () => {
             </p>
             <div className="flex space-x-6 text-sm text-muted-foreground">
               <a href="#" className="hover:text-primary transition-colors">Datenschutz</a>
-              <a href="#" className="hover:text-primary transition-colors">Impressum</a>
+             {/* <a href="#" className="hover:text-primary transition-colors">Impressum</a>*/}
+              <Link to="/impressum">
               <a href="#" className="hover:text-primary transition-colors">AGB</a>
             </div>
           </div>
