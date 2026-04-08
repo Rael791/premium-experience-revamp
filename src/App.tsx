@@ -10,6 +10,7 @@ import InterculturalDetail from "./pages/InterculturalDetail";
 import LeadershipDetail from "./pages/LeadershipDetail";
 import ServiceDetail from "./pages/ServiceDetail";
 import Philosophy from "./pages/Philosophy";
+import Impressum from "./pages/Impressum";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,12 +23,13 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-        <Route path="/expertise/edi-excellence" element={<EDIExcellenceDetail />} />
-        <Route path="/expertise/eprocurement-mastery" element={<EProcurementDetail />} />
-        <Route path="/expertise/interkulturelle-integration" element={<InterculturalDetail />} />
-        <Route path="/expertise/leadership-und-transformation" element={<LeadershipDetail />} />
-        <Route path="/services/:slug" element={<ServiceDetail />} />
+          <Route path="/expertise/edi-excellence" element={<EDIExcellenceDetail />} />
+          <Route path="/expertise/eprocurement-mastery" element={<EProcurementDetail />} />
+          <Route path="/expertise/interkulturelle-integration" element={<InterculturalDetail />} />
+          <Route path="/expertise/leadership-und-transformation" element={<LeadershipDetail />} />
+          <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/philosophie" element={<Philosophy />} />
+          <Route path="/impressum" element={<Impressum />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
