@@ -1,4 +1,5 @@
 import { Mail, MapPin, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -64,10 +65,9 @@ const Footer = () => {
               © {currentYear} IQOIQ / RSL INTEGRATE. Alle Rechte vorbehalten.
             </p>
             <div className="flex space-x-6 text-sm text-muted-foreground">
-              <a href="#" className="hover:text-primary transition-colors">Datenschutz</a>
-             {/* <a href="#" className="hover:text-primary transition-colors">Impressum</a>*/}
-              <Link to="/impressum">
-              <a href="#" className="hover:text-primary transition-colors">AGB</a>
+              <Link to="/datenschutz" className="hover:text-primary transition-colors">Datenschutz</Link>
+              <Link to="/impressum" className="hover:text-primary transition-colors">Impressum</Link>
+              <Link to="/agb" className="hover:text-primary transition-colors">AGB</Link>
             </div>
           </div>
           <div className="text-center mt-4">
