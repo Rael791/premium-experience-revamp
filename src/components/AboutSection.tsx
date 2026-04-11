@@ -25,7 +25,7 @@ const AboutSection = () => {
               Wer wir sind
             </h2>
             <div className="max-w-4xl mx-auto">
-              <h3 className="text-3xl font-bold text-primary mb-8">Wir sind IQONIQ</h3>
+              <h3 className="text-3xl font-bold text-primary mb-8">Wir sind GLOBALE DATA</h3>
               <p className="text-premium leading-relaxed">
                 eine Boutique-Beratung, die Technologie, Management-Exzellenz und kulturelle Intelligenz zu einer Einheit formt. 
                 Gegründet von einem Experten mit über zehn Jahren Erfahrung in EDI, eProcurement und internationalem Projektmanagement, 
@@ -110,7 +110,7 @@ const AboutSection = () => {
           {/* CTA */}
           <div className="text-center mt-16">
             <div className="bg-gradient-hero rounded-2xl p-8 text-background">
-              <h3 className="text-2xl font-bold mb-4">IQONIQ ist nicht Add-on, sondern Grundlage.</h3>
+              <h3 className="text-2xl font-bold mb-4">GLOBALE DATA ist nicht Add-on, sondern Grundlage.</h3>
               <p className="text-lg mb-6 opacity-90">Für resiliente, digitale und globale Lieferketten.</p>
               <Button variant="outline" size="lg" className="bg-background text-foreground hover:bg-background/90" asChild>
                 <a href="/philosophie">Mehr über unsere Philosophie erfahren</a>
