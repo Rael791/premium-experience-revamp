@@ -11,6 +11,7 @@ import LeadershipDetail from "./pages/LeadershipDetail";
 import ServiceDetail from "./pages/ServiceDetail";
 import Philosophy from "./pages/Philosophy";
 import Impressum from "./pages/Impressum";
+import Datenschutz from "./pages/Datenschutz";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +31,7 @@ const App = () => (
           <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/philosophie" element={<Philosophy />} />
           <Route path="/impressum" element={<Impressum />} />
+          <Route path="/datenschutz" element={<Datenschutz />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
