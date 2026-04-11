@@ -10,7 +10,6 @@ const Navigation = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
-
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -31,7 +30,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="text-2xl font-bold">
-            <a href="/" className="gradient-shift">IQONIQ</a>
+            <a href="/" className="gradient-shift">GLOBALE DATA</a>
           </div>
 
           {/* Desktop Navigation */}
