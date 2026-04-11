@@ -11,20 +11,20 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="text-3xl font-bold mb-4">
-              <span className="gradient-shift">IQOIQ</span>
+              <span className="gradient-shift">GLOBALE DATA</span>
             </div>
             <p className="text-muted-foreground leading-relaxed max-w-md">
-              Boutique-Beratung für EDI Excellence, eProcurement Mastery und interkulturelle Integration. 
+              Boutique-Beratung für EDI Excellence, eProcurement Mastery und interkulturelle Integration.
               Strategische Lösungen für globale Wettbewerbsfähigkeit.
             </p>
             <div className="mt-6 space-y-2">
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-primary" />
-                <span className="text-muted-foreground">hello@rsl-integrate.com</span>
+                <span className="text-muted-foreground">contact@globaledata.de</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span className="text-muted-foreground">Remote & vor Ort in DACH, GCC & NA</span>
+                <span className="text-muted-foreground">Remote & vor Ort in DACH, GCC & MOROCCO</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Linkedin className="w-4 h-4 text-primary" />
@@ -62,7 +62,7 @@ const Footer = () => {
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} IQOIQ / RSL INTEGRATE. Alle Rechte vorbehalten.
+              © {currentYear} GLOBALE DATA / IQONIQ. Alle Rechte vorbehalten.
             </p>
             <div className="flex space-x-6 text-sm text-muted-foreground">
               <Link to="/datenschutz" className="hover:text-primary transition-colors">Datenschutz</Link>
@@ -72,7 +72,7 @@ const Footer = () => {
           </div>
           <div className="text-center mt-4">
             <p className="text-xs text-muted-foreground">
-              RSL INTEGRATE ist nicht Add-on, sondern Grundlage. Für resiliente, digitale und globale Lieferketten.
+              GLOBALE DATA ist nicht Add-on, sondern Grundlage. Für resiliente, digitale und globale Lieferketten.
             </p>
           </div>
         </div>
