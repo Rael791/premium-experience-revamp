@@ -122,7 +122,7 @@ const Philosophy = () => {
                 Unsere <span className="text-primary">Philosophie</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                Warum IQONIQ nicht nur ein weiterer Beratungspartner ist, sondern die strategische Grundlage 
+                Warum GLOBALE DATA nicht nur ein weiterer Beratungspartner ist, sondern die strategische Grundlage 
                 für Ihren digitalen Erfolg.
               </p>
             </div>
