@@ -62,7 +62,7 @@ const Footer = () => {
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} GLOBALE DATA / IQONIQ. Alle Rechte vorbehalten.
+              © {currentYear} GLOBALE DATA. Alle Rechte vorbehalten.
             </p>
             <div className="flex space-x-6 text-sm text-muted-foreground">
               <Link to="/datenschutz" className="hover:text-primary transition-colors">Datenschutz</Link>
