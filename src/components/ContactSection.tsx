@@ -7,9 +7,9 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "contact@iqoniq.com",
+      value: "contact@globaledata.de",
       description: "Direkter Kontakt für alle Anfragen",
-      action: "mailto:contact@iqoniq.com"
+      action: "mailto:contact@globaledata.de"
     },
     {
       icon: MapPin,
