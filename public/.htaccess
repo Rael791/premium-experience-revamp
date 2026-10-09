@@ -1,0 +1,12 @@
+# Hostinger: alle Unterseiten (z. B. /impressum) an die React-App weiterleiten
+RewriteEngine On
+RewriteBase /
+
+# HTTPS erzwingen
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [L,R=301]
+
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]
