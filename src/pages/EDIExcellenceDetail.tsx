@@ -11,8 +11,6 @@ const EDIExcellenceDetail = () => {
     {
       name: "EDI Architektur Assessment",
       description: "Umfassende Bewertung Ihrer EDI-Infrastruktur für strategische Entscheidungen",
-      duration: "2-4 Wochen",
-      investment: "€15,000 - €25,000",
       icon: Database,
       what: "Vollständige Analyse Ihrer bestehenden EDI-Landschaft mit Fokus auf Skalierbarkeit, Performance und Zukunftsfähigkeit.",
       why: "90% der Unternehmen haben versteckte Ineffizienzen in ihrer EDI-Infrastruktur, die Millionen kosten können.",
@@ -46,8 +44,6 @@ const EDIExcellenceDetail = () => {
     {
       name: "Business Rules Engine Implementation",
       description: "Intelligente Automatisierung für Datenvalidierung und Geschäftslogik",
-      duration: "6-12 Wochen", 
-      investment: "€35,000 - €75,000",
       icon: Zap,
       what: "Implementierung einer robusten Business Rules Engine für automatisierte Entscheidungsfindung und Datenverarbeitung.",
       why: "Manuelle Datenvalidierung kostet durchschnittlich 40 Stunden pro Woche und führt zu 15% Fehlerquote.",
@@ -81,8 +77,6 @@ const EDIExcellenceDetail = () => {
     {
       name: "EDI Migration & Integration",
       description: "Nahtlose Migration zu modernen EDI-Plattformen ohne Geschäftsunterbrechung",
-      duration: "12-20 Wochen",
-      investment: "€50,000 - €150,000", 
       icon: Shield,
       what: "Zero-Downtime Migration bestehender EDI-Systeme auf moderne, cloudbasierte Plattformen mit vollständiger Datenintegrität.",
       why: "Legacy EDI-Systeme verursachen 65% mehr Ausfälle und 3x höhere Wartungskosten als moderne Lösungen.",
@@ -210,16 +204,6 @@ const EDIExcellenceDetail = () => {
                           </div>
                         </div>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                          <div className="bg-card/50 rounded-lg p-4">
-                            <div className="text-sm text-muted-foreground">Projektdauer</div>
-                            <div className="font-semibold text-foreground">{service.duration}</div>
-                          </div>
-                          <div className="bg-card/50 rounded-lg p-4">
-                            <div className="text-sm text-muted-foreground">Investment</div>
-                            <div className="font-semibold text-foreground">{service.investment}</div>
-                          </div>
-                        </div>
                       </div>
                     </div>
 

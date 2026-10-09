@@ -67,7 +67,6 @@ const Footer = () => {
             <div className="flex space-x-6 text-sm text-muted-foreground">
               <Link to="/datenschutz" className="hover:text-primary transition-colors">Datenschutz</Link>
               <Link to="/impressum" className="hover:text-primary transition-colors">Impressum</Link>
-              <Link to="/agb" className="hover:text-primary transition-colors">AGB</Link>
             </div>
           </div>
           <div className="text-center mt-4">

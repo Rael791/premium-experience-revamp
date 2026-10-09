@@ -11,8 +11,6 @@ const InterculturalDetail = () => {
     {
       name: "Cross-Cultural Process Design",
       description: "Geschäftsprozesse, die in jeder Kultur funktionieren und Akzeptanz finden",
-      duration: "6-12 Wochen",
-      investment: "€20,000 - €45,000",
       icon: Globe2,
       what: "Entwicklung kultursensibler Geschäftsprozesse, die sowohl lokale Anforderungen als auch globale Standards erfüllen.",
       why: "78% der globalen Projektfehler entstehen durch kulturelle Missverständnisse und unpassende Prozessdesigns.",
@@ -46,8 +44,6 @@ const InterculturalDetail = () => {
     {
       name: "DACH ↔ GCC Project Management",
       description: "Professionelles Management komplexer Projekte zwischen DACH und GCC Regionen",
-      duration: "Projektabhängig", 
-      investment: "€8,000 - €15,000/Monat",
       icon: Users,
       what: "End-to-End Projektmanagement für internationale Implementierungen mit Fokus auf kulturelle Sensibilität und lokale Expertise.",
       why: "Internationale Projekte haben 67% höhere Erfolgsraten mit kulturell erfahrenen Projektmanagern.",
@@ -81,8 +77,6 @@ const InterculturalDetail = () => {
     {
       name: "Cultural Compliance & Governance",
       description: "Sicherstellung rechtlicher und kultureller Compliance in internationalen Operationen",
-      duration: "4-8 Wochen",
-      investment: "€15,000 - €35,000", 
       icon: Shield,
       what: "Entwicklung umfassender Compliance-Frameworks, die sowohl rechtliche als auch kulturelle Anforderungen berücksichtigen.",
       why: "Non-Compliance Kosten betragen durchschnittlich €14.8M pro Unternehmen jährlich, davon 40% kulturbedingt.",
@@ -210,16 +204,6 @@ const InterculturalDetail = () => {
                           </div>
                         </div>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                          <div className="bg-card/50 rounded-lg p-4">
-                            <div className="text-sm text-muted-foreground">Projektdauer</div>
-                            <div className="font-semibold text-foreground">{service.duration}</div>
-                          </div>
-                          <div className="bg-card/50 rounded-lg p-4">
-                            <div className="text-sm text-muted-foreground">Investment</div>
-                            <div className="font-semibold text-foreground">{service.investment}</div>
-                          </div>
-                        </div>
                       </div>
                     </div>
 

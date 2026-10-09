@@ -11,8 +11,6 @@ const LeadershipDetail = () => {
     {
       name: "Executive Sparring & Strategy",
       description: "Strategisches Sparring für C-Level Executives bei komplexen Transformationen",
-      duration: "3-12 Monate",
-      investment: "€12,000 - €25,000/Monat",
       icon: Users2,
       what: "Vertrauensvolle Sparring-Partnerschaft für Führungskräfte bei strategischen Entscheidungen und Transformationsprojekten.",
       why: "87% der CEOs geben an, dass sie sich in kritischen Entscheidungen isoliert fühlen und externe Expertise benötigen.",
@@ -46,8 +44,6 @@ const LeadershipDetail = () => {
     {
       name: "Agile Transformation Leadership",
       description: "Führung und Steuerung komplexer Agile Transformationen in traditionellen Organisationen",
-      duration: "6-18 Monate", 
-      investment: "€18,000 - €35,000/Monat",
       icon: Zap,
       what: "End-to-End Steuerung von Agile Transformationen mit Fokus auf kulturellen Wandel und nachhaltiger Veränderung.",
       why: "70% der Agile Transformationen scheitern aufgrund mangelnder Leadership-Unterstützung und kultureller Widerstände.",
@@ -81,8 +77,6 @@ const LeadershipDetail = () => {
     {
       name: "Leadership Development & Empowerment",
       description: "Entwicklung von Führungskompetenzen für digitale Transformation und internationale Zusammenarbeit",
-      duration: "4-12 Monate",
-      investment: "€15,000 - €30,000/Programm", 
       icon: Target,
       what: "Maßgeschneiderte Leadership-Entwicklungsprogramme für Führungskräfte in digitalen und internationalen Kontexten.",
       why: "93% der Organisationen sehen Leadership als kritischen Engpass für digitale Transformation und internationale Expansion.",
@@ -210,16 +204,6 @@ const LeadershipDetail = () => {
                           </div>
                         </div>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                          <div className="bg-card/50 rounded-lg p-4">
-                            <div className="text-sm text-muted-foreground">Engagement-Dauer</div>
-                            <div className="font-semibold text-foreground">{service.duration}</div>
-                          </div>
-                          <div className="bg-card/50 rounded-lg p-4">
-                            <div className="text-sm text-muted-foreground">Investment</div>
-                            <div className="font-semibold text-foreground">{service.investment}</div>
-                          </div>
-                        </div>
                       </div>
                     </div>
 

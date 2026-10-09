@@ -11,8 +11,6 @@ const EProcurementDetail = () => {
     {
       name: "Procurement Process Optimization",
       description: "End-to-End Optimierung Ihrer Beschaffungsprozesse für maximale Effizienz",
-      duration: "8-16 Wochen",
-      investment: "€25,000 - €50,000",
       icon: ShoppingCart,
       what: "Komplette Neugestaltung Ihrer Procurement-Workflows mit Fokus auf Automatisierung, Compliance und User Experience.",
       why: "Manuelle Beschaffungsprozesse kosten durchschnittlich €180 pro Bestellung und dauern 12-15 Tage.",
@@ -46,8 +44,6 @@ const EProcurementDetail = () => {
     {
       name: "Supplier Portal & Self-Service",
       description: "Moderne Lieferantenportale für nahtlose B2B-Zusammenarbeit",
-      duration: "10-14 Wochen", 
-      investment: "€40,000 - €80,000",
       icon: Users,
       what: "Implementierung intuitiver Self-Service-Portale für Lieferanten mit automatisierten Onboarding- und Kollaborationsprozessen.",
       why: "73% der Lieferanten bevorzugen Self-Service-Optionen und sind bereit, 15% mehr für bessere digitale Erfahrungen zu zahlen.",
@@ -81,8 +77,6 @@ const EProcurementDetail = () => {
     {
       name: "Spend Analytics & Intelligence",
       description: "Datengetriebene Beschaffungsstrategien durch Advanced Analytics",
-      duration: "6-10 Wochen",
-      investment: "€30,000 - €60,000", 
       icon: TrendingUp,
       what: "Implementierung einer umfassenden Spend Analytics Plattform für strategische Beschaffungsentscheidungen und Kostenstimierung.",
       why: "Unternehmen mit Advanced Spend Analytics erreichen 12% bessere Kostenperformance und 15% höhere Lieferantenperformance.",
@@ -220,16 +214,6 @@ const EProcurementDetail = () => {
                           </div>
                         </div>
                         
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                          <div className="bg-card/50 rounded-lg p-4">
-                            <div className="text-sm text-muted-foreground">Projektdauer</div>
-                            <div className="font-semibold text-foreground">{service.duration}</div>
-                          </div>
-                          <div className="bg-card/50 rounded-lg p-4">
-                            <div className="text-sm text-muted-foreground">Investment</div>
-                            <div className="font-semibold text-foreground">{service.investment}</div>
-                          </div>
-                        </div>
                       </div>
                     </div>
 

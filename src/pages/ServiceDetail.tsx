@@ -21,21 +21,18 @@ const ServiceDetail = () => {
           name: "EDI Architecture Assessment",
           description: "Comprehensive evaluation of your current EDI infrastructure",
           deliverables: ["Current State Analysis", "Gap Assessment", "Future State Roadmap", "ROI Calculation"],
-          duration: "2-4 weeks",
           approach: "We analyze your existing EDI systems, identify bottlenecks, and design a scalable architecture that grows with your business."
         },
         {
           name: "System Migration & Integration",
           description: "Seamless migration to modern EDI platforms",
           deliverables: ["Migration Strategy", "System Integration", "Data Mapping", "Go-Live Support"],
-          duration: "8-16 weeks",
           approach: "Zero-downtime migration with comprehensive testing and rollback strategies to ensure business continuity."
         },
         {
           name: "Business Rules Engine",
           description: "Intelligent automation for data validation and processing",
           deliverables: ["Rules Configuration", "Validation Framework", "Exception Handling", "Monitoring Dashboard"],
-          duration: "4-8 weeks",
           approach: "Implement sophisticated business logic that ensures data quality and automates decision-making processes."
         }
       ]
@@ -51,21 +48,18 @@ const ServiceDetail = () => {
           name: "Procurement Process Optimization",
           description: "Streamline your entire procurement lifecycle",
           deliverables: ["Process Mapping", "Workflow Design", "Automation Setup", "User Training"],
-          duration: "6-12 weeks",
           approach: "Design user-centric processes that balance efficiency, compliance, and stakeholder satisfaction."
         },
         {
           name: "Supplier Portal Implementation",
           description: "Self-service portals for enhanced supplier collaboration",
           deliverables: ["Portal Configuration", "Onboarding Process", "Integration APIs", "Performance Metrics"],
-          duration: "8-14 weeks",
           approach: "Create intuitive self-service experiences that reduce manual effort and improve supplier relationships."
         },
         {
           name: "Spend Analytics & Intelligence",
           description: "Data-driven insights for strategic procurement decisions",
           deliverables: ["Analytics Dashboard", "Reporting Framework", "KPI Definitions", "Actionable Insights"],
-          duration: "4-8 weeks",
           approach: "Transform procurement data into strategic intelligence that drives cost savings and supplier performance."
         }
       ]
@@ -141,12 +135,6 @@ const ServiceDetail = () => {
                         <div className="mb-6">
                           <h4 className="font-semibold text-foreground mb-3">Unser Ansatz:</h4>
                           <p className="text-muted-foreground leading-relaxed">{item.approach}</p>
-                        </div>
-                        <div className="flex items-center space-x-6 text-sm">
-                          <div className="flex items-center space-x-2">
-                            <div className="w-2 h-2 bg-primary rounded-full"></div>
-                            <span className="text-muted-foreground">Dauer: {item.duration}</span>
-                          </div>
                         </div>
                       </div>
                       

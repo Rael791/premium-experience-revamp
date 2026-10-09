@@ -1,8 +1,19 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Mail, MapPin, Globe, Phone, FileText, Scale, AlertCircle } from "lucide-react";
+import { ArrowLeft, Mail, MapPin, Globe, FileText, Scale, AlertCircle, Linkedin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import type { ReactNode } from "react";
+
+const Block = ({ icon, title, children }: { icon: ReactNode; title: string; children: ReactNode }) => (
+  <div className="bg-card border border-border rounded-2xl p-8">
+    <div className="flex items-center space-x-3 mb-6">
+      <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">{icon}</div>
+      <h2 className="text-xl font-semibold text-foreground">{title}</h2>
+    </div>
+    <div className="space-y-4 text-muted-foreground leading-relaxed">{children}</div>
+  </div>
+);
 
 const Impressum = () => {
   return (
@@ -33,9 +44,6 @@ const Impressum = () => {
             <h1 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="gradient-shift">Impressum</span>
             </h1>
-            <p className="text-muted-foreground text-lg">
-              Angaben gemäß § 5 TMG (Telemediengesetz)
-            </p>
           </div>
         </div>
       </section>
@@ -45,202 +53,129 @@ const Impressum = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl space-y-10">
 
-            {/* Anbieter */}
-            <div className="bg-card border border-border rounded-2xl p-8">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
-                  <FileText className="w-5 h-5 text-primary" />
-                </div>
-                <h2 className="text-xl font-semibold text-foreground">Anbieter</h2>
+            <Block icon={<FileText className="w-5 h-5 text-primary" />} title="Angaben gemäß § 5 DDG">
+              <div className="space-y-1">
+                <p className="font-semibold text-foreground text-lg">Rachid El Mokhi</p>
+                <p>RAELDATA – Beratung für EDI und eProcurement</p>
+                <p>Merkelbuckel 11</p>
+                <p>77815 Bühl</p>
+                <p>Deutschland</p>
               </div>
-              <div className="space-y-2 text-muted-foreground">
-                <p className="font-semibold text-foreground text-lg">RAELDATA</p>
-                <p>Rachid S. L.</p>
-                <p>[Straße und Hausnummer]</p>
-                <p>[PLZ Ort], Deutschland</p>
-              </div>
-            </div>
+            </Block>
 
-            {/* Kontakt */}
-            <div className="bg-card border border-border rounded-2xl p-8">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-primary" />
-                </div>
-                <h2 className="text-xl font-semibold text-foreground">Kontakt</h2>
+            <Block icon={<Mail className="w-5 h-5 text-primary" />} title="Kontakt">
+              <div className="flex items-center space-x-3">
+                <Phone className="w-4 h-4 text-primary shrink-0" />
+                <span>
+                  Telefon:{" "}
+                  <a href="tel:+491629620582" className="text-primary hover:underline">
+                    +49 162 9620582
+                  </a>
+                </span>
               </div>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-muted-foreground">
-                  <Mail className="w-4 h-4 text-primary shrink-0" />
-                  <span>
-                    E-Mail:{" "}
-                    <a
-                      href="mailto:contact@raeldata.de"
-                      className="text-primary hover:underline"
-                    >
-                      contact@raeldata.de
-                    </a>
-                  </span>
-                </div>
-                <div className="flex items-center space-x-3 text-muted-foreground">
-                  <Globe className="w-4 h-4 text-primary shrink-0" />
-                  <span>
-                    Web:{" "}
-                    <a
-                      href="https://raeldata.de"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary hover:underline"
-                    >
-                      raeldata.de
-                    </a>
-                  </span>
-                </div>
-                <div className="flex items-center space-x-3 text-muted-foreground">
-                  <Phone className="w-4 h-4 text-primary shrink-0" />
-                  <span>Telefon: [Telefonnummer einfügen]</span>
-                </div>
+              <div className="flex items-center space-x-3">
+                <Mail className="w-4 h-4 text-primary shrink-0" />
+                <span>
+                  E-Mail:{" "}
+                  <a href="mailto:contact@raeldata.de" className="text-primary hover:underline">
+                    contact@raeldata.de
+                  </a>
+                </span>
               </div>
-            </div>
+              <div className="flex items-center space-x-3">
+                <Globe className="w-4 h-4 text-primary shrink-0" />
+                <span>
+                  Web:{" "}
+                  <a href="https://raeldata.de" className="text-primary hover:underline">
+                    raeldata.de
+                  </a>
+                </span>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Linkedin className="w-4 h-4 text-primary shrink-0" />
+                <span>
+                  LinkedIn:{" "}
+                  <a
+                    href="https://www.linkedin.com/in/elmokhirachid/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary hover:underline"
+                  >
+                    linkedin.com/in/elmokhirachid
+                  </a>
+                </span>
+              </div>
+            </Block>
 
-            {/* Steuerliche Angaben */}
-            <div className="bg-card border border-border rounded-2xl p-8">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
-                  <Scale className="w-5 h-5 text-primary" />
-                </div>
-                <h2 className="text-xl font-semibold text-foreground">Steuerliche Angaben</h2>
+            <Block
+              icon={<MapPin className="w-5 h-5 text-primary" />}
+              title="Verantwortlich für den Inhalt gemäß § 18 Abs. 2 MStV"
+            >
+              <div className="space-y-1">
+                <p className="text-foreground font-medium">Rachid El Mokhi</p>
+                <p>Merkelbuckel 11</p>
+                <p>77815 Bühl</p>
               </div>
-              <div className="space-y-3 text-muted-foreground">
-                <div>
-                  <span className="text-foreground font-medium">Umsatzsteuer-Identifikationsnummer</span>
-                  <p className="mt-1">gemäß § 27a UStG: [USt-IdNr. einfügen]</p>
-                </div>
-                <div>
-                  <span className="text-foreground font-medium">Steuernummer</span>
-                  <p className="mt-1">[Steuernummer einfügen]</p>
-                </div>
-                <div>
-                  <span className="text-foreground font-medium">Zuständiges Finanzamt</span>
-                  <p className="mt-1">Finanzamt [Ort einfügen]</p>
-                </div>
-              </div>
-            </div>
+            </Block>
 
-            {/* Berufsrechtliche Angaben (optional für Berater) */}
-            <div className="bg-card border border-border rounded-2xl p-8">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
-                  <FileText className="w-5 h-5 text-primary" />
-                </div>
-                <h2 className="text-xl font-semibold text-foreground">Tätigkeitsbeschreibung</h2>
-              </div>
-              <div className="space-y-2 text-muted-foreground">
-                <p>
-                  RAELDATA ist eine Boutique-Unternehmensberatung mit Spezialisierung auf
-                  EDI Excellence, eProcurement Mastery und interkulturelle Integration. Die Tätigkeit
-                  umfasst strategische IT-Beratung, Prozessoptimierung sowie die Implementierung
-                  elektronischer Datenaustausch- und Beschaffungslösungen für Unternehmen im DACH-Raum
-                  und international.
-                </p>
-              </div>
-            </div>
+            <Block icon={<Scale className="w-5 h-5 text-primary" />} title="Verbraucherstreitbeilegung">
+              <p>
+                Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
+                Verbraucherschlichtungsstelle teilzunehmen.
+              </p>
+            </Block>
 
-            {/* Verantwortlich für den Inhalt */}
-            <div className="bg-card border border-border rounded-2xl p-8">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-primary" />
-                </div>
-                <h2 className="text-xl font-semibold text-foreground">
-                  Verantwortlich für den Inhalt
-                </h2>
-              </div>
-              <div className="space-y-1 text-muted-foreground">
-                <p className="text-foreground font-medium">Rachid S. L.</p>
-                <p>[Straße und Hausnummer]</p>
-                <p>[PLZ Ort], Deutschland</p>
-                <p className="mt-2 text-sm">
-                  (gemäß § 18 Abs. 2 MStV)
-                </p>
-              </div>
-            </div>
-
-            {/* Haftungsausschluss */}
-            <div className="bg-card border border-border rounded-2xl p-8">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center">
-                  <AlertCircle className="w-5 h-5 text-primary" />
-                </div>
-                <h2 className="text-xl font-semibold text-foreground">Haftungsausschluss</h2>
-              </div>
-
-              <div className="space-y-6 text-muted-foreground text-sm leading-relaxed">
+            <Block icon={<AlertCircle className="w-5 h-5 text-primary" />} title="Haftungsausschluss">
+              <div className="space-y-6 text-sm">
                 <div>
                   <h3 className="text-foreground font-semibold mb-2">Haftung für Inhalte</h3>
                   <p>
-                    Die Inhalte unserer Seiten wurden mit größter Sorgfalt erstellt. Für die
-                    Richtigkeit, Vollständigkeit und Aktualität der Inhalte können wir jedoch keine
-                    Gewähr übernehmen. Als Diensteanbieter sind wir gemäß § 7 Abs. 1 TMG für eigene
-                    Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8
-                    bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte
-                    oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu
-                    forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+                    Die Inhalte dieser Website wurden mit größter Sorgfalt erstellt. Für die
+                    Richtigkeit, Vollständigkeit und Aktualität der Inhalte übernehmen wir jedoch
+                    keine Gewähr. Als Diensteanbieter sind wir für eigene Inhalte auf diesen Seiten
+                    nach den allgemeinen Gesetzen verantwortlich. Wir sind jedoch nicht verpflichtet,
+                    übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach
+                    Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen.
+                    Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach
+                    den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung
+                    ist erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich.
+                    Sobald uns entsprechende Rechtsverletzungen bekannt werden, entfernen wir diese
+                    Inhalte umgehend.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-foreground font-semibold mb-2">Haftung für Links</h3>
                   <p>
-                    Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir
-                    keinen Einfluss haben. Deshalb können wir für diese fremden Inhalte auch keine
-                    Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige
-                    Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden
-                    zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige
-                    Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente
-                    inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte
-                    einer Rechtsverletzung nicht zumutbar.
+                    Unser Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte wir
+                    keinen Einfluss haben. Für diese fremden Inhalte können wir daher keine Gewähr
+                    übernehmen; verantwortlich ist stets der jeweilige Anbieter oder Betreiber der
+                    Seiten. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche
+                    Rechtsverstöße überprüft; rechtswidrige Inhalte waren zu diesem Zeitpunkt nicht
+                    erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist ohne
+                    konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden
+                    von Rechtsverletzungen entfernen wir derartige Links umgehend.
                   </p>
                 </div>
 
                 <div>
                   <h3 className="text-foreground font-semibold mb-2">Urheberrecht</h3>
                   <p>
-                    Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten
-                    unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung,
+                    Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten
+                    unterliegen dem deutschen Urheberrecht. Vervielfältigung, Bearbeitung,
                     Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechts
                     bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
                     Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen
-                    Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht vom Betreiber
-                    erstellt wurden, werden die Urheberrechte Dritter beachtet.
-                  </p>
-                </div>
-
-                <div>
-                  <h3 className="text-foreground font-semibold mb-2">Streitschlichtung</h3>
-                  <p>
-                    Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS)
-                    bereit:{" "}
-                    <a
-                      href="https://ec.europa.eu/consumers/odr/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary hover:underline"
-                    >
-                      https://ec.europa.eu/consumers/odr/
-                    </a>
-                    . Unsere E-Mail-Adresse finden Sie oben im Impressum. Wir sind nicht bereit oder
-                    verpflichtet, an Streitbeilegungsverfahren vor einer
-                    Verbraucherschlichtungsstelle teilzunehmen.
+                    Gebrauch gestattet. Soweit Inhalte auf dieser Seite nicht vom Betreiber erstellt
+                    wurden, werden die Urheberrechte Dritter beachtet und entsprechend
+                    gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam
+                    werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von
+                    Rechtsverletzungen entfernen wir derartige Inhalte umgehend.
                   </p>
                 </div>
               </div>
-            </div>
+            </Block>
 
-            {/* Stand */}
-            <p className="text-sm text-muted-foreground text-right">
-              Stand: {new Date().toLocaleDateString("de-DE", { month: "long", year: "numeric" })}
-            </p>
           </div>
         </div>
       </section>
