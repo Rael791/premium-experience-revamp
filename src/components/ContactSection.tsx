@@ -21,9 +21,9 @@ const ContactSection = () => {
     {
       icon: Linkedin,
       title: "LinkedIn",
-      value: "@rachids",
+      value: "@elmokhirachid",
       description: "Vernetzen Sie sich mit uns",
-      action: "https://linkedin.com/in/rachids"
+      action: "https://www.linkedin.com/in/elmokhirachid/"
     },
     {
       icon: Calendar,

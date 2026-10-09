@@ -28,8 +28,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Linkedin className="w-4 h-4 text-primary" />
-                <a href="https://linkedin.com/in/rachids" className="text-muted-foreground hover:text-primary transition-colors">
-                  @rachids
+                <a href="https://www.linkedin.com/in/elmokhirachid/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">
+                  @elmokhirachid
                 </a>
               </div>
             </div>
