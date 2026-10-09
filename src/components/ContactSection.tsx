@@ -7,9 +7,9 @@ const ContactSection = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "contact@globaledata.de",
+      value: "contact@raeldata.de",
       description: "Direkter Kontakt für alle Anfragen",
-      action: "mailto:contact@globaledata.de"
+      action: "mailto:contact@raeldata.de"
     },
     {
       icon: MapPin,

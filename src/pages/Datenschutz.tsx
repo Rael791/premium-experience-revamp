@@ -67,14 +67,14 @@ const Datenschutz = () => {
 
             <Block icon={<UserCheck className="w-5 h-5 text-primary" />} title="1. Verantwortlicher">
               <div className="space-y-1">
-                <p className="font-semibold text-foreground">[Firmenname]</p>
+                <p className="font-semibold text-foreground">RAELDATA</p>
                 <p>[Vor- und Nachname]</p>
                 <p>[Straße und Hausnummer]</p>
                 <p>[PLZ Ort], Deutschland</p>
                 <p>
                   E-Mail:{" "}
-                  <a href="mailto:[E-Mail-Adresse]" className="text-primary hover:underline">
-                    [E-Mail-Adresse]
+                  <a href="mailto:contact@raeldata.de" className="text-primary hover:underline">
+                    contact@raeldata.de
                   </a>
                 </p>
               </div>

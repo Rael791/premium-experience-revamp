@@ -54,7 +54,7 @@ const Impressum = () => {
                 <h2 className="text-xl font-semibold text-foreground">Anbieter</h2>
               </div>
               <div className="space-y-2 text-muted-foreground">
-                <p className="font-semibold text-foreground text-lg">IQONIQ / RSL INTEGRATE</p>
+                <p className="font-semibold text-foreground text-lg">RAELDATA</p>
                 <p>Rachid S. L.</p>
                 <p>[Straße und Hausnummer]</p>
                 <p>[PLZ Ort], Deutschland</p>
@@ -75,10 +75,10 @@ const Impressum = () => {
                   <span>
                     E-Mail:{" "}
                     <a
-                      href="mailto:hello@rsl-integrate.com"
+                      href="mailto:contact@raeldata.de"
                       className="text-primary hover:underline"
                     >
-                      hello@rsl-integrate.com
+                      contact@raeldata.de
                     </a>
                   </span>
                 </div>
@@ -87,12 +87,12 @@ const Impressum = () => {
                   <span>
                     Web:{" "}
                     <a
-                      href="https://globaledata.de"
+                      href="https://raeldata.de"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="text-primary hover:underline"
                     >
-                      globaledata.de
+                      raeldata.de
                     </a>
                   </span>
                 </div>
@@ -137,7 +137,7 @@ const Impressum = () => {
               </div>
               <div className="space-y-2 text-muted-foreground">
                 <p>
-                  IQONIQ / RSL INTEGRATE ist eine Boutique-Unternehmensberatung mit Spezialisierung auf
+                  RAELDATA ist eine Boutique-Unternehmensberatung mit Spezialisierung auf
                   EDI Excellence, eProcurement Mastery und interkulturelle Integration. Die Tätigkeit
                   umfasst strategische IT-Beratung, Prozessoptimierung sowie die Implementierung
                   elektronischer Datenaustausch- und Beschaffungslösungen für Unternehmen im DACH-Raum

@@ -11,7 +11,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="md:col-span-2">
             <div className="text-3xl font-bold mb-4">
-              <span className="gradient-shift">GLOBALE DATA</span>
+              <span className="gradient-shift">RAELDATA</span>
             </div>
             <p className="text-muted-foreground leading-relaxed max-w-md">
               Boutique-Beratung für EDI Excellence, eProcurement Mastery und interkulturelle Integration.
@@ -20,7 +20,7 @@ const Footer = () => {
             <div className="mt-6 space-y-2">
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-primary" />
-                <span className="text-muted-foreground">contact@globaledata.de</span>
+                <span className="text-muted-foreground">contact@raeldata.de</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-4 h-4 text-primary" />
@@ -62,7 +62,7 @@ const Footer = () => {
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} GLOBALE DATA. Alle Rechte vorbehalten.
+              © {currentYear} RAELDATA. Alle Rechte vorbehalten.
             </p>
             <div className="flex space-x-6 text-sm text-muted-foreground">
               <Link to="/datenschutz" className="hover:text-primary transition-colors">Datenschutz</Link>
@@ -72,7 +72,7 @@ const Footer = () => {
           </div>
           <div className="text-center mt-4">
             <p className="text-xs text-muted-foreground">
-              GLOBALE DATA ist nicht Add-on, sondern Grundlage. Für resiliente, digitale und globale Lieferketten.
+              RAELDATA ist nicht Add-on, sondern Grundlage. Für resiliente, digitale und globale Lieferketten.
             </p>
           </div>
         </div>
