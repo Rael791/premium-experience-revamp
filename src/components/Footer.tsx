@@ -39,10 +39,10 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-foreground mb-4">Expertise</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#expertise" className="hover:text-primary transition-colors">EDI Excellence</a></li>
-              <li><a href="#expertise" className="hover:text-primary transition-colors">eProcurement Mastery</a></li>
-              <li><a href="#expertise" className="hover:text-primary transition-colors">Interkulturelle Integration</a></li>
-              <li><a href="#expertise" className="hover:text-primary transition-colors">Leadership & Transformation</a></li>
+              <li><a href="/#expertise" className="hover:text-primary transition-colors">EDI Excellence</a></li>
+              <li><a href="/#expertise" className="hover:text-primary transition-colors">eProcurement Mastery</a></li>
+              <li><a href="/#expertise" className="hover:text-primary transition-colors">Interkulturelle Integration</a></li>
+              <li><a href="/#expertise" className="hover:text-primary transition-colors">Leadership & Transformation</a></li>
             </ul>
           </div>
 
@@ -50,10 +50,11 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-foreground mb-4">Unternehmen</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
-              <li><a href="#ueber-uns" className="hover:text-primary transition-colors">Über uns</a></li>
-              <li><a href="#leistungen" className="hover:text-primary transition-colors">Leistungen</a></li>
-              <li><a href="#kontakt" className="hover:text-primary transition-colors">Kontakt</a></li>
-              <li><a href="#kontakt" className="hover:text-primary transition-colors">Strategisches Erstgespräch</a></li>
+              <li><a href="/#ueber-uns" className="hover:text-primary transition-colors">Über uns</a></li>
+              <li><a href="/#leistungen" className="hover:text-primary transition-colors">Leistungen</a></li>
+              <li><a href="/training" className="hover:text-primary transition-colors">Training</a></li>
+              <li><a href="/#kontakt" className="hover:text-primary transition-colors">Kontakt</a></li>
+              <li><a href="/#kontakt" className="hover:text-primary transition-colors">Strategisches Erstgespräch</a></li>
             </ul>
           </div>
         </div>

@@ -16,10 +16,11 @@ const Navigation = () => {
 
   const navItems = [
     { href: "/", label: "Home" },
-    { href: "#ueber-uns", label: "Über uns" },
-    { href: "#expertise", label: "Expertise" },
-    { href: "#leistungen", label: "Leistungen" },
-    { href: "#kontakt", label: "Kontakt" },
+    { href: "/#ueber-uns", label: "Über uns" },
+    { href: "/#expertise", label: "Expertise" },
+    { href: "/#leistungen", label: "Leistungen" },
+    { href: "/training", label: "Training" },
+    { href: "/#kontakt", label: "Kontakt" },
   ];
 
   return (
@@ -45,7 +46,7 @@ const Navigation = () => {
               </a>
             ))}
             <Button variant="hero" size="lg" asChild>
-              <a href="#kontakt">Strategisches Erstgespräch</a>
+              <a href="/#kontakt">Strategisches Erstgespräch</a>
             </Button>
           </div>
 
@@ -72,7 +73,7 @@ const Navigation = () => {
               </a>
             ))}
             <Button variant="hero" size="lg" className="w-full" asChild>
-              <a href="#kontakt" onClick={() => setIsMobileMenuOpen(false)}>
+              <a href="/#kontakt" onClick={() => setIsMobileMenuOpen(false)}>
                 Strategisches Erstgespräch
               </a>
             </Button>

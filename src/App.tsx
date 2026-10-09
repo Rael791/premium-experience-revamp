@@ -14,6 +14,7 @@ import Impressum from "./pages/Impressum";
 import Datenschutz from "./pages/Datenschutz";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
+import Training from "./pages/Training";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/expertise/interkulturelle-integration" element={<InterculturalDetail />} />
           <Route path="/expertise/leadership-und-transformation" element={<LeadershipDetail />} />
           <Route path="/services/:slug" element={<ServiceDetail />} />
+          <Route path="/training" element={<Training />} />
           <Route path="/philosophie" element={<Philosophy />} />
           <Route path="/impressum" element={<Impressum />} />
           <Route path="/datenschutz" element={<Datenschutz />} />
