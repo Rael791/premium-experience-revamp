@@ -151,6 +151,11 @@ const Datenschutz = () => {
                   <br />
                   77815 Bühl
                   <br />
+                  Telefon:{" "}
+                  <a href="tel:+491629620582" className="text-primary hover:underline">
+                    +49 162 9620582
+                  </a>
+                  <br />
                   E-Mail:{" "}
                   <a href="mailto:contact@raeldata.de" className="text-primary hover:underline">
                     contact@raeldata.de

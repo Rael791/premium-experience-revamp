@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, Mail, MapPin, Globe, FileText, Scale, AlertCircle, Linkedin } from "lucide-react";
+import { ArrowLeft, Mail, MapPin, Globe, FileText, Scale, AlertCircle, Linkedin, Phone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
@@ -64,6 +64,15 @@ const Impressum = () => {
             </Block>
 
             <Block icon={<Mail className="w-5 h-5 text-primary" />} title="Kontakt">
+              <div className="flex items-center space-x-3">
+                <Phone className="w-4 h-4 text-primary shrink-0" />
+                <span>
+                  Telefon:{" "}
+                  <a href="tel:+491629620582" className="text-primary hover:underline">
+                    +49 162 9620582
+                  </a>
+                </span>
+              </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-4 h-4 text-primary shrink-0" />
                 <span>
