@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { 
 import { t } from "@/i18n";
+import { 
   Database, 
   ShoppingBag, 
   Globe, 
