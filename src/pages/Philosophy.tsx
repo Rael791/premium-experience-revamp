@@ -4,9 +4,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 import philosophyHero from "@/assets/philosophy-hero.jpg";
+import { t } from "@/i18n";
 
 const Philosophy = () => {
-  const philosophyPillars = [
+  const philosophyPillars = t({
+    de: [
     {
       icon: Target,
       title: "Strategische Präzision",
@@ -51,9 +53,57 @@ const Philosophy = () => {
         "Cross-Cultural Change Management"
       ]
     }
-  ];
+  ],
+    fr: [
+    {
+      icon: Target,
+      title: "Précision stratégique",
+      description: "Nous ne nous contentons pas d'agir sur l'opérationnel, nous pensons stratégie. Chaque décision technique est prise au regard de vos objectifs business.",
+      details: [
+        "Analyse de l'impact business avant chaque mise en œuvre",
+        "Architectures de solutions orientées ROI",
+        "Élaboration de feuilles de route stratégiques",
+        "Une communication adaptée à la direction"
+      ]
+    },
+    {
+      icon: Lightbulb,
+      title: "Esprit d'innovation",
+      description: "Nous regardons au-delà de l'évidence et trouvons les solutions que d'autres ne voient pas. L'innovation naît à la croisée des disciplines.",
+      details: [
+        "Bonnes pratiques issues de plusieurs secteurs",
+        "Évaluation des technologies émergentes",
+        "Ateliers d'innovation",
+        "Des architectures conçues pour durer"
+      ]
+    },
+    {
+      icon: Shield,
+      title: "Conformité & sécurité",
+      description: "Dans un monde de réglementations et de cybermenaces, la conformité n'est pas un supplément, mais le fondement de toutes nos solutions.",
+      details: [
+        "Traitement des données conforme au RGPD et à la loi marocaine 09-08",
+        "Conformité aux exigences des groupes internationaux",
+        "Sécurité dès la conception",
+        "Traçabilité et documentation"
+      ]
+    },
+    {
+      icon: Globe,
+      title: "Intelligence culturelle",
+      description: "Les affaires internationales exigent une compréhension culturelle. Nous évoluons avec aisance entre les standards allemands et les usages internationaux.",
+      details: [
+        "Connaissance des cultures d'affaires Europe – Maroc – Golfe",
+        "Équipes de projet multiculturelles",
+        "Standards de conformité internationaux",
+        "Conduite du changement interculturelle"
+      ]
+    }
+  ],
+  });
 
-  const uniqueFactors = [
+  const uniqueFactors = t({
+    de: [
     {
       title: "Boutique-Ansatz",
       description: "Keine Massenabfertigung, sondern maßgeschneiderte Lösungen für Ihre spezifischen Herausforderungen.",
@@ -74,9 +124,33 @@ const Philosophy = () => {
       description: "Lokale Präsenz in Europa und etablierte Partnerschaften im Nahen Osten.",
       metric: "DACH + GCC Expertise"
     }
-  ];
+  ],
+    fr: [
+    {
+      title: "Une approche sur mesure",
+      description: "Pas de solutions en série, mais des réponses adaptées à vos enjeux spécifiques.",
+      metric: "100 % de solutions individuelles"
+    },
+    {
+      title: "Une expertise de niveau direction",
+      description: "Un accès direct à un conseil senior, sans niveaux hiérarchiques ni consultants juniors.",
+      metric: "Échanges avec la direction"
+    },
+    {
+      title: "Technologie + management",
+      description: "Une combinaison rare d'expertise technique approfondie et de compréhension stratégique du management.",
+      metric: "10+ ans d'expérience"
+    },
+    {
+      title: "Une portée internationale",
+      description: "Une présence en Europe, au Maroc et des partenariats établis au Moyen-Orient.",
+      metric: "Expertise Europe + Maroc"
+    }
+  ],
+  });
 
-  const workingPrinciples = [
+  const workingPrinciples = t({
+    de: [
     {
       principle: "Verstehen vor Handeln",
       description: "Wir investieren Zeit in das Verständnis Ihrer Geschäftslogik, bevor wir technische Lösungen vorschlagen."
@@ -93,7 +167,26 @@ const Philosophy = () => {
       principle: "Kulturelle Sensibilität",
       description: "Berücksichtigung lokaler Geschäftspraktiken und regulatorischer Besonderheiten."
     }
-  ];
+  ],
+    fr: [
+    {
+      principle: "Comprendre avant d'agir",
+      description: "Nous prenons le temps de comprendre votre logique métier avant de proposer des solutions techniques."
+    },
+    {
+      principle: "La transparence en tout",
+      description: "Une communication claire sur les défis, les risques et des délais réalistes."
+    },
+    {
+      principle: "La durabilité au cœur",
+      description: "Des solutions qui fonctionnent aujourd'hui et créent encore de la valeur dans 5 ans."
+    },
+    {
+      principle: "Sensibilité culturelle",
+      description: "La prise en compte des pratiques d'affaires locales et des spécificités réglementaires."
+    }
+  ],
+  });
 
   return (
     <div className="min-h-screen bg-background">
@@ -115,15 +208,14 @@ const Philosophy = () => {
             <div className="max-w-4xl mx-auto text-center">
               <a href="/" className="inline-flex items-center text-primary hover:text-primary/80 mb-8 group">
                 <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-                Zurück zur Startseite
+                {t({ de: "Zurück zur Startseite", fr: "Retour à l'accueil" })}
               </a>
               
               <h1 className="text-5xl font-bold text-foreground mb-6">
-                Unsere <span className="text-primary">Philosophie</span>
+                {t({ de: "Unsere", fr: "Notre" })} <span className="text-primary">{t({ de: "Philosophie", fr: "philosophie" })}</span>
               </h1>
               <p className="text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-                Warum RAELDATA nicht nur ein weiterer Beratungspartner ist, sondern die strategische Grundlage 
-                für Ihren digitalen Erfolg.
+                {t({ de: "Warum RAELDATA nicht nur ein weiterer Beratungspartner ist, sondern die strategische Grundlage für Ihren digitalen Erfolg.", fr: "Pourquoi RAELDATA n'est pas un cabinet de conseil de plus, mais le socle stratégique de votre réussite digitale." })}
               </p>
             </div>
           </div>
@@ -135,11 +227,10 @@ const Philosophy = () => {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold text-foreground mb-6">
-                  Warum wir <span className="text-primary">unverzichtbar</span> sind
+                  {t({ de: "Warum wir", fr: "Pourquoi nous sommes" })} <span className="text-primary">{t({ de: "unverzichtbar", fr: "indispensables" })}</span>{t({ de: " sind", fr: "" })}
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                  In einer Welt voller Standardlösungen und oberflächlicher Beratung schaffen wir echten, 
-                  messbaren und nachhaltigen Wert.
+                  {t({ de: "In einer Welt voller Standardlösungen und oberflächlicher Beratung schaffen wir echten, messbaren und nachhaltigen Wert.", fr: "Dans un monde de solutions standard et de conseil superficiel, nous créons une valeur réelle, mesurable et durable." })}
                 </p>
               </div>
 
@@ -166,10 +257,10 @@ const Philosophy = () => {
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold text-foreground mb-6">
-                  Die vier <span className="text-primary">Säulen</span> unserer Philosophie
+                  {t({ de: "Die vier", fr: "Les quatre" })} <span className="text-primary">{t({ de: "Säulen", fr: "piliers" })}</span> {t({ de: "unserer Philosophie", fr: "de notre philosophie" })}
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                  Unsere Arbeitsweise basiert auf vier fundamentalen Prinzipien, die jeden unserer Projekte prägen.
+                  {t({ de: "Unsere Arbeitsweise basiert auf vier fundamentalen Prinzipien, die jedes unserer Projekte prägen.", fr: "Notre façon de travailler repose sur quatre principes fondamentaux qui guident chacun de nos projets." })}
                 </p>
               </div>
 
@@ -215,11 +306,10 @@ const Philosophy = () => {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-16">
                 <h2 className="text-4xl font-bold text-foreground mb-6">
-                  Wie wir <span className="text-primary">arbeiten</span>
+                  {t({ de: "Wie wir", fr: "Notre façon de" })} <span className="text-primary">{t({ de: "arbeiten", fr: "travailler" })}</span>
                 </h2>
                 <p className="text-lg text-muted-foreground">
-                  Unsere Arbeitsweise ist geprägt von Prinzipien, die sich in über einem Jahrzehnt 
-                  internationaler Projekte bewährt haben.
+                  {t({ de: "Unsere Arbeitsweise ist geprägt von Prinzipien, die sich in über einem Jahrzehnt internationaler Projekte bewährt haben.", fr: "Notre méthode repose sur des principes éprouvés en plus de dix ans de projets internationaux." })}
                 </p>
               </div>
 
@@ -247,31 +337,32 @@ const Philosophy = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl font-bold text-foreground mb-8">
-                Unser <span className="text-primary">Ziel</span>
+                {t({ de: "Unser", fr: "Notre" })} <span className="text-primary">{t({ de: "Ziel", fr: "objectif" })}</span>
               </h2>
               <div className="glass-effect rounded-2xl p-12">
                 <p className="text-xl text-foreground leading-relaxed mb-8">
-                  "Wir wollen nicht der größte Beratungspartner sein – wir wollen der <span className="text-primary font-bold">entscheidende</span> sein."
+                  {t({ de: "„Wir wollen nicht der größte Beratungspartner sein – wir wollen der", fr: "« Nous ne voulons pas être le plus grand partenaire de conseil – nous voulons être le" })}{" "}
+                  <span className="text-primary font-bold">{t({ de: "entscheidende", fr: "plus décisif" })}</span>
+                  {t({ de: " sein.“", fr: ". »" })}
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                  Unser Erfolg misst sich nicht an der Anzahl unserer Projekte, sondern an der strategischen Wirkung, 
-                  die wir für unsere Kunden erzielen. Wir schaffen Grundlagen, auf denen Unternehmen jahrelang aufbauen können.
+                  {t({ de: "Unser Erfolg misst sich nicht an der Anzahl unserer Projekte, sondern an der strategischen Wirkung, die wir für unsere Kunden erzielen. Wir schaffen Grundlagen, auf denen Unternehmen jahrelang aufbauen können.", fr: "Notre succès ne se mesure pas au nombre de projets, mais à l'impact stratégique que nous créons pour nos clients. Nous posons des fondations sur lesquelles les entreprises peuvent bâtir pendant des années." })}
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
                   <div className="text-center">
                     <TrendingUp className="w-8 h-8 text-primary mx-auto mb-3" />
                     <div className="text-2xl font-bold text-primary">10+</div>
-                    <div className="text-sm text-muted-foreground">Jahre Expertise</div>
+                    <div className="text-sm text-muted-foreground">{t({ de: "Jahre Expertise", fr: "ans d'expertise" })}</div>
                   </div>
                   <div className="text-center">
                     <Globe className="w-8 h-8 text-primary mx-auto mb-3" />
                     <div className="text-2xl font-bold text-primary">3</div>
-                    <div className="text-sm text-muted-foreground">Kontinente</div>
+                    <div className="text-sm text-muted-foreground">{t({ de: "Kontinente", fr: "continents" })}</div>
                   </div>
                   <div className="text-center">
                     <Award className="w-8 h-8 text-primary mx-auto mb-3" />
-                    <div className="text-2xl font-bold text-primary">100%</div>
-                    <div className="text-sm text-muted-foreground">Individuelle Lösungen</div>
+                    <div className="text-2xl font-bold text-primary">{t({ de: "100%", fr: "100 %" })}</div>
+                    <div className="text-sm text-muted-foreground">{t({ de: "Individuelle Lösungen", fr: "de solutions sur mesure" })}</div>
                   </div>
                 </div>
               </div>
@@ -284,11 +375,10 @@ const Philosophy = () => {
           <div className="container mx-auto px-6">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-foreground mb-6">
-                Bereit für echte <span className="text-primary">Transformation</span>?
+                {t({ de: "Bereit für echte", fr: "Prêt pour une vraie" })} <span className="text-primary">{t({ de: "Transformation", fr: "transformation" })}</span>{t({ de: "?", fr: " ?" })}
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Lassen Sie uns in einem strategischen Erstgespräch erkunden, wie unsere Philosophie 
-                Ihr Unternehmen voranbringen kann.
+                {t({ de: "Lassen Sie uns in einem strategischen Erstgespräch erkunden, wie unsere Philosophie Ihr Unternehmen voranbringen kann.", fr: "Explorons ensemble, lors d'un entretien stratégique, comment notre philosophie peut faire avancer votre entreprise." })}
               </p>
             </div>
             <ContactForm />
