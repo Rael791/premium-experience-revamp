@@ -5,6 +5,9 @@ on:
     branches-ignore: [main]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,3 +32,11 @@ jobs:
         with:
           name: screenshots
           path: screenshots/
+      - name: Screenshots auf Hilfszweig ablegen
+        if: always()
+        run: |
+          cd screenshots
+          git init -q -b ci-screenshots
+          git -c user.name=ci -c user.email=ci@example.com add -A
+          git -c user.name=ci -c user.email=ci@example.com commit -q -m "screenshots ${GITHUB_SHA}"
+          git push -q -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}.git" ci-screenshots
