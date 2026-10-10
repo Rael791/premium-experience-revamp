@@ -19,25 +19,31 @@ const ContactForm = () => {
     preferredTime: ""
   });
 
+  const [sent, setSent] = useState(false);
+  const [privacy, setPrivacy] = useState(false);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    
-    // Here you would integrate with your calendar system
-    // For now, we'll show a success message
-    toast.success("Anfrage erfolgreich gesendet! Wir melden uns innerhalb von 24 Stunden bei Ihnen.");
-    
-    // Reset form
-    setFormData({
-      firstName: "",
-      lastName: "",
-      email: "",
-      phone: "",
-      company: "",
-      topic: "",
-      message: "",
-      preferredDate: "",
-      preferredTime: ""
-    });
+
+    const subject = `Anfrage Erstgespräch: ${formData.topic || "Allgemein"} – ${formData.company}`;
+    const body = [
+      "Guten Tag,",
+      "",
+      "ich möchte gerne ein strategisches Erstgespräch vereinbaren.",
+      "",
+      `Name: ${formData.firstName} ${formData.lastName}`,
+      `Unternehmen: ${formData.company}`,
+      `E-Mail: ${formData.email}`,
+      `Telefon: ${formData.phone || "-"}`,
+      `Thema: ${formData.topic || "nicht angegeben"}`,
+      `Wunschtermin: ${formData.preferredDate || "flexibel"}${formData.preferredTime ? `, ${formData.preferredTime} Uhr` : ""}`,
+      "",
+      formData.message ? `Nachricht:\n${formData.message}` : "",
+    ].join("\n");
+
+    window.location.href = `mailto:contact@raeldata.de?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setSent(true);
+    toast.success("Ihr E-Mail-Programm wurde geöffnet – bitte senden Sie die vorbereitete E-Mail ab.");
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -207,14 +213,46 @@ const ContactForm = () => {
             />
           </div>
 
+          {/* Datenschutz */}
+          <label className="flex items-start space-x-3 text-sm text-muted-foreground cursor-pointer">
+            <input
+              type="checkbox"
+              required
+              checked={privacy}
+              onChange={(e) => setPrivacy(e.target.checked)}
+              className="mt-1 accent-[hsl(var(--primary))]"
+            />
+            <span>
+              Ich habe die{" "}
+              <a href="/datenschutz" className="text-primary hover:underline">
+                Datenschutzerklärung
+              </a>{" "}
+              gelesen und bin mit der Verarbeitung meiner Angaben zur Bearbeitung der Anfrage einverstanden. *
+            </span>
+          </label>
+
           {/* Submit Button */}
           <Button type="submit" size="lg" className="w-full group">
             <Send className="w-4 h-4 mr-2 group-hover:translate-x-1 transition-transform" />
             Termin anfragen
           </Button>
 
+          {sent && (
+            <p className="text-sm text-center text-muted-foreground">
+              Falls sich Ihr E-Mail-Programm nicht geöffnet hat, schreiben Sie uns direkt an{" "}
+              <a href="mailto:contact@raeldata.de" className="text-primary hover:underline">
+                contact@raeldata.de
+              </a>{" "}
+              oder rufen Sie an:{" "}
+              <a href="tel:+491629620582" className="text-primary hover:underline">
+                +49 162 9620582
+              </a>
+              .
+            </p>
+          )}
+
           <p className="text-xs text-muted-foreground text-center">
-            * Pflichtfelder. Ihre Daten werden vertraulich behandelt und nicht an Dritte weitergegeben.
+            * Pflichtfelder. Mit Klick auf „Termin anfragen“ öffnet sich Ihr E-Mail-Programm mit einer vorbereiteten Nachricht.
           </p>
         </form>
       </div>

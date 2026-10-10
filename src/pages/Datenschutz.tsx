@@ -309,7 +309,12 @@ const Datenschutz = () => {
 
               <Sub title="Kontaktformular">
                 <p>
-                  Wenn Sie uns per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben aus
+                  Die Kontakt- und Buchungsformulare dieser Website speichern keine Daten auf dem
+                  Server. Beim Absenden wird Ihr E-Mail-Programm mit einer vorbereiteten Nachricht
+                  geöffnet; die Übermittlung erfolgt erst, wenn Sie diese E-Mail selbst absenden.
+                </p>
+                <p>
+                  Wenn Sie uns auf diesem Weg Anfragen zukommen lassen, werden Ihre Angaben aus
                   dem Formular inklusive der von Ihnen dort angegebenen Kontaktdaten (Name,
                   E-Mail-Adresse, ggf. Telefonnummer und Unternehmen, Thema, Nachricht und
                   Terminwunsch) zwecks Bearbeitung der Anfrage und für den Fall von Anschlussfragen
