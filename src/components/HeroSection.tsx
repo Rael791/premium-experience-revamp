@@ -5,7 +5,7 @@ import { t } from "@/i18n";
 
 const HeroSection = () => {
   return (
-    <section className="relative h-screen flex items-center justify-center overflow-hidden pt-20">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-24 md:pt-20 md:pb-0">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img 
@@ -30,14 +30,14 @@ const HeroSection = () => {
           </div>
 
           {/* Main Headline */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mt-20 mb-20">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight mt-6 mb-8 md:mt-20 md:mb-20">
             {t({ de: "Wir machen aus", fr: "Nous transformons" })} <br />
             <span className="text-primary">{t({ de: "Datenaustausch", fr: "l'échange de données" })}</span><br />
             {t({ de: "Geschäftsintelligenz.", fr: "en intelligence business." })}
           </h1>
 
           {/* Subheadline */}
-          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-20">
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-8 md:mb-20">
             {t({
               de: "Wenn EDI nicht nur laufen, sondern skalieren muss – ohne Ausfall, ohne Kompromisse. Strategische, skalierbare und nachhaltige Lösungen für globale Wettbewerbsfähigkeit.",
               fr: "Quand l'EDI ne doit pas seulement fonctionner, mais passer à l'échelle – sans interruption, sans compromis. Des solutions stratégiques, évolutives et durables pour votre compétitivité internationale.",
@@ -45,7 +45,7 @@ const HeroSection = () => {
           </p>
 
           {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 md:pt-8">
             <Button variant="hero" size="xl" className="group" asChild>
               <a href="#kontakt">
                 {t({ de: "Strategisches Erstgespräch", fr: "Entretien stratégique" })}
@@ -58,7 +58,7 @@ const HeroSection = () => {
           </div>
 
           {/* Key Points */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-16 max-w-4xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10 md:pt-16 max-w-4xl mx-auto">
             {[
               { title: t({ de: "DACH → GCC", fr: "Europe → Maroc" }), desc: t({ de: "Internationale Projekterfahrung", fr: "Expérience de projets internationaux" }) },
               { title: t({ de: "10+ Jahre", fr: "10+ ans" }), desc: t({ de: "EDI & eProcurement Expertise", fr: "d'expertise EDI & eProcurement" }) },
@@ -74,7 +74,7 @@ const HeroSection = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="hidden md:block absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
         <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
           <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
         </div>
