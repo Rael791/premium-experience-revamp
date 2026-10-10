@@ -22,18 +22,21 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { t } from "@/i18n";
 
 /* ------------------------------------------------------------------
  * PREISE & EINSTELLUNGEN – hier zentral anpassen
  * ------------------------------------------------------------------ */
 const BOOKING_EMAIL = "contact@raeldata.de";
-const PRICE_COURSE = "890 €"; // Kompaktkurs, 2 × 4 Std., pro Person
-const PRICE_MODULE = "490 €"; // Einzelmodul, 4 Std., pro Person
-const PRICE_COACHING = "160 €"; // 1:1-Coaching pro Stunde
-const PRICE_INHOUSE = "ab 2.900 €"; // Firmenschulung, 8 Std., bis 8 Teilnehmende
-const PRICE_NOTE = "Preise pro Person, netto";
+// Deutschland (raeldata.de) in Euro – Marokko (raeldata.com) in Dirham
+const PRICE_COURSE = t({ de: "890 €", fr: "3 900 MAD" }); // Kompaktkurs, 2 × 4 Std., pro Person
+const PRICE_MODULE = t({ de: "490 €", fr: "2 200 MAD" }); // Einzelmodul, 4 Std., pro Person
+const PRICE_COACHING = t({ de: "160 €", fr: "750 MAD" }); // 1:1-Coaching pro Stunde
+const PRICE_INHOUSE = t({ de: "ab 2.900 €", fr: "dès 12 000 MAD" }); // Firmenschulung, 8 Std., bis 8 Teilnehmende
+const PRICE_NOTE = t({ de: "Preise pro Person, netto", fr: "Prix HT par personne" });
 
-const courses = [
+const courses = t({
+  de: [
   {
     id: "edi-grundlagen",
     icon: FileText,
@@ -90,9 +93,69 @@ const courses = [
       "Umsetzung in bestehende Prozesse und Systeme",
     ],
   },
-];
+],
+  fr: [
+  {
+    id: "edi-grundlagen",
+    icon: FileText,
+    title: "Les fondamentaux de l'EDI",
+    level: "Débutant",
+    description:
+      "Une introduction compacte à l'échange de données informatisé – claire, concrète et sans jargon.",
+    topics: [
+      "Comment fonctionne l'EDI : standards, messages, partenaires",
+      "EDIFACT & X12 : lire et comprendre ORDERS, DESADV, INVOIC",
+      "Canaux de transmission : AS2, OFTP2, SFTP, VAN",
+      "Les erreurs fréquentes au quotidien et comment les identifier",
+    ],
+  },
+  {
+    id: "edi-praxis",
+    icon: Network,
+    title: "EDI en pratique & intégration des partenaires",
+    level: "Avancé",
+    description:
+      "Pour celles et ceux qui mettent en place ou gèrent des flux EDI et connectent fournisseurs et clients.",
+    topics: [
+      "Intégration d'un partenaire étape par étape",
+      "Logique de mapping, phases de test et mise en production",
+      "Monitoring, analyse des erreurs et escalade",
+      "Bonnes pratiques issues de projets réels",
+    ],
+  },
+  {
+    id: "eprocurement",
+    icon: ShoppingCart,
+    title: "eProcurement & plateformes B2B",
+    level: "Débutant à avancé",
+    description:
+      "Comprendre les achats digitaux et maîtriser les plateformes B2B – côté acheteur comme côté fournisseur.",
+    topics: [
+      "Catalogues électroniques : BMEcat, gestion du contenu et des prix",
+      "Punchout (OCI, cXML) et connexion aux ERP",
+      "Panorama des plateformes : SAP Ariba, Coupa, Jaggaer & co.",
+      "Intégration des fournisseurs et optimisation des processus",
+    ],
+  },
+  {
+    id: "e-facture-maroc",
+    icon: Receipt,
+    title: "Facture électronique au Maroc",
+    level: "Tous niveaux",
+    description:
+      "La nouvelle obligation de facturation électronique au Maroc expliquée simplement – avec des étapes concrètes pour votre entreprise.",
+    topics: [
+      "Cadre légal, calendrier et entreprises concernées",
+      "Le modèle de validation en temps réel par la DGI",
+      "Formats structurés UBL et CII, signature électronique",
+      "Adapter vos processus, votre ERP et vos échanges avec les partenaires",
+    ],
+  },
+],
+});
 
-const formats = [
+const formats = t({
+  de: [
   {
     id: "abend",
     icon: Moon,
@@ -114,7 +177,36 @@ const formats = [
     time: "Termin nach Absprache",
     description: "Für Teams und Firmenschulungen – wir richten uns nach Ihrem Kalender.",
   },
-];
+],
+  fr: [
+  {
+    id: "abend",
+    icon: Moon,
+    title: "Format après le travail",
+    time: "2 soirées, de 18h00 à 22h00",
+    description: "Se former après le travail – sans jour de congé ni absence au bureau.",
+  },
+  {
+    id: "samstag",
+    icon: Sun,
+    title: "Format samedi matin",
+    time: "2 samedis, de 9h00 à 13h00",
+    description: "Une matinée concentrée le samedi – l'après-midi vous appartient.",
+  },
+  {
+    id: "wunsch",
+    icon: CalendarCheck,
+    title: "Date sur mesure",
+    time: "Selon vos disponibilités",
+    description: "Pour les équipes et les formations intra-entreprise – nous nous adaptons à votre agenda.",
+  },
+],
+});
+
+const bookingTypes = t({
+  de: ["Kompaktkurs (2 × 4 Std.)", "Einzelmodul (4 Std.)", "1:1-Coaching", "Firmenschulung"],
+  fr: ["Formation complète (2 × 4 h)", "Module (4 h)", "Coaching individuel", "Formation intra-entreprise"],
+});
 
 const selectClass =
   "flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2";
@@ -123,7 +215,7 @@ const Training = () => {
   const [form, setForm] = useState({
     course: courses[0].title,
     format: formats[0].title,
-    booking: "Kompaktkurs (2 × 4 Std.)",
+    booking: bookingTypes[0],
     start: "",
     participants: "1",
     name: "",
@@ -139,27 +231,52 @@ const Training = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = `Schulungsbuchung: ${form.course} – ${form.format}`;
-    const body = [
-      "Guten Tag,",
-      "",
-      "hiermit möchte ich folgende Schulung verbindlich anfragen:",
-      "",
-      `Kurs: ${form.course}`,
-      `Format: ${form.format}`,
-      `Buchungsart: ${form.booking}`,
-      `Gewünschter Start: ${form.start || "flexibel"}`,
-      `Teilnehmende: ${form.participants}`,
-      "",
-      `Name: ${form.name}`,
-      `Unternehmen: ${form.company}`,
-      `E-Mail: ${form.email}`,
-      `Telefon: ${form.phone || "-"}`,
-      "",
-      form.message ? `Nachricht: ${form.message}` : "",
-      "",
-      "Ich bestätige, dass ich die Schulung für ein Unternehmen buche.",
-    ]
+    const subject = t({
+      de: `Schulungsbuchung: ${form.course} – ${form.format}`,
+      fr: `Réservation de formation : ${form.course} – ${form.format}`,
+    });
+    const body = t({
+      de: [
+        "Guten Tag,",
+        "",
+        "hiermit möchte ich folgende Schulung verbindlich anfragen:",
+        "",
+        `Kurs: ${form.course}`,
+        `Format: ${form.format}`,
+        `Buchungsart: ${form.booking}`,
+        `Gewünschter Start: ${form.start || "flexibel"}`,
+        `Teilnehmende: ${form.participants}`,
+        "",
+        `Name: ${form.name}`,
+        `Unternehmen: ${form.company}`,
+        `E-Mail: ${form.email}`,
+        `Telefon: ${form.phone || "-"}`,
+        "",
+        form.message ? `Nachricht: ${form.message}` : "",
+        "",
+        "Ich bestätige, dass ich die Schulung für ein Unternehmen buche.",
+      ],
+      fr: [
+        "Bonjour,",
+        "",
+        "Je souhaite réserver la formation suivante :",
+        "",
+        `Formation : ${form.course}`,
+        `Format : ${form.format}`,
+        `Type de réservation : ${form.booking}`,
+        `Date de début souhaitée : ${form.start || "flexible"}`,
+        `Participants : ${form.participants}`,
+        "",
+        `Nom : ${form.name}`,
+        `Entreprise : ${form.company}`,
+        `E-mail : ${form.email}`,
+        `Téléphone : ${form.phone || "-"}`,
+        "",
+        form.message ? `Message : ${form.message}` : "",
+        "",
+        "Je confirme réserver cette formation pour le compte d'une entreprise.",
+      ],
+    })
       .filter((l, i, arr) => !(l === "" && arr[i - 1] === ""))
       .join("\n");
     window.location.href = `mailto:${BOOKING_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -182,38 +299,39 @@ const Training = () => {
           <Button variant="ghost" size="sm" asChild className="mb-8 text-muted-foreground hover:text-primary">
             <Link to="/">
               <ArrowLeft className="w-4 h-4 mr-2" />
-              Zurück zur Startseite
+              {t({ de: "Zurück zur Startseite", fr: "Retour à l'accueil" })}
             </Link>
           </Button>
 
           <div className="max-w-3xl">
             <div className="inline-flex items-center space-x-2 bg-primary/10 border border-primary/20 rounded-full px-4 py-2 mb-6">
               <GraduationCap className="w-4 h-4 text-primary" />
-              <span className="text-sm text-primary font-medium">Training & Schulungen</span>
+              <span className="text-sm text-primary font-medium">{t({ de: "Training & Schulungen", fr: "Formations" })}</span>
             </div>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              EDI & eProcurement lernen –<br />
-              <span className="gradient-shift">dann, wenn es Ihnen passt.</span>
+              {t({ de: "EDI & eProcurement lernen –", fr: "Se former à l'EDI et à l'eProcurement –" })}<br />
+              <span className="gradient-shift">{t({ de: "dann, wenn es Ihnen passt.", fr: "quand cela vous convient." })}</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-              Live-Schulungen per Zoom in kompakten 4-Stunden-Blöcken: nach Feierabend oder am
-              Samstagmorgen. Praxiswissen aus über 10 Jahren Projekterfahrung – ohne dafür einen
-              ganzen Arbeitstag zu blockieren.
+              {t({
+                de: "Live-Schulungen per Zoom in kompakten 4-Stunden-Blöcken: nach Feierabend oder am Samstagmorgen. Praxiswissen aus über 10 Jahren Projekterfahrung – ohne dafür einen ganzen Arbeitstag zu blockieren.",
+                fr: "Des formations en direct sur Zoom, en sessions compactes de 4 heures : après le travail ou le samedi matin. Un savoir-faire tiré de plus de 10 ans de projets en Allemagne et à l'international – sans bloquer une journée de travail entière.",
+              })}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Button variant="hero" size="lg" asChild>
-                <a href="#buchen">Schulung buchen</a>
+                <a href="#buchen">{t({ de: "Schulung buchen", fr: "Réserver une formation" })}</a>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="#kurse">Kurse ansehen</a>
+                <a href="#kurse">{t({ de: "Kurse ansehen", fr: "Voir les formations" })}</a>
               </Button>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-12">
               {[
-                { icon: Video, text: "Live per Zoom" },
-                { icon: Clock, text: "4-Stunden-Blöcke" },
-                { icon: Users, text: "Max. 8 Teilnehmende" },
+                { icon: Video, text: t({ de: "Live per Zoom", fr: "En direct sur Zoom" }) },
+                { icon: Clock, text: t({ de: "4-Stunden-Blöcke", fr: "Sessions de 4 heures" }) },
+                { icon: Users, text: t({ de: "Max. 8 Teilnehmende", fr: "8 participants max." }) },
               ].map((f) => (
                 <div key={f.text} className="flex items-center space-x-3 text-muted-foreground">
                   <f.icon className="w-5 h-5 text-primary shrink-0" />
@@ -229,9 +347,9 @@ const Training = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Flexible Formate</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t({ de: "Flexible Formate", fr: "Des formats flexibles" })}</h2>
             <p className="text-muted-foreground text-lg">
-              Jeder Kurs umfasst 8 Stunden, aufgeteilt in zwei Blöcke à 4 Stunden. Sie wählen, wann.
+              {t({ de: "Jeder Kurs umfasst 8 Stunden, aufgeteilt in zwei Blöcke à 4 Stunden. Sie wählen, wann.", fr: "Chaque formation dure 8 heures, réparties en deux sessions de 4 heures. Vous choisissez quand." })}
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -253,9 +371,9 @@ const Training = () => {
       <section id="kurse" className="py-20 bg-gradient-subtle">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Kursangebot</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t({ de: "Kursangebot", fr: "Nos formations" })}</h2>
             <p className="text-muted-foreground text-lg">
-              Praxisnah, mit echten Beispielen und Raum für Ihre Fragen aus dem Arbeitsalltag.
+              {t({ de: "Praxisnah, mit echten Beispielen und Raum für Ihre Fragen aus dem Arbeitsalltag.", fr: "Concrètes, avec des exemples réels et du temps pour vos questions du quotidien." })}
             </p>
           </div>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -282,11 +400,11 @@ const Training = () => {
                 <div className="mt-auto flex items-center justify-between pt-6 border-t border-border">
                   <div>
                     <div className="text-2xl font-bold">{PRICE_COURSE}</div>
-                    <div className="text-xs text-muted-foreground">8 Std. · {PRICE_NOTE}</div>
+                    <div className="text-xs text-muted-foreground">{t({ de: "8 Std.", fr: "8 h" })} · {PRICE_NOTE}</div>
                   </div>
                   <Button variant="premium" asChild>
                     <a href="#buchen" onClick={() => set("course", c.title)}>
-                      Buchen
+                      {t({ de: "Buchen", fr: "Réserver" })}
                     </a>
                   </Button>
                 </div>
@@ -300,39 +418,51 @@ const Training = () => {
       <section className="py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-2xl mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Preise</h2>
-            <p className="text-muted-foreground text-lg">Transparent und ohne versteckte Kosten.</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t({ de: "Preise", fr: "Tarifs" })}</h2>
+            <p className="text-muted-foreground text-lg">{t({ de: "Transparent und ohne versteckte Kosten.", fr: "Transparents et sans frais cachés." })}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               {
                 icon: GraduationCap,
-                title: "Kompaktkurs",
+                title: t({ de: "Kompaktkurs", fr: "Formation complète" }),
                 price: PRICE_COURSE,
-                unit: "pro Person",
-                points: ["2 × 4 Std. live per Zoom", "Unterlagen & Teilnahmebescheinigung", "Abend- oder Samstagsformat"],
+                unit: t({ de: "pro Person", fr: "par personne" }),
+                points: t({
+                  de: ["2 × 4 Std. live per Zoom", "Unterlagen & Teilnahmebescheinigung", "Abend- oder Samstagsformat"],
+                  fr: ["2 × 4 h en direct sur Zoom", "Supports & attestation de participation", "Format soirée ou samedi"],
+                }),
                 highlight: true,
               },
               {
                 icon: Clock,
-                title: "Einzelmodul",
+                title: t({ de: "Einzelmodul", fr: "Module" }),
                 price: PRICE_MODULE,
-                unit: "pro Person",
-                points: ["1 × 4 Std. zu einem Schwerpunkt", "Ideal zum Auffrischen", "Abend- oder Samstagsformat"],
+                unit: t({ de: "pro Person", fr: "par personne" }),
+                points: t({
+                  de: ["1 × 4 Std. zu einem Schwerpunkt", "Ideal zum Auffrischen", "Abend- oder Samstagsformat"],
+                  fr: ["1 × 4 h sur un thème précis", "Idéal pour une remise à niveau", "Format soirée ou samedi"],
+                }),
               },
               {
                 icon: UserRound,
-                title: "1:1-Coaching",
+                title: t({ de: "1:1-Coaching", fr: "Coaching individuel" }),
                 price: PRICE_COACHING,
-                unit: "pro Stunde",
-                points: ["Individuell zu Ihren Fragen", "Termin nach Absprache", "Mindestbuchung 2 Std."],
+                unit: t({ de: "pro Stunde", fr: "de l'heure" }),
+                points: t({
+                  de: ["Individuell zu Ihren Fragen", "Termin nach Absprache", "Mindestbuchung 2 Std."],
+                  fr: ["Centré sur vos questions", "Date selon vos disponibilités", "Minimum 2 heures"],
+                }),
               },
               {
                 icon: Building2,
-                title: "Firmenschulung",
+                title: t({ de: "Firmenschulung", fr: "Formation intra-entreprise" }),
                 price: PRICE_INHOUSE,
-                unit: "pro Gruppe, 8 Std.",
-                points: ["Bis 8 Teilnehmende", "Inhalte auf Ihr Unternehmen zugeschnitten", "Wunschtermin"],
+                unit: t({ de: "pro Gruppe, 8 Std.", fr: "par groupe, 8 h" }),
+                points: t({
+                  de: ["Bis 8 Teilnehmende", "Inhalte auf Ihr Unternehmen zugeschnitten", "Wunschtermin"],
+                  fr: ["Jusqu'à 8 participants", "Contenu adapté à votre entreprise", "Date sur mesure"],
+                }),
               },
             ].map((p) => (
               <div
@@ -357,8 +487,11 @@ const Training = () => {
             ))}
           </div>
           <p className="text-sm text-muted-foreground mt-6">
-            {PRICE_NOTE}. Das Angebot richtet sich ausschließlich an Unternehmen. Offene Kurse finden ab
-            3 Teilnehmenden statt.
+            {PRICE_NOTE}.{" "}
+            {t({
+              de: "Das Angebot richtet sich ausschließlich an Unternehmen. Offene Kurse finden ab 3 Teilnehmenden statt.",
+              fr: "Offre réservée aux entreprises. Les sessions inter-entreprises ont lieu à partir de 3 participants. Horaires indiqués à l'heure du Maroc.",
+            })}
           </p>
         </div>
       </section>
@@ -368,17 +501,16 @@ const Training = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             <div className="text-center mb-12">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Schulung buchen</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">{t({ de: "Schulung buchen", fr: "Réserver une formation" })}</h2>
               <p className="text-muted-foreground text-lg">
-                Wählen Sie Kurs und Format. Sie erhalten innerhalb von 24 Stunden eine Bestätigung mit
-                den konkreten Terminen und dem Zoom-Link.
+                {t({ de: "Wählen Sie Kurs und Format. Sie erhalten innerhalb von 24 Stunden eine Bestätigung mit den konkreten Terminen und dem Zoom-Link.", fr: "Choisissez la formation et le format. Vous recevez sous 24 heures une confirmation avec les dates précises et le lien Zoom." })}
               </p>
             </div>
 
             <form onSubmit={handleSubmit} className="bg-card border border-border rounded-2xl p-8 space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-sm font-medium">Kurs *</label>
+                  <label className="text-sm font-medium">{t({ de: "Kurs", fr: "Formation" })} *</label>
                   <select className={selectClass} value={form.course} onChange={(e) => set("course", e.target.value)}>
                     {courses.map((c) => (
                       <option key={c.id}>{c.title}</option>
@@ -394,20 +526,19 @@ const Training = () => {
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium">Buchungsart *</label>
+                  <label className="text-sm font-medium">{t({ de: "Buchungsart", fr: "Type de réservation" })} *</label>
                   <select className={selectClass} value={form.booking} onChange={(e) => set("booking", e.target.value)}>
-                    <option>Kompaktkurs (2 × 4 Std.)</option>
-                    <option>Einzelmodul (4 Std.)</option>
-                    <option>1:1-Coaching</option>
-                    <option>Firmenschulung</option>
+                    {bookingTypes.map((b) => (
+                      <option key={b}>{b}</option>
+                    ))}
                   </select>
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium">Gewünschter Start</label>
+                  <label className="text-sm font-medium">{t({ de: "Gewünschter Start", fr: "Date de début souhaitée" })}</label>
                   <Input type="date" value={form.start} onChange={(e) => set("start", e.target.value)} />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium">Teilnehmende *</label>
+                  <label className="text-sm font-medium">{t({ de: "Teilnehmende", fr: "Participants" })} *</label>
                   <Input
                     type="number"
                     min={1}
@@ -418,11 +549,11 @@ const Training = () => {
                   />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium">Unternehmen *</label>
+                  <label className="text-sm font-medium">{t({ de: "Unternehmen", fr: "Entreprise" })} *</label>
                   <Input required value={form.company} onChange={(e) => set("company", e.target.value)} />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-sm font-medium">Name *</label>
+                  <label className="text-sm font-medium">{t({ de: "Name", fr: "Nom" })} *</label>
                   <Input required value={form.name} onChange={(e) => set("name", e.target.value)} />
                 </div>
                 <div className="space-y-2">
@@ -430,14 +561,14 @@ const Training = () => {
                   <Input type="email" required value={form.email} onChange={(e) => set("email", e.target.value)} />
                 </div>
                 <div className="space-y-2 md:col-span-2">
-                  <label className="text-sm font-medium">Telefon</label>
+                  <label className="text-sm font-medium">{t({ de: "Telefon", fr: "Téléphone" })}</label>
                   <Input type="tel" value={form.phone} onChange={(e) => set("phone", e.target.value)} />
                 </div>
                 <div className="space-y-2 md:col-span-2">
-                  <label className="text-sm font-medium">Nachricht</label>
+                  <label className="text-sm font-medium">{t({ de: "Nachricht", fr: "Message" })}</label>
                   <Textarea
                     rows={4}
-                    placeholder="z. B. Vorkenntnisse, Schwerpunkte, Wunschtermine"
+                    placeholder={t({ de: "z. B. Vorkenntnisse, Schwerpunkte, Wunschtermine", fr: "ex. niveau, thèmes prioritaires, dates souhaitées" })}
                     value={form.message}
                     onChange={(e) => set("message", e.target.value)}
                   />
@@ -453,22 +584,24 @@ const Training = () => {
                   className="mt-1 accent-[hsl(var(--primary))]"
                 />
                 <span>
-                  Ich buche die Schulung für ein Unternehmen und habe die{" "}
+                  {t({ de: "Ich buche die Schulung für ein Unternehmen und habe die", fr: "Je réserve pour le compte d'une entreprise et j'ai lu la" })}{" "}
                   <Link to="/datenschutz" className="text-primary hover:underline">
-                    Datenschutzerklärung
-                  </Link>{" "}
-                  gelesen. *
+                    {t({ de: "Datenschutzerklärung", fr: "politique de confidentialité" })}
+                  </Link>
+                  {t({ de: " gelesen.", fr: "." })} *
                 </span>
               </label>
 
               <Button type="submit" variant="hero" size="lg" className="w-full">
-                Buchungsanfrage senden
+                {t({ de: "Buchungsanfrage senden", fr: "Envoyer la demande de réservation" })}
               </Button>
 
               {sent && (
                 <p className="text-sm text-center text-muted-foreground">
-                  Ihr E-Mail-Programm wurde geöffnet. Bitte senden Sie die vorbereitete E-Mail ab. Falls
-                  sich nichts geöffnet hat, schreiben Sie uns direkt an{" "}
+                  {t({
+                    de: "Ihr E-Mail-Programm wurde geöffnet. Bitte senden Sie die vorbereitete E-Mail ab. Falls sich nichts geöffnet hat, schreiben Sie uns direkt an",
+                    fr: "Votre messagerie s'est ouverte. Veuillez envoyer l'e-mail préparé. Si rien ne s'est ouvert, écrivez-nous directement à",
+                  })}{" "}
                   <a href={`mailto:${BOOKING_EMAIL}`} className="text-primary hover:underline">
                     {BOOKING_EMAIL}
                   </a>
