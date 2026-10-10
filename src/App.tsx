@@ -15,6 +15,9 @@ import Datenschutz from "./pages/Datenschutz";
 import NotFound from "./pages/NotFound";
 import ScrollToTop from "./components/ScrollToTop";
 import Training from "./pages/Training";
+import MentionsLegales from "./pages/MentionsLegales";
+import Confidentialite from "./pages/Confidentialite";
+import { isFR } from "./i18n";
 
 const queryClient = new QueryClient();
 
@@ -34,8 +37,10 @@ const App = () => (
           <Route path="/services/:slug" element={<ServiceDetail />} />
           <Route path="/training" element={<Training />} />
           <Route path="/philosophie" element={<Philosophy />} />
-          <Route path="/impressum" element={<Impressum />} />
-          <Route path="/datenschutz" element={<Datenschutz />} />
+          <Route path="/impressum" element={isFR ? <MentionsLegales /> : <Impressum />} />
+          <Route path="/mentions-legales" element={isFR ? <MentionsLegales /> : <Impressum />} />
+          <Route path="/datenschutz" element={isFR ? <Confidentialite /> : <Datenschutz />} />
+          <Route path="/confidentialite" element={isFR ? <Confidentialite /> : <Datenschutz />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
