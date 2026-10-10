@@ -5,9 +5,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import procurementHero from "@/assets/procurement-hero.jpg";
 import eprocurementDashboard from "@/assets/eprocurement-dashboard.jpg";
+import { t } from "@/i18n";
 
 const EProcurementDetail = () => {
-  const services = [
+  const services = t({
+    de: [
     {
       name: "Procurement Process Optimization",
       description: "End-to-End Optimierung Ihrer Beschaffungsprozesse für maximale Effizienz",
@@ -107,7 +109,109 @@ const EProcurementDetail = () => {
         "Continuous Improvement Process"
       ]
     }
-  ];
+  ],
+    fr: [
+    {
+      name: "Optimisation des processus achats",
+      description: "Optimisation de bout en bout de vos processus achats pour une efficacité maximale",
+      icon: ShoppingCart,
+      what: "Refonte complète de vos workflows achats, axée sur l'automatisation, la conformité et l'expérience utilisateur.",
+      why: "Les processus d'achat manuels coûtent en moyenne 180 € par commande et prennent 12 à 15 jours.",
+      how: "Approche Design Thinking : entretiens avec les parties prenantes → cartographie des processus → conception des workflows → prototypage → déploiement.",
+      whatHappens: [
+        "80 % de réduction du délai d'achat",
+        "Circuits de validation entièrement automatisés",
+        "Transparence en temps réel pour toutes les parties prenantes",
+        "Intégration aux ERP existants"
+      ],
+      whatNotHappens: [
+        "Pas de systèmes complexes que personne ne comprend",
+        "Pas de perte de contrôle métier",
+        "Pas de solutions isolées dépendantes d'un fournisseur"
+      ],
+      kpis: [
+        "Processus d'achat 80 % plus rapides",
+        "95 % de validations automatiques",
+        "60 % de tâches manuelles en moins",
+        "99 % de taux de conformité"
+      ],
+      deliverables: [
+        "Analyse des processus actuels",
+        "Conception des processus cibles",
+        "Mise en place de l'automatisation des workflows",
+        "Formation des utilisateurs & conduite du changement",
+        "Tests d'intégration & accompagnement au démarrage",
+        "Tableau de bord de suivi des performances"
+      ]
+    },
+    {
+      name: "Portail fournisseurs & libre-service",
+      description: "Des portails fournisseurs modernes pour une collaboration B2B fluide",
+      icon: Users,
+      what: "Mise en place de portails libre-service intuitifs pour les fournisseurs, avec des processus d'intégration et de collaboration automatisés.",
+      why: "73 % des fournisseurs préfèrent les options en libre-service et sont prêts à payer 15 % de plus pour une meilleure expérience digitale.",
+      how: "Conception centrée utilisateur : parcours fournisseur → conception du portail → développement des API → tests → déploiement progressif.",
+      whatHappens: [
+        "Intégration automatisée des fournisseurs en 24 h",
+        "Libre-service pour 90 % des demandes fournisseurs",
+        "Collaboration et échange de documents en temps réel",
+        "Gestion automatisée de la conformité et des certifications"
+      ],
+      whatNotHappens: [
+        "Pas de processus d'inscription compliqués",
+        "Pas de support manuel pour les demandes standard",
+        "Pas de formats de données ou d'interfaces propriétaires"
+      ],
+      kpis: [
+        "24 h pour intégrer un nouveau fournisseur",
+        "90 % de taux de libre-service",
+        "75 % de tickets de support en moins",
+        "Traitement des contrats 50 % plus rapide"
+      ],
+      deliverables: [
+        "Mise en place de la plateforme portail fournisseurs",
+        "Workflows d'intégration automatisés",
+        "Système de gestion documentaire",
+        "Cadre d'intégration API",
+        "Design adapté au mobile",
+        "Support & monitoring"
+      ]
+    },
+    {
+      name: "Analyse des dépenses & intelligence achats",
+      description: "Des stratégies achats pilotées par les données grâce à l'analytique avancée",
+      icon: TrendingUp,
+      what: "Mise en place d'une plateforme complète d'analyse des dépenses pour des décisions d'achat stratégiques et l'optimisation des coûts.",
+      why: "Les entreprises dotées d'une analyse avancée des dépenses obtiennent 12 % de meilleure performance coûts et 15 % de meilleure performance fournisseurs.",
+      how: "Approche orientée données : évaluation des données → plateforme analytique → tableaux de bord → génération d'insights → plan d'action.",
+      whatHappens: [
+        "Transparence à 360° sur toutes les dépenses",
+        "Analytique prédictive pour optimiser les coûts",
+        "Surveillance des risques & alertes automatisées",
+        "Recommandations de sourcing stratégique"
+      ],
+      whatNotHappens: [
+        "Pas de rapports statiques sans actions concrètes",
+        "Pas de silos de données entre services",
+        "Pas d'analyses « boîte noire » sans traçabilité"
+      ],
+      kpis: [
+        "12 % d'économies dès la première année",
+        "95 % de précision des données",
+        "< 2 secondes de chargement des tableaux de bord",
+        "100 % des catégories de dépenses couvertes"
+      ],
+      deliverables: [
+        "Mise en place de la plateforme d'analyse des dépenses",
+        "Tableaux de bord interactifs pour la direction",
+        "Génération automatisée de rapports",
+        "Modèles prédictifs",
+        "Formation des utilisateurs & bonnes pratiques",
+        "Processus d'amélioration continue"
+      ]
+    }
+  ],
+  });
 
   return (
     <div className="min-h-screen bg-background">
@@ -129,7 +233,7 @@ const EProcurementDetail = () => {
             <div className="max-w-4xl mx-auto">
               <Link to="/#expertise" className="inline-flex items-center text-primary hover:text-primary/80 mb-8 group">
                 <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-                Zurück zur Expertise
+                {t({ de: "Zurück zur Expertise", fr: "Retour à l'expertise" })}
               </Link>
               
               <div className="flex items-center mb-6">
@@ -137,14 +241,13 @@ const EProcurementDetail = () => {
                   <ShoppingCart className="w-8 h-8 text-accent" />
                 </div>
                 <div>
-                  <h1 className="text-4xl font-bold text-foreground mb-2">eProcurement Mastery Services</h1>
-                  <p className="text-xl text-muted-foreground">Strategische Transformation Ihrer Beschaffungsprozesse</p>
+                  <h1 className="text-4xl font-bold text-foreground mb-2">{t({ de: "eProcurement Mastery Services", fr: "Services eProcurement Mastery" })}</h1>
+                  <p className="text-xl text-muted-foreground">{t({ de: "Strategische Transformation Ihrer Beschaffungsprozesse", fr: "La transformation stratégique de vos processus achats" })}</p>
                 </div>
               </div>
               
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Von operativer Effizienz zur strategischen Wertschöpfung – wir transformieren Ihre 
-                Beschaffung in einen echten Competitive Advantage durch Digitalisierung und Automatisierung.
+                {t({ de: "Von operativer Effizienz zur strategischen Wertschöpfung – wir transformieren Ihre Beschaffung in einen echten Competitive Advantage durch Digitalisierung und Automatisierung.", fr: "De l'efficacité opérationnelle à la création de valeur stratégique – nous faisons de vos achats un véritable avantage concurrentiel grâce à la digitalisation et à l'automatisation." })}
               </p>
             </div>
           </div>
@@ -155,19 +258,18 @@ const EProcurementDetail = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-foreground mb-4">Der Strategic Value von eProcurement Excellence</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-4">{t({ de: "Der Strategic Value von eProcurement Excellence", fr: "La valeur stratégique de l'excellence eProcurement" })}</h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                  Moderne Beschaffung ist weit mehr als Kosteneinsparung – sie ist ein strategischer Hebel für 
-                  Wachstum, Innovation und Wettbewerbsvorteile in globalen Märkten.
+                  {t({ de: "Moderne Beschaffung ist weit mehr als Kosteneinsparung – sie ist ein strategischer Hebel für Wachstum, Innovation und Wettbewerbsvorteile in globalen Märkten.", fr: "Les achats modernes vont bien au-delà de la réduction des coûts – ils sont un levier stratégique de croissance, d'innovation et de compétitivité sur les marchés mondiaux." })}
                 </p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  { icon: Target, title: "€890K", subtitle: "Durchschnittliche jährliche Einsparungen", color: "primary" },
-                  { icon: TrendingUp, title: "40%", subtitle: "Zeit-Reduktion bei Beschaffungsprozessen", color: "accent" },
-                  { icon: Users, title: "85%", subtitle: "Lieferanten bevorzugen digitale Prozesse", color: "secondary" },
-                  { icon: Zap, title: "12%", subtitle: "EBIT-Verbesserung durch optimierte Beschaffung", color: "primary" }
+                  { icon: Target, title: t({ de: "€890K", fr: "890 k€" }), subtitle: t({ de: "Durchschnittliche jährliche Einsparungen", fr: "d'économies annuelles en moyenne" }), color: "primary" },
+                  { icon: TrendingUp, title: t({ de: "40%", fr: "40 %" }), subtitle: t({ de: "Zeit-Reduktion bei Beschaffungsprozessen", fr: "de temps gagné sur les processus achats" }), color: "accent" },
+                  { icon: Users, title: t({ de: "85%", fr: "85 %" }), subtitle: t({ de: "Lieferanten bevorzugen digitale Prozesse", fr: "des fournisseurs préfèrent les processus digitaux" }), color: "secondary" },
+                  { icon: Zap, title: t({ de: "12%", fr: "12 %" }), subtitle: t({ de: "EBIT-Verbesserung durch optimierte Beschaffung", fr: "d'amélioration de l'EBIT grâce à des achats optimisés" }), color: "primary" }
                 ].map((stat, idx) => (
                   <div key={idx} className="bg-card rounded-xl p-6 text-center hover-lift border border-border">
                     <div className={`w-12 h-12 mx-auto mb-4 rounded-lg bg-${stat.color}/10 flex items-center justify-center`}>
@@ -186,7 +288,7 @@ const EProcurementDetail = () => {
         <section className="py-16">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-foreground text-center mb-12">eProcurement Mastery Services im Detail</h2>
+              <h2 className="text-3xl font-bold text-foreground text-center mb-12">{t({ de: "eProcurement Mastery Services im Detail", fr: "Nos services eProcurement en détail" })}</h2>
               
               <div className="space-y-16">
                 {services.map((service, idx) => (
@@ -225,7 +327,7 @@ const EProcurementDetail = () => {
                             idx % 3 === 0 ? 'bg-accent/20 text-accent' :
                             idx % 3 === 1 ? 'bg-secondary/20 text-secondary' : 'bg-primary/20 text-primary'
                           } rounded-full flex items-center justify-center text-sm mr-2`}>?</span>
-                          Was
+                          {t({ de: "Was", fr: "Quoi" })}
                         </h4>
                         <p className="text-sm text-muted-foreground leading-relaxed">{service.what}</p>
                       </div>
@@ -235,7 +337,7 @@ const EProcurementDetail = () => {
                             idx % 3 === 0 ? 'bg-accent/20 text-accent' :
                             idx % 3 === 1 ? 'bg-secondary/20 text-secondary' : 'bg-primary/20 text-primary'
                           } rounded-full flex items-center justify-center text-sm mr-2`}>!</span>
-                          Warum
+                          {t({ de: "Warum", fr: "Pourquoi" })}
                         </h4>
                         <p className="text-sm text-muted-foreground leading-relaxed">{service.why}</p>
                       </div>
@@ -245,7 +347,7 @@ const EProcurementDetail = () => {
                             idx % 3 === 0 ? 'bg-accent/20 text-accent' :
                             idx % 3 === 1 ? 'bg-secondary/20 text-secondary' : 'bg-primary/20 text-primary'
                           } rounded-full flex items-center justify-center text-sm mr-2`}>→</span>
-                          Wie
+                          {t({ de: "Wie", fr: "Comment" })}
                         </h4>
                         <p className="text-sm text-muted-foreground leading-relaxed">{service.how}</p>
                       </div>
@@ -257,7 +359,7 @@ const EProcurementDetail = () => {
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-4 flex items-center">
                           <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                          Was passiert
+                          {t({ de: "Was passiert", fr: "Ce qui change" })}
                         </h4>
                         <div className="space-y-3">
                           {service.whatHappens.map((item, itemIdx) => (
@@ -276,7 +378,7 @@ const EProcurementDetail = () => {
                             idx % 3 === 0 ? 'text-accent' :
                             idx % 3 === 1 ? 'text-secondary' : 'text-primary'
                           }`} />
-                          Was nicht passiert
+                          {t({ de: "Was nicht passiert", fr: "Ce qui n'arrivera pas" })}
                         </h4>
                         <div className="space-y-3">
                           {service.whatNotHappens.map((item, itemIdx) => (
@@ -301,7 +403,7 @@ const EProcurementDetail = () => {
                             idx % 3 === 0 ? 'text-accent' :
                             idx % 3 === 1 ? 'text-secondary' : 'text-primary'
                           }`} />
-                          Messbare KPIs
+                          {t({ de: "Messbare KPIs", fr: "KPI mesurables" })}
                         </h4>
                         <div className="space-y-3">
                           {service.kpis.map((kpi, kpiIdx) => (
@@ -323,7 +425,7 @@ const EProcurementDetail = () => {
                             idx % 3 === 0 ? 'text-accent' :
                             idx % 3 === 1 ? 'text-secondary' : 'text-primary'
                           }`} />
-                          Deliverables
+                          {t({ de: "Deliverables", fr: "Livrables" })}
                         </h4>
                         <div className="space-y-3">
                           {service.deliverables.map((deliverable, delIdx) => (
@@ -352,18 +454,17 @@ const EProcurementDetail = () => {
               <div className="relative rounded-3xl overflow-hidden">
                 <img 
                   src={eprocurementDashboard} 
-                  alt="eProcurement Success Story - Team analyzing procurement analytics"
+                  alt={t({ de: "Team analysiert Beschaffungsdaten", fr: "Équipe analysant des données achats" })}
                   className="w-full h-96 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-background/90 to-background/60 flex items-center">
                   <div className="p-12">
-                    <h3 className="text-3xl font-bold text-foreground mb-4">Ready für eProcurement Excellence?</h3>
+                    <h3 className="text-3xl font-bold text-foreground mb-4">{t({ de: "Ready für eProcurement Excellence?", fr: "Prêt pour l'excellence eProcurement ?" })}</h3>
                     <p className="text-lg text-muted-foreground mb-6 max-w-2xl">
-                      Transformieren Sie Ihre Beschaffung von einem Kostenfaktor zu einem strategischen Wettbewerbsvorteil. 
-                      Lassen Sie uns Ihre Procurement-Vision besprechen.
+                      {t({ de: "Transformieren Sie Ihre Beschaffung von einem Kostenfaktor zu einem strategischen Wettbewerbsvorteil. Lassen Sie uns Ihre Procurement-Vision besprechen.", fr: "Faites de vos achats non plus un centre de coûts, mais un avantage concurrentiel stratégique. Échangeons sur votre vision achats." })}
                     </p>
                     <Button variant="hero" size="xl" asChild>
-                      <a href="/#kontakt">Procurement Strategie-Gespräch vereinbaren</a>
+                      <a href="/#kontakt">{t({ de: "Procurement Strategie-Gespräch vereinbaren", fr: "Planifier un entretien stratégique achats" })}</a>
                     </Button>
                   </div>
                 </div>

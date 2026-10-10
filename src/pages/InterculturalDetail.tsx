@@ -5,9 +5,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import interculturalHero from "@/assets/intercultural-hero.jpg";
 import interculturalMeeting from "@/assets/intercultural-meeting.jpg";
+import { t } from "@/i18n";
 
 const InterculturalDetail = () => {
-  const services = [
+  const services = t({
+    de: [
     {
       name: "Cross-Cultural Process Design",
       description: "Geschäftsprozesse, die in jeder Kultur funktionieren und Akzeptanz finden",
@@ -107,7 +109,109 @@ const InterculturalDetail = () => {
         "Regular Compliance Reports"
       ]
     }
-  ];
+  ],
+    fr: [
+    {
+      name: "Conception de processus interculturels",
+      description: "Des processus métier qui fonctionnent et sont acceptés dans chaque culture",
+      icon: Globe2,
+      what: "Conception de processus métier sensibles aux cultures, répondant à la fois aux exigences locales et aux standards internationaux.",
+      why: "78 % des échecs de projets internationaux proviennent de malentendus culturels et de processus inadaptés.",
+      how: "Cadre d'intelligence culturelle : analyse culturelle → cartographie des parties prenantes → adaptation locale des processus → pilote → déploiement.",
+      whatHappens: [
+        "95 % d'adhésion aux nouveaux processus dans toutes les cultures",
+        "Intégration fluide Europe ↔ Maroc",
+        "Délai de mise en œuvre réduit de 60 %",
+        "Meilleure satisfaction des équipes et meilleure conformité"
+      ],
+      whatNotHappens: [
+        "Pas de processus « taille unique »",
+        "Pas de conflits ni de résistances culturelles",
+        "Pas de perte d'expertise ni d'autonomie locale"
+      ],
+      kpis: [
+        "95 % de taux d'adhésion",
+        "Mise en œuvre des processus 60 % plus rapide",
+        "40 % de conflits culturels en moins",
+        "25 % de réussite de projet en plus"
+      ],
+      deliverables: [
+        "Rapport d'analyse culturelle",
+        "Processus adaptés au contexte local",
+        "Cadre de communication avec les parties prenantes",
+        "Supports de formation interculturelle",
+        "Feuille de route de mise en œuvre",
+        "Indicateurs de réussite & suivi"
+      ]
+    },
+    {
+      name: "Gestion de projets Europe ↔ Maroc",
+      description: "Pilotage professionnel de projets complexes entre l'Europe, le Maroc et les pays du Golfe",
+      icon: Users,
+      what: "Gestion de projet de bout en bout pour des déploiements internationaux, avec une attention particulière à la sensibilité culturelle et à l'expertise locale.",
+      why: "Les projets internationaux ont 67 % de chances de réussite en plus avec des chefs de projet expérimentés en interculturel.",
+      how: "Gestion de projet agile et internationale : lancement interculturel → équipes biculturelles → alignement continu → conduite du changement adaptée localement.",
+      whatHappens: [
+        "Livraison dans les délais malgré la complexité culturelle",
+        "Communication efficace malgré les distances",
+        "Autonomie et responsabilisation des équipes locales",
+        "Transfert de compétences durable"
+      ],
+      whatNotHappens: [
+        "Pas de malentendus ni de conflits culturels",
+        "Pas de micromanagement depuis le siège",
+        "Pas de problèmes « perdus dans la traduction »"
+      ],
+      kpis: [
+        "100 % des livraisons dans les délais",
+        "90 % de satisfaction des parties prenantes",
+        "< 5 % d'escalades liées à la culture",
+        "85 % de rétention des équipes locales"
+      ],
+      deliverables: [
+        "Organisation de projet biculturelle",
+        "Protocoles de communication",
+        "Points réguliers sur la dynamique interculturelle",
+        "Programmes de formation adaptés localement",
+        "Documentation du transfert de compétences",
+        "Bilan interculturel en fin de projet"
+      ]
+    },
+    {
+      name: "Conformité & gouvernance culturelle",
+      description: "Garantir la conformité juridique et culturelle de vos opérations internationales",
+      icon: Shield,
+      what: "Conception de cadres de conformité complets, intégrant à la fois les exigences juridiques et culturelles.",
+      why: "Les coûts de non-conformité atteignent en moyenne 14,8 M€ par entreprise et par an, dont 40 % liés à des facteurs culturels.",
+      how: "Conformité dès la conception : cartographie juridique → analyse culturelle → élaboration du cadre → mise en œuvre → suivi.",
+      whatHappens: [
+        "100 % de conformité juridique et culturelle",
+        "Suivi automatisé de la conformité",
+        "Risque réglementaire réduit",
+        "Confiance renforcée des parties prenantes"
+      ],
+      whatNotHappens: [
+        "Pas d'infractions coûteuses à la conformité",
+        "Pas de faux pas culturels ni de crises d'image",
+        "Pas de corrections de conformité improvisées et coûteuses"
+      ],
+      kpis: [
+        "100 % de taux de conformité",
+        "Zéro infraction réglementaire",
+        "90 % de réduction des coûts de conformité",
+        "< 24 h pour résoudre un incident"
+      ],
+      deliverables: [
+        "Cadre de conformité culturelle",
+        "Système de suivi automatisé",
+        "Matrice d'évaluation des risques",
+        "Procédures d'escalade",
+        "Programmes de formation & de sensibilisation",
+        "Rapports de conformité réguliers"
+      ]
+    }
+  ],
+  });
 
   return (
     <div className="min-h-screen bg-background">
@@ -129,7 +233,7 @@ const InterculturalDetail = () => {
             <div className="max-w-4xl mx-auto">
               <Link to="/#expertise" className="inline-flex items-center text-primary hover:text-primary/80 mb-8 group">
                 <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-                Zurück zur Expertise
+                {t({ de: "Zurück zur Expertise", fr: "Retour à l'expertise" })}
               </Link>
               
               <div className="flex items-center mb-6">
@@ -137,14 +241,13 @@ const InterculturalDetail = () => {
                   <Globe2 className="w-8 h-8 text-secondary" />
                 </div>
                 <div>
-                  <h1 className="text-4xl font-bold text-foreground mb-2">Interkulturelle Integration Services</h1>
-                  <p className="text-xl text-muted-foreground">Globale Projekte mit kultureller Intelligenz zum Erfolg führen</p>
+                  <h1 className="text-4xl font-bold text-foreground mb-2">{t({ de: "Interkulturelle Integration Services", fr: "Services d'intégration interculturelle" })}</h1>
+                  <p className="text-xl text-muted-foreground">{t({ de: "Globale Projekte mit kultureller Intelligenz zum Erfolg führen", fr: "Réussir vos projets internationaux grâce à l'intelligence culturelle" })}</p>
                 </div>
               </div>
               
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Wenn Technologie auf Kultur trifft, entstehen die komplexesten Herausforderungen. Wir überbrücken 
-                diese Lücken mit bewährter kultureller Intelligenz und tiefem Verständnis für DACH und GCC Märkte.
+                {t({ de: "Wenn Technologie auf Kultur trifft, entstehen die komplexesten Herausforderungen. Wir überbrücken diese Lücken mit bewährter kultureller Intelligenz und tiefem Verständnis für DACH und GCC Märkte.", fr: "Quand la technologie rencontre la culture, naissent les défis les plus complexes. Nous comblons ces écarts grâce à une intelligence culturelle éprouvée et à une connaissance approfondie des marchés européens et marocains." })}
               </p>
             </div>
           </div>
@@ -155,19 +258,18 @@ const InterculturalDetail = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-foreground mb-4">Cultural Intelligence als Business Advantage</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-4">{t({ de: "Cultural Intelligence als Business Advantage", fr: "L'intelligence culturelle, un avantage business" })}</h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                  In einer globalisierten Welt ist kulturelle Kompetenz nicht nur 'Nice-to-Have' – 
-                  sie ist der entscheidende Faktor für nachhaltigen internationalen Erfolg.
+                  {t({ de: "In einer globalisierten Welt ist kulturelle Kompetenz nicht nur 'Nice-to-Have' – sie ist der entscheidende Faktor für nachhaltigen internationalen Erfolg.", fr: "Dans un monde globalisé, la compétence culturelle n'est pas un simple « plus » – c'est le facteur décisif d'un succès international durable." })}
                 </p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  { icon: Target, title: "78%", subtitle: "Projektfehler durch kulturelle Missverständnisse", color: "destructive" },
-                  { icon: TrendingUp, title: "€14.8M", subtitle: "Durchschnittliche jährliche Cultural Compliance Kosten", color: "warning" },
-                  { icon: Users, title: "67%", subtitle: "Höhere Erfolgsrate mit kulturell erfahrenen Teams", color: "success" },
-                  { icon: Zap, title: "3.2x", subtitle: "ROI bei professionellem Cultural Management", color: "secondary" }
+                  { icon: Target, title: t({ de: "78%", fr: "78 %" }), subtitle: t({ de: "Projektfehler durch kulturelle Missverständnisse", fr: "des échecs de projets dus à des malentendus culturels" }), color: "destructive" },
+                  { icon: TrendingUp, title: t({ de: "€14.8M", fr: "14,8 M€" }), subtitle: t({ de: "Durchschnittliche jährliche Cultural Compliance Kosten", fr: "Coût annuel moyen de la non-conformité culturelle" }), color: "warning" },
+                  { icon: Users, title: t({ de: "67%", fr: "67 %" }), subtitle: t({ de: "Höhere Erfolgsrate mit kulturell erfahrenen Teams", fr: "de réussite en plus avec des équipes interculturelles" }), color: "success" },
+                  { icon: Zap, title: t({ de: "3.2x", fr: "3,2x" }), subtitle: t({ de: "ROI bei professionellem Cultural Management", fr: "de ROI avec une gestion culturelle professionnelle" }), color: "secondary" }
                 ].map((stat, idx) => (
                   <div key={idx} className="bg-card rounded-xl p-6 text-center hover-lift border border-border">
                     <div className={`w-12 h-12 mx-auto mb-4 rounded-lg bg-${stat.color}/10 flex items-center justify-center`}>
@@ -186,7 +288,7 @@ const InterculturalDetail = () => {
         <section className="py-16">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-foreground text-center mb-12">Interkulturelle Integration Services im Detail</h2>
+              <h2 className="text-3xl font-bold text-foreground text-center mb-12">{t({ de: "Interkulturelle Integration Services im Detail", fr: "Nos services interculturels en détail" })}</h2>
               
               <div className="space-y-16">
                 {services.map((service, idx) => (
@@ -212,21 +314,21 @@ const InterculturalDetail = () => {
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-3 flex items-center">
                           <span className="w-6 h-6 bg-secondary/20 rounded-full flex items-center justify-center text-secondary text-sm mr-2">?</span>
-                          Was
+                          {t({ de: "Was", fr: "Quoi" })}
                         </h4>
                         <p className="text-sm text-muted-foreground leading-relaxed">{service.what}</p>
                       </div>
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-3 flex items-center">
                           <span className="w-6 h-6 bg-secondary/20 rounded-full flex items-center justify-center text-secondary text-sm mr-2">!</span>
-                          Warum
+                          {t({ de: "Warum", fr: "Pourquoi" })}
                         </h4>
                         <p className="text-sm text-muted-foreground leading-relaxed">{service.why}</p>
                       </div>
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-3 flex items-center">
                           <span className="w-6 h-6 bg-secondary/20 rounded-full flex items-center justify-center text-secondary text-sm mr-2">→</span>
-                          Wie
+                          {t({ de: "Wie", fr: "Comment" })}
                         </h4>
                         <p className="text-sm text-muted-foreground leading-relaxed">{service.how}</p>
                       </div>
@@ -238,7 +340,7 @@ const InterculturalDetail = () => {
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-4 flex items-center">
                           <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                          Was passiert
+                          {t({ de: "Was passiert", fr: "Ce qui change" })}
                         </h4>
                         <div className="space-y-3">
                           {service.whatHappens.map((item, itemIdx) => (
@@ -254,7 +356,7 @@ const InterculturalDetail = () => {
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-4 flex items-center">
                           <Shield className="w-5 h-5 text-secondary mr-2" />
-                          Was nicht passiert
+                          {t({ de: "Was nicht passiert", fr: "Ce qui n'arrivera pas" })}
                         </h4>
                         <div className="space-y-3">
                           {service.whatNotHappens.map((item, itemIdx) => (
@@ -273,7 +375,7 @@ const InterculturalDetail = () => {
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-4 flex items-center">
                           <TrendingUp className="w-5 h-5 text-secondary mr-2" />
-                          Messbare KPIs
+                          {t({ de: "Messbare KPIs", fr: "KPI mesurables" })}
                         </h4>
                         <div className="space-y-3">
                           {service.kpis.map((kpi, kpiIdx) => (
@@ -289,7 +391,7 @@ const InterculturalDetail = () => {
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-4 flex items-center">
                           <Globe2 className="w-5 h-5 text-secondary mr-2" />
-                          Deliverables
+                          {t({ de: "Deliverables", fr: "Livrables" })}
                         </h4>
                         <div className="space-y-3">
                           {service.deliverables.map((deliverable, delIdx) => (
@@ -315,18 +417,17 @@ const InterculturalDetail = () => {
               <div className="relative rounded-3xl overflow-hidden">
                 <img 
                   src={interculturalMeeting} 
-                  alt="Intercultural Success Story - International team collaboration"
+                  alt={t({ de: "Internationales Team in Zusammenarbeit", fr: "Équipe internationale en collaboration" })}
                   className="w-full h-96 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-background/90 to-background/60 flex items-center">
                   <div className="p-12">
-                    <h3 className="text-3xl font-bold text-foreground mb-4">Ready für Global Excellence?</h3>
+                    <h3 className="text-3xl font-bold text-foreground mb-4">{t({ de: "Ready für Global Excellence?", fr: "Prêt pour l'excellence internationale ?" })}</h3>
                     <p className="text-lg text-muted-foreground mb-6 max-w-2xl">
-                      Machen Sie kulturelle Vielfalt zu Ihrem Wettbewerbsvorteil. Lassen Sie uns besprechen, 
-                      wie wir Ihre internationalen Projekte zum Erfolg führen.
+                      {t({ de: "Machen Sie kulturelle Vielfalt zu Ihrem Wettbewerbsvorteil. Lassen Sie uns besprechen, wie wir Ihre internationalen Projekte zum Erfolg führen.", fr: "Faites de la diversité culturelle votre avantage concurrentiel. Voyons ensemble comment mener vos projets internationaux au succès." })}
                     </p>
                     <Button variant="hero" size="xl" asChild>
-                      <a href="/#kontakt">Cultural Intelligence Beratung vereinbaren</a>
+                      <a href="/#kontakt">{t({ de: "Cultural Intelligence Beratung vereinbaren", fr: "Planifier un conseil en intelligence culturelle" })}</a>
                     </Button>
                   </div>
                 </div>

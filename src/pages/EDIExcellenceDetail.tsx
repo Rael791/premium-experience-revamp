@@ -5,9 +5,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import ediHero from "@/assets/edi-hero.jpg";
 import ediSystems from "@/assets/edi-systems.jpg";
+import { t } from "@/i18n";
 
 const EDIExcellenceDetail = () => {
-  const services = [
+  const services = t({
+    de: [
     {
       name: "EDI Architektur Assessment",
       description: "Umfassende Bewertung Ihrer EDI-Infrastruktur für strategische Entscheidungen",
@@ -107,7 +109,109 @@ const EDIExcellenceDetail = () => {
         "3-Monate Hypercare Support"
       ]
     }
-  ];
+  ],
+    fr: [
+    {
+      name: "Audit d'architecture EDI",
+      description: "Évaluation complète de votre infrastructure EDI pour des décisions stratégiques",
+      icon: Database,
+      what: "Analyse complète de votre paysage EDI existant, axée sur l'évolutivité, la performance et la pérennité.",
+      why: "90 % des entreprises présentent des inefficacités cachées dans leur infrastructure EDI, pouvant coûter des millions.",
+      how: "Méthodologie structurée en 4 phases : Découverte → Analyse → Conception → Feuille de route, avec des bonnes pratiques documentées.",
+      whatHappens: [
+        "Réduction des coûts de transaction EDI de 30 à 50 %",
+        "Élimination des pannes et des pertes de données",
+        "Architecture évolutive pour une croissance x10",
+        "Monitoring et alertes automatisés"
+      ],
+      whatNotHappens: [
+        "Pas de solutions rapides sans vision stratégique",
+        "Pas de dépendance fournisseur ni de technologies propriétaires",
+        "Pas d'implémentations « boîte noire » non documentées"
+      ],
+      kpis: [
+        "99,9 % de disponibilité des systèmes EDI",
+        "< 2 secondes de temps de transaction",
+        "50 % de réduction des coûts d'exploitation",
+        "100 % de conformité aux standards du secteur"
+      ],
+      deliverables: [
+        "Rapport d'état des lieux détaillé",
+        "Plan d'architecture technique",
+        "Calcul du ROI et business case",
+        "Feuille de route de transformation sur 3 ans",
+        "Recommandations technologiques indépendantes",
+        "Analyse des risques & plan d'atténuation"
+      ]
+    },
+    {
+      name: "Mise en place d'un moteur de règles métier",
+      description: "Automatisation intelligente de la validation des données et de la logique métier",
+      icon: Zap,
+      what: "Mise en place d'un moteur de règles métier robuste pour automatiser les décisions et le traitement des données.",
+      why: "La validation manuelle des données coûte en moyenne 40 heures par semaine et entraîne un taux d'erreur de 15 %.",
+      how: "Développement agile avec revues hebdomadaires : Exigences → Conception → Développement → Tests → Mise en production.",
+      whatHappens: [
+        "95 % d'automatisation de la validation des données",
+        "Traitement des règles métier en temps réel",
+        "Ajustements dynamiques sans arrêt des systèmes",
+        "Pistes d'audit complètes pour la conformité"
+      ],
+      whatNotHappens: [
+        "Pas de systèmes de règles rigides et difficiles à modifier",
+        "Pas de perte de contrôle métier au profit de l'IT",
+        "Pas de baisse de performance due au traitement des règles"
+      ],
+      kpis: [
+        "95 % de réduction de la validation manuelle",
+        "< 100 ms de temps de traitement des règles",
+        "99,8 % de précision des règles",
+        "< 4 heures pour modifier une règle"
+      ],
+      deliverables: [
+        "Mise en place du cadre de règles métier",
+        "Éditeur de règles pour les équipes métier",
+        "Tableau de bord de suivi des performances",
+        "Intégration aux systèmes EDI existants",
+        "Formation des utilisateurs & documentation",
+        "Support pendant les 3 premiers mois"
+      ]
+    },
+    {
+      name: "Migration & intégration EDI",
+      description: "Migration fluide vers des plateformes EDI modernes, sans interruption d'activité",
+      icon: Shield,
+      what: "Migration sans interruption des systèmes EDI existants vers des plateformes modernes dans le cloud, avec une intégrité totale des données.",
+      why: "Les systèmes EDI obsolètes provoquent 65 % de pannes en plus et des coûts de maintenance 3 fois plus élevés que les solutions modernes.",
+      how: "Migration par phases : fonctionnement en parallèle → migration progressive → validation → bascule → décommissionnement.",
+      whatHappens: [
+        "Aucune interruption pendant toute la migration",
+        "100 % d'intégrité et de cohérence des données",
+        "Architecture moderne, native cloud",
+        "Performance et évolutivité nettement améliorées"
+      ],
+      whatNotHappens: [
+        "Pas d'interruption d'activité ni de perte de données",
+        "Pas de dépendance à des systèmes propriétaires",
+        "Pas d'approche « tout remplacer » hors de prix"
+      ],
+      kpis: [
+        "0 interruption pendant la migration",
+        "100 % d'intégrité des données",
+        "60 % de performance en plus",
+        "40 % d'économies dès la première année"
+      ],
+      deliverables: [
+        "Plan de migration détaillé",
+        "Mise en place & tests du système parallèle",
+        "Scripts de migration automatisés",
+        "Stratégies de retour arrière à chaque étape",
+        "Optimisation des performances après migration",
+        "3 mois de support renforcé (hypercare)"
+      ]
+    }
+  ],
+  });
 
   return (
     <div className="min-h-screen bg-background">
@@ -129,7 +233,7 @@ const EDIExcellenceDetail = () => {
             <div className="max-w-4xl mx-auto">
               <Link to="/#expertise" className="inline-flex items-center text-primary hover:text-primary/80 mb-8 group">
                 <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-                Zurück zur Expertise
+                {t({ de: "Zurück zur Expertise", fr: "Retour à l'expertise" })}
               </Link>
               
               <div className="flex items-center mb-6">
@@ -137,14 +241,13 @@ const EDIExcellenceDetail = () => {
                   <Database className="w-8 h-8 text-primary" />
                 </div>
                 <div>
-                  <h1 className="text-4xl font-bold text-foreground mb-2">EDI Excellence Services</h1>
-                  <p className="text-xl text-muted-foreground">Strategische EDI-Transformation für nachhaltige Wettbewerbsvorteile</p>
+                  <h1 className="text-4xl font-bold text-foreground mb-2">{t({ de: "EDI Excellence Services", fr: "Services EDI Excellence" })}</h1>
+                  <p className="text-xl text-muted-foreground">{t({ de: "Strategische EDI-Transformation für nachhaltige Wettbewerbsvorteile", fr: "Une transformation EDI stratégique pour un avantage concurrentiel durable" })}</p>
                 </div>
               </div>
               
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Von Legacy-Modernisierung bis zur Implementierung zukunftsfähiger EDI-Architekturen – 
-                wir transformieren Ihre Datenlandschaft strategisch, skalierbar und nachhaltig.
+                {t({ de: "Von Legacy-Modernisierung bis zur Implementierung zukunftsfähiger EDI-Architekturen – wir transformieren Ihre Datenlandschaft strategisch, skalierbar und nachhaltig.", fr: "De la modernisation des systèmes existants à la mise en place d'architectures EDI pérennes – nous transformons votre paysage de données de manière stratégique, évolutive et durable." })}
               </p>
             </div>
           </div>
@@ -155,19 +258,18 @@ const EDIExcellenceDetail = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-foreground mb-4">Warum EDI Excellence unverzichtbar ist</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-4">{t({ de: "Warum EDI Excellence unverzichtbar ist", fr: "Pourquoi l'excellence EDI est indispensable" })}</h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                  In einer digitalisierten Welt ist EDI der unsichtbare Motor Ihres Geschäftserfolgs. 
-                  Unzuverlässige Systeme kosten nicht nur Geld – sie gefährden Kundenbeziehungen und Wachstumschancen.
+                  {t({ de: "In einer digitalisierten Welt ist EDI der unsichtbare Motor Ihres Geschäftserfolgs. Unzuverlässige Systeme kosten nicht nur Geld – sie gefährden Kundenbeziehungen und Wachstumschancen.", fr: "Dans un monde digitalisé, l'EDI est le moteur invisible de votre réussite. Des systèmes peu fiables ne coûtent pas seulement de l'argent – ils menacent vos relations clients et vos opportunités de croissance." })}
                 </p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  { icon: Target, title: "€2.1M", subtitle: "Durchschnittliche jährliche Kosten von EDI-Ausfällen", color: "destructive" },
-                  { icon: TrendingUp, title: "67%", subtitle: "Unternehmen mit veralteten EDI-Systemen", color: "warning" },
-                  { icon: Users, title: "89%", subtitle: "Geschäftspartner bevorzugen automatisierte Prozesse", color: "success" },
-                  { icon: Zap, title: "24/7", subtitle: "Erwartete Verfügbarkeit moderner EDI-Systeme", color: "primary" }
+                  { icon: Target, title: t({ de: "€2.1M", fr: "2,1 M€" }), subtitle: t({ de: "Durchschnittliche jährliche Kosten von EDI-Ausfällen", fr: "Coût annuel moyen des pannes EDI" }), color: "destructive" },
+                  { icon: TrendingUp, title: t({ de: "67%", fr: "67 %" }), subtitle: t({ de: "Unternehmen mit veralteten EDI-Systemen", fr: "des entreprises ont des systèmes EDI obsolètes" }), color: "warning" },
+                  { icon: Users, title: t({ de: "89%", fr: "89 %" }), subtitle: t({ de: "Geschäftspartner bevorzugen automatisierte Prozesse", fr: "des partenaires préfèrent des processus automatisés" }), color: "success" },
+                  { icon: Zap, title: "24/7", subtitle: t({ de: "Erwartete Verfügbarkeit moderner EDI-Systeme", fr: "Disponibilité attendue des systèmes EDI modernes" }), color: "primary" }
                 ].map((stat, idx) => (
                   <div key={idx} className="bg-card rounded-xl p-6 text-center hover-lift border border-border">
                     <div className={`w-12 h-12 mx-auto mb-4 rounded-lg bg-${stat.color}/10 flex items-center justify-center`}>
@@ -186,7 +288,7 @@ const EDIExcellenceDetail = () => {
         <section className="py-16">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-foreground text-center mb-12">Unsere EDI Excellence Services im Detail</h2>
+              <h2 className="text-3xl font-bold text-foreground text-center mb-12">{t({ de: "Unsere EDI Excellence Services im Detail", fr: "Nos services EDI Excellence en détail" })}</h2>
               
               <div className="space-y-16">
                 {services.map((service, idx) => (
@@ -212,21 +314,21 @@ const EDIExcellenceDetail = () => {
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-3 flex items-center">
                           <span className="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center text-primary text-sm mr-2">?</span>
-                          Was
+                          {t({ de: "Was", fr: "Quoi" })}
                         </h4>
                         <p className="text-sm text-muted-foreground leading-relaxed">{service.what}</p>
                       </div>
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-3 flex items-center">
                           <span className="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center text-primary text-sm mr-2">!</span>
-                          Warum
+                          {t({ de: "Warum", fr: "Pourquoi" })}
                         </h4>
                         <p className="text-sm text-muted-foreground leading-relaxed">{service.why}</p>
                       </div>
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-3 flex items-center">
                           <span className="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center text-primary text-sm mr-2">→</span>
-                          Wie
+                          {t({ de: "Wie", fr: "Comment" })}
                         </h4>
                         <p className="text-sm text-muted-foreground leading-relaxed">{service.how}</p>
                       </div>
@@ -238,7 +340,7 @@ const EDIExcellenceDetail = () => {
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-4 flex items-center">
                           <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                          Was passiert
+                          {t({ de: "Was passiert", fr: "Ce qui change" })}
                         </h4>
                         <div className="space-y-3">
                           {service.whatHappens.map((item, itemIdx) => (
@@ -254,7 +356,7 @@ const EDIExcellenceDetail = () => {
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-4 flex items-center">
                           <Shield className="w-5 h-5 text-primary mr-2" />
-                          Was nicht passiert
+                          {t({ de: "Was nicht passiert", fr: "Ce qui n'arrivera pas" })}
                         </h4>
                         <div className="space-y-3">
                           {service.whatNotHappens.map((item, itemIdx) => (
@@ -273,7 +375,7 @@ const EDIExcellenceDetail = () => {
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-4 flex items-center">
                           <TrendingUp className="w-5 h-5 text-primary mr-2" />
-                          Messbare KPIs
+                          {t({ de: "Messbare KPIs", fr: "KPI mesurables" })}
                         </h4>
                         <div className="space-y-3">
                           {service.kpis.map((kpi, kpiIdx) => (
@@ -289,7 +391,7 @@ const EDIExcellenceDetail = () => {
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-4 flex items-center">
                           <Database className="w-5 h-5 text-primary mr-2" />
-                          Deliverables
+                          {t({ de: "Deliverables", fr: "Livrables" })}
                         </h4>
                         <div className="space-y-3">
                           {service.deliverables.map((deliverable, delIdx) => (
@@ -315,18 +417,17 @@ const EDIExcellenceDetail = () => {
               <div className="relative rounded-3xl overflow-hidden">
                 <img 
                   src={ediSystems} 
-                  alt="EDI Excellence Success Story - Professional team analyzing system architecture"
+                  alt={t({ de: "Team analysiert eine EDI-Systemarchitektur", fr: "Équipe analysant une architecture de systèmes EDI" })}
                   className="w-full h-96 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-background/90 to-background/60 flex items-center">
                   <div className="p-12">
-                    <h3 className="text-3xl font-bold text-foreground mb-4">Ready für EDI Excellence?</h3>
+                    <h3 className="text-3xl font-bold text-foreground mb-4">{t({ de: "Ready für EDI Excellence?", fr: "Prêt pour l'excellence EDI ?" })}</h3>
                     <p className="text-lg text-muted-foreground mb-6 max-w-2xl">
-                      Transformieren Sie Ihre EDI-Landschaft mit bewährten Strategien und modernster Technologie. 
-                      Lassen Sie uns Ihre spezifischen Herausforderungen besprechen.
+                      {t({ de: "Transformieren Sie Ihre EDI-Landschaft mit bewährten Strategien und modernster Technologie. Lassen Sie uns Ihre spezifischen Herausforderungen besprechen.", fr: "Transformez votre paysage EDI grâce à des stratégies éprouvées et des technologies modernes. Échangeons sur vos enjeux spécifiques." })}
                     </p>
                     <Button variant="hero" size="xl" asChild>
-                      <a href="/#kontakt">EDI Strategie-Gespräch vereinbaren</a>
+                      <a href="/#kontakt">{t({ de: "EDI Strategie-Gespräch vereinbaren", fr: "Planifier un entretien stratégique EDI" })}</a>
                     </Button>
                   </div>
                 </div>

@@ -5,9 +5,11 @@ import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import leadershipHero from "@/assets/leadership-hero.jpg";
 import leadershipTeam from "@/assets/leadership-team.jpg";
+import { t } from "@/i18n";
 
 const LeadershipDetail = () => {
-  const services = [
+  const services = t({
+    de: [
     {
       name: "Executive Sparring & Strategy",
       description: "Strategisches Sparring für C-Level Executives bei komplexen Transformationen",
@@ -107,7 +109,109 @@ const LeadershipDetail = () => {
         "Impact Measurement & ROI Analysis"
       ]
     }
-  ];
+  ],
+    fr: [
+    {
+      name: "Accompagnement des dirigeants & stratégie",
+      description: "Un partenaire de réflexion stratégique pour les dirigeants face à des transformations complexes",
+      icon: Users2,
+      what: "Un partenariat de confiance pour accompagner les dirigeants dans leurs décisions stratégiques et leurs projets de transformation.",
+      why: "87 % des dirigeants déclarent se sentir isolés face aux décisions critiques et avoir besoin d'une expertise externe.",
+      how: "Modèle de partenariat : diagnostic stratégique → séances d'échange confidentielles → aide à la décision → accompagnement de la mise en œuvre.",
+      whatHappens: [
+        "Des décisions stratégiques solides malgré l'incertitude",
+        "Prise de décision accélérée de 40 %",
+        "Meilleur taux de réussite des mises en œuvre",
+        "Renforcement de la posture et du leadership des dirigeants"
+      ],
+      whatNotHappens: [
+        "Pas d'approches de conseil standardisées ni de modèles tout faits",
+        "Pas de perte d'autonomie des dirigeants",
+        "Pas de dépendance à des consultants externes"
+      ],
+      kpis: [
+        "Décisions stratégiques 40 % plus rapides",
+        "85 % de réussite des mises en œuvre",
+        "95 % de satisfaction des dirigeants",
+        "60 % de meilleur alignement des équipes"
+      ],
+      deliverables: [
+        "Diagnostic stratégique & feuille de route",
+        "Séances d'échange mensuelles",
+        "Cadre et outils d'aide à la décision",
+        "Accompagnement de la mise en œuvre",
+        "Plan de développement du leadership",
+        "Revues de progression confidentielles"
+      ]
+    },
+    {
+      name: "Pilotage de la transformation agile",
+      description: "Conduire des transformations agiles complexes dans des organisations traditionnelles",
+      icon: Zap,
+      what: "Pilotage de bout en bout de transformations agiles, axé sur le changement culturel et la durabilité.",
+      why: "70 % des transformations agiles échouent faute de soutien de la direction et en raison de résistances culturelles.",
+      how: "Cadre de leadership de la transformation : diagnostic culturel → alignement de la direction → déploiement progressif → coaching continu.",
+      whatHappens: [
+        "Une transformation agile réussie, sans choc culturel",
+        "Délai de mise sur le marché amélioré de 60 %",
+        "Plus d'engagement et d'innovation des équipes",
+        "Un état d'esprit agile durable"
+      ],
+      whatNotHappens: [
+        "Pas d'« agilité de façade » sans réel changement culturel",
+        "Pas de retour aux anciennes pratiques après le lancement",
+        "Pas de surcharge des équipes par un changement trop rapide"
+      ],
+      kpis: [
+        "70 % de réussite des transformations",
+        "60 % de gain sur le délai de mise sur le marché",
+        "80 % de score d'engagement des collaborateurs",
+        "50 % d'escalades en moins"
+      ],
+      deliverables: [
+        "Feuille de route de la transformation agile",
+        "Programme de coaching des managers",
+        "Conduite du changement culturel",
+        "Cadre de responsabilisation des équipes",
+        "Système de mesure de la performance",
+        "Évaluation de la pérennité"
+      ]
+    },
+    {
+      name: "Développement du leadership",
+      description: "Développer les compétences managériales pour la transformation digitale et la collaboration internationale",
+      icon: Target,
+      what: "Programmes de développement du leadership sur mesure pour les managers évoluant dans des contextes digitaux et internationaux.",
+      why: "93 % des organisations considèrent le leadership comme un goulot d'étranglement critique pour la transformation digitale et l'expansion internationale.",
+      how: "Développement par les compétences : évaluation → plans de développement individuels → coaching de groupe → apprentissage entre pairs → mesure de l'impact.",
+      whatHappens: [
+        "Des compétences managériales améliorées de façon mesurable",
+        "Meilleure performance et fidélisation des équipes",
+        "Meilleure capacité à conduire le changement",
+        "Une présence managériale internationale renforcée"
+      ],
+      whatNotHappens: [
+        "Pas de programmes génériques déconnectés de la pratique",
+        "Pas de formation sans impact business mesurable",
+        "Pas d'approches théoriques sans application concrète"
+      ],
+      kpis: [
+        "25 % d'amélioration des évaluations de leadership",
+        "90 % de satisfaction des participants",
+        "40 % de meilleure performance des équipes",
+        "70 % de promotions internes"
+      ],
+      deliverables: [
+        "Évaluation individuelle du leadership",
+        "Plans de développement personnalisés",
+        "Séances de coaching de groupe",
+        "Cadre d'apprentissage entre pairs",
+        "Mise en place d'un programme de mentorat",
+        "Mesure de l'impact & analyse du ROI"
+      ]
+    }
+  ],
+  });
 
   return (
     <div className="min-h-screen bg-background">
@@ -129,7 +233,7 @@ const LeadershipDetail = () => {
             <div className="max-w-4xl mx-auto">
               <Link to="/#expertise" className="inline-flex items-center text-primary hover:text-primary/80 mb-8 group">
                 <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-                Zurück zur Expertise
+                {t({ de: "Zurück zur Expertise", fr: "Retour à l'expertise" })}
               </Link>
               
               <div className="flex items-center mb-6">
@@ -137,14 +241,13 @@ const LeadershipDetail = () => {
                   <Users2 className="w-8 h-8 text-primary" />
                 </div>
                 <div>
-                  <h1 className="text-4xl font-bold text-foreground mb-2">Leadership & Transformation Services</h1>
-                  <p className="text-xl text-muted-foreground">Executive Leadership für komplexe Veränderungsprozesse</p>
+                  <h1 className="text-4xl font-bold text-foreground mb-2">{t({ de: "Leadership & Transformation Services", fr: "Services Leadership & Transformation" })}</h1>
+                  <p className="text-xl text-muted-foreground">{t({ de: "Executive Leadership für komplexe Veränderungsprozesse", fr: "Un leadership de direction pour des transformations complexes" })}</p>
                 </div>
               </div>
               
               <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-                Wenn Transformation Leadership braucht, schaffen wir die Brücke zwischen Vision und Execution. 
-                Mit bewährter Erfahrung in Executive Sparring und Change Leadership.
+                {t({ de: "Wenn Transformation Leadership braucht, schaffen wir die Brücke zwischen Vision und Execution. Mit bewährter Erfahrung in Executive Sparring und Change Leadership.", fr: "Quand la transformation a besoin de leadership, nous faisons le pont entre la vision et l'exécution – avec une expérience éprouvée de l'accompagnement des dirigeants et de la conduite du changement." })}
               </p>
             </div>
           </div>
@@ -155,19 +258,18 @@ const LeadershipDetail = () => {
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
               <div className="text-center mb-12">
-                <h2 className="text-3xl font-bold text-foreground mb-4">Leadership als Transformation Enabler</h2>
+                <h2 className="text-3xl font-bold text-foreground mb-4">{t({ de: "Leadership als Transformation Enabler", fr: "Le leadership, moteur de la transformation" })}</h2>
                 <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                  In Zeiten exponentieller Veränderung ist Leadership der entscheidende Faktor zwischen 
-                  Transformation Success und Transformation Fatigue.
+                  {t({ de: "In Zeiten exponentieller Veränderung ist Leadership der entscheidende Faktor zwischen Transformation Success und Transformation Fatigue.", fr: "En période de changement accéléré, le leadership fait toute la différence entre une transformation réussie et une transformation qui s'essouffle." })}
                 </p>
               </div>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                 {[
-                  { icon: Target, title: "70%", subtitle: "Transformationen scheitern an Leadership", color: "destructive" },
-                  { icon: TrendingUp, title: "87%", subtitle: "CEOs fühlen sich in kritischen Entscheidungen isoliert", color: "warning" },
-                  { icon: Users, title: "93%", subtitle: "Organisationen sehen Leadership als kritischen Engpass", color: "primary" },
-                  { icon: Zap, title: "3.5x", subtitle: "ROI bei professionellem Leadership Development", color: "primary" }
+                  { icon: Target, title: t({ de: "70%", fr: "70 %" }), subtitle: t({ de: "Transformationen scheitern an Leadership", fr: "des transformations échouent faute de leadership" }), color: "destructive" },
+                  { icon: TrendingUp, title: t({ de: "87%", fr: "87 %" }), subtitle: t({ de: "CEOs fühlen sich in kritischen Entscheidungen isoliert", fr: "des dirigeants se sentent isolés face aux décisions critiques" }), color: "warning" },
+                  { icon: Users, title: t({ de: "93%", fr: "93 %" }), subtitle: t({ de: "Organisationen sehen Leadership als kritischen Engpass", fr: "des organisations voient le leadership comme un goulot d'étranglement" }), color: "primary" },
+                  { icon: Zap, title: t({ de: "3.5x", fr: "3,5x" }), subtitle: t({ de: "ROI bei professionellem Leadership Development", fr: "de ROI avec un développement professionnel du leadership" }), color: "primary" }
                 ].map((stat, idx) => (
                   <div key={idx} className="bg-card rounded-xl p-6 text-center hover-lift border border-border">
                     <div className={`w-12 h-12 mx-auto mb-4 rounded-lg bg-${stat.color}/10 flex items-center justify-center`}>
@@ -186,7 +288,7 @@ const LeadershipDetail = () => {
         <section className="py-16">
           <div className="container mx-auto px-6">
             <div className="max-w-6xl mx-auto">
-              <h2 className="text-3xl font-bold text-foreground text-center mb-12">Leadership & Transformation Services im Detail</h2>
+              <h2 className="text-3xl font-bold text-foreground text-center mb-12">{t({ de: "Leadership & Transformation Services im Detail", fr: "Nos services Leadership & Transformation en détail" })}</h2>
               
               <div className="space-y-16">
                 {services.map((service, idx) => (
@@ -212,21 +314,21 @@ const LeadershipDetail = () => {
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-3 flex items-center">
                           <span className="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center text-primary text-sm mr-2">?</span>
-                          Was
+                          {t({ de: "Was", fr: "Quoi" })}
                         </h4>
                         <p className="text-sm text-muted-foreground leading-relaxed">{service.what}</p>
                       </div>
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-3 flex items-center">
                           <span className="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center text-primary text-sm mr-2">!</span>
-                          Warum
+                          {t({ de: "Warum", fr: "Pourquoi" })}
                         </h4>
                         <p className="text-sm text-muted-foreground leading-relaxed">{service.why}</p>
                       </div>
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-3 flex items-center">
                           <span className="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center text-primary text-sm mr-2">→</span>
-                          Wie
+                          {t({ de: "Wie", fr: "Comment" })}
                         </h4>
                         <p className="text-sm text-muted-foreground leading-relaxed">{service.how}</p>
                       </div>
@@ -238,7 +340,7 @@ const LeadershipDetail = () => {
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-4 flex items-center">
                           <CheckCircle className="w-5 h-5 text-green-500 mr-2" />
-                          Was passiert
+                          {t({ de: "Was passiert", fr: "Ce qui change" })}
                         </h4>
                         <div className="space-y-3">
                           {service.whatHappens.map((item, itemIdx) => (
@@ -254,7 +356,7 @@ const LeadershipDetail = () => {
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-4 flex items-center">
                           <Shield className="w-5 h-5 text-primary mr-2" />
-                          Was nicht passiert
+                          {t({ de: "Was nicht passiert", fr: "Ce qui n'arrivera pas" })}
                         </h4>
                         <div className="space-y-3">
                           {service.whatNotHappens.map((item, itemIdx) => (
@@ -273,7 +375,7 @@ const LeadershipDetail = () => {
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-4 flex items-center">
                           <TrendingUp className="w-5 h-5 text-primary mr-2" />
-                          Messbare KPIs
+                          {t({ de: "Messbare KPIs", fr: "KPI mesurables" })}
                         </h4>
                         <div className="space-y-3">
                           {service.kpis.map((kpi, kpiIdx) => (
@@ -289,7 +391,7 @@ const LeadershipDetail = () => {
                       <div className="bg-card/30 rounded-xl p-6">
                         <h4 className="font-bold text-foreground mb-4 flex items-center">
                           <Users2 className="w-5 h-5 text-primary mr-2" />
-                          Deliverables
+                          {t({ de: "Deliverables", fr: "Livrables" })}
                         </h4>
                         <div className="space-y-3">
                           {service.deliverables.map((deliverable, delIdx) => (
@@ -315,18 +417,17 @@ const LeadershipDetail = () => {
               <div className="relative rounded-3xl overflow-hidden">
                 <img 
                   src={leadershipTeam} 
-                  alt="Leadership Success Story - Executive team planning transformation strategy"
+                  alt={t({ de: "Führungsteam plant eine Transformationsstrategie", fr: "Équipe de direction planifiant une stratégie de transformation" })}
                   className="w-full h-96 object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-background/90 to-background/60 flex items-center">
                   <div className="p-12">
-                    <h3 className="text-3xl font-bold text-foreground mb-4">Ready für Leadership Excellence?</h3>
+                    <h3 className="text-3xl font-bold text-foreground mb-4">{t({ de: "Ready für Leadership Excellence?", fr: "Prêt pour l'excellence en leadership ?" })}</h3>
                     <p className="text-lg text-muted-foreground mb-6 max-w-2xl">
-                      Machen Sie Ihre Führungsmannschaft zum Enabler für erfolgreiche Transformation. 
-                      Lassen Sie uns Ihre Leadership-Herausforderungen besprechen.
+                      {t({ de: "Machen Sie Ihre Führungsmannschaft zum Enabler für erfolgreiche Transformation. Lassen Sie uns Ihre Leadership-Herausforderungen besprechen.", fr: "Faites de votre équipe de direction le moteur d'une transformation réussie. Échangeons sur vos enjeux de leadership." })}
                     </p>
                     <Button variant="hero" size="xl" asChild>
-                      <a href="/#kontakt">Executive Sparring vereinbaren</a>
+                      <a href="/#kontakt">{t({ de: "Executive Sparring vereinbaren", fr: "Planifier un accompagnement dirigeant" })}</a>
                     </Button>
                   </div>
                 </div>
