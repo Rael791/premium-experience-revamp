@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { 
+import { t } from "@/i18n";
   Database, 
   ShoppingBag, 
   Globe, 
@@ -14,75 +15,111 @@ import {
 const ServicesSection = () => {
   const services = [
     {
+      slug: "edi-excellence",
       category: "EDI Excellence",
       icon: Database,
       color: "primary",
       gradient: "from-primary/20 to-primary-glow/10",
-      services: [
-        "Systemarchitektur & Migrationsstrategien",
-        "Datenqualitäts-Frameworks & Business Rules",
-        "Monitoring, KPI-Visualisierung, Fehleranalyse",
-        "Performance-Optimierung & Skalierung"
-      ]
+      services: t({
+        de: [
+          "Systemarchitektur & Migrationsstrategien",
+          "Datenqualitäts-Frameworks & Business Rules",
+          "Monitoring, KPI-Visualisierung, Fehleranalyse",
+          "Performance-Optimierung & Skalierung",
+        ],
+        fr: [
+          "Architecture système & stratégies de migration",
+          "Cadres de qualité des données & règles métier",
+          "Monitoring, tableaux de bord KPI, analyse des erreurs",
+          "Optimisation des performances & montée en charge",
+        ],
+      })
     },
     {
+      slug: "eprocurement-mastery",
       category: "eProcurement Mastery",
       icon: ShoppingBag,
       color: "accent",
       gradient: "from-accent/20 to-accent/10",
-      services: [
-        "Prozessdesign & Automatisierung",
-        "Lieferanten-Onboarding & Self-Service-Portale",
-        "Compliance & eInvoicing-Strategien",
-        "Spend-Analytics & Kostentransparenz"
-      ]
+      services: t({
+        de: [
+          "Prozessdesign & Automatisierung",
+          "Lieferanten-Onboarding & Self-Service-Portale",
+          "Compliance & eInvoicing-Strategien",
+          "Spend-Analytics & Kostentransparenz",
+        ],
+        fr: [
+          "Conception & automatisation des processus",
+          "Intégration des fournisseurs & portails libre-service",
+          "Conformité & stratégies de facturation électronique",
+          "Analyse des dépenses & transparence des coûts",
+        ],
+      })
     },
     {
-      category: "Interkulturelle Integration",
+      slug: "interkulturelle-integration",
+      category: t({ de: "Interkulturelle Integration", fr: "Intégration interculturelle" }),
       icon: Globe,
       color: "secondary",
       gradient: "from-secondary/20 to-secondary/10",
-      services: [
-        "Cross-Cultural Process Design",
-        "Interkulturelles Stakeholder-Management",
-        "Projektkommunikation zwischen DACH & GCC",
-        "Change Management über Kulturgrenzen"
-      ]
+      services: t({
+        de: [
+          "Cross-Cultural Process Design",
+          "Interkulturelles Stakeholder-Management",
+          "Projektkommunikation zwischen DACH & GCC",
+          "Change Management über Kulturgrenzen",
+        ],
+        fr: [
+          "Conception de processus interculturels",
+          "Gestion interculturelle des parties prenantes",
+          "Communication de projet entre l'Europe et le Maroc",
+          "Conduite du changement au-delà des frontières culturelles",
+        ],
+      })
     },
     {
+      slug: "leadership-&-transformation",
       category: "Leadership & Transformation",
       icon: TrendingUp,
       color: "primary",
       gradient: "from-primary/20 to-primary-glow/10",
-      services: [
-        "Executive Sparring & Projektsteuerung",
-        "Training für interne EDI-/eProcurement-Rollen",
-        "Agile Methoden für Beschaffungs- und IT-Teams",
-        "Digitale Transformation Roadmaps"
-      ]
+      services: t({
+        de: [
+          "Executive Sparring & Projektsteuerung",
+          "Training für interne EDI-/eProcurement-Rollen",
+          "Agile Methoden für Beschaffungs- und IT-Teams",
+          "Digitale Transformation Roadmaps",
+        ],
+        fr: [
+          "Accompagnement des dirigeants & pilotage de projets",
+          "Formation des équipes EDI / eProcurement internes",
+          "Méthodes agiles pour les équipes achats et IT",
+          "Feuilles de route de transformation digitale",
+        ],
+      })
     }
   ];
 
   const highlights = [
     {
       icon: Shield,
-      title: "Compliance-First",
-      description: "Alle Lösungen erfüllen höchste Compliance-Standards"
+      title: t({ de: "Compliance-First", fr: "Conformité d'abord" }),
+      description: t({ de: "Alle Lösungen erfüllen höchste Compliance-Standards", fr: "Toutes nos solutions respectent les plus hauts standards de conformité" })
     },
     {
       icon: Zap,
-      title: "Agile Umsetzung",
-      description: "Schnelle Iterationen, messbare Fortschritte"
+      title: t({ de: "Agile Umsetzung", fr: "Mise en œuvre agile" }),
+      description: t({ de: "Schnelle Iterationen, messbare Fortschritte", fr: "Itérations rapides, progrès mesurables" })
     },
     {
       icon: Users,
-      title: "Change Enablement",
-      description: "Befähigung Ihrer Teams für nachhaltigen Erfolg"
+      title: t({ de: "Change Enablement", fr: "Conduite du changement" }),
+      description: t({ de: "Befähigung Ihrer Teams für nachhaltigen Erfolg", fr: "Des équipes autonomes pour un succès durable" })
     },
     {
       icon: Target,
-      title: "ROI-Fokus",
-      description: "Messbare Geschäftsresultate von Tag 1"
+      title: t({ de: "ROI-Fokus", fr: "Orientation ROI" }),
+      description: t({ de: "Messbare Geschäftsresultate von Tag 1", fr: "Des résultats mesurables dès le premier jour" })
     }
   ];
 
@@ -92,10 +129,10 @@ const ServicesSection = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="heading-section mb-6">
-            Unsere <span className="text-primary">Leistungen</span>
+            {t({ de: "Unsere", fr: "Nos" })} <span className="text-primary">{t({ de: "Leistungen", fr: "services" })}</span>
           </h2>
           <p className="text-premium max-w-3xl mx-auto">
-            Umfassende Expertise in vier strategischen Bereichen. Jede Leistung designed für maximale Wirkung und nachhaltigen Erfolg.
+            {t({ de: "Umfassende Expertise in vier strategischen Bereichen. Jede Leistung designed für maximale Wirkung und nachhaltigen Erfolg.", fr: "Une expertise complète dans quatre domaines stratégiques. Chaque prestation est conçue pour un impact maximal et un succès durable." })}
           </p>
         </div>
 
@@ -140,8 +177,8 @@ const ServicesSection = () => {
                     className={`w-full group/btn hover:border-${service.color}/40`}
                     asChild
                   >
-                    <a href={`/services/${service.category.toLowerCase().replace(/\s+/g, '-')}`}>
-                      Detailberatung anfordern
+                    <a href={`/services/${service.slug}`}>
+                      {t({ de: "Detailberatung anfordern", fr: "Demander un conseil détaillé" })}
                       <span className="ml-2 transform group-hover/btn:translate-x-1 transition-transform">→</span>
                     </a>
                   </Button>
@@ -154,7 +191,7 @@ const ServicesSection = () => {
         {/* Service Highlights */}
         <div className="glass-effect rounded-2xl p-8 mb-16">
           <h3 className="text-2xl font-bold text-center text-foreground mb-8">
-            Warum unsere Leistungen anders sind
+            {t({ de: "Warum unsere Leistungen anders sind", fr: "Pourquoi nos services sont différents" })}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {highlights.map((highlight, idx) => (
@@ -172,14 +209,14 @@ const ServicesSection = () => {
         {/* Process Overview */}
         <div className="text-center animate-fade-in-up">
           <h3 className="text-2xl font-bold text-foreground mb-8">
-            Unser bewährter Prozess
+            {t({ de: "Unser bewährter Prozess", fr: "Notre méthode éprouvée" })}
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {[
-              { step: "01", title: "Strategische Analyse", desc: "Tiefgehende Bewertung Ihrer aktuellen Landschaft" },
-              { step: "02", title: "Roadmap Design", desc: "Maßgeschneiderte Transformationsstrategie" },
-              { step: "03", title: "Agile Umsetzung", desc: "Iterative Implementierung mit kontinuierlichem Feedback" },
-              { step: "04", title: "Nachhaltigkeit", desc: "Knowledge Transfer und Empowerment Ihrer Teams" }
+              { step: "01", title: t({ de: "Strategische Analyse", fr: "Analyse stratégique" }), desc: t({ de: "Tiefgehende Bewertung Ihrer aktuellen Landschaft", fr: "Évaluation approfondie de votre environnement actuel" }) },
+              { step: "02", title: t({ de: "Roadmap Design", fr: "Feuille de route" }), desc: t({ de: "Maßgeschneiderte Transformationsstrategie", fr: "Stratégie de transformation sur mesure" }) },
+              { step: "03", title: t({ de: "Agile Umsetzung", fr: "Mise en œuvre agile" }), desc: t({ de: "Iterative Implementierung mit kontinuierlichem Feedback", fr: "Déploiement itératif avec retours continus" }) },
+              { step: "04", title: t({ de: "Nachhaltigkeit", fr: "Pérennité" }), desc: t({ de: "Knowledge Transfer und Empowerment Ihrer Teams", fr: "Transfert de compétences et autonomie de vos équipes" }) }
             ].map((phase, idx) => (
               <div key={idx} className="relative">
                 <div className="glass-effect rounded-xl p-6 hover-lift">
@@ -198,12 +235,12 @@ const ServicesSection = () => {
         {/* Final CTA */}
         <div className="text-center mt-16">
           <div className="bg-gradient-hero rounded-2xl p-8 text-background max-w-3xl mx-auto">
-            <h3 className="text-3xl font-bold mb-4">Bereit für Transformation?</h3>
+            <h3 className="text-3xl font-bold mb-4">{t({ de: "Bereit für Transformation?", fr: "Prêt pour la transformation ?" })}</h3>
             <p className="text-lg mb-6 opacity-90">
-              Lassen Sie uns gemeinsam erkunden, wie unsere Leistungen Ihr Unternehmen auf die nächste Stufe bringen.
+              {t({ de: "Lassen Sie uns gemeinsam erkunden, wie unsere Leistungen Ihr Unternehmen auf die nächste Stufe bringen.", fr: "Explorons ensemble comment nos services peuvent faire passer votre entreprise au niveau supérieur." })}
             </p>
-            <Button variant="outline" size="xl" className="bg-background text-foreground hover:bg-background/90">
-              Strategisches Erstgespräch vereinbaren
+            <Button variant="outline" size="xl" className="bg-background text-foreground hover:bg-background/90" asChild>
+              <a href="#kontakt">{t({ de: "Strategisches Erstgespräch vereinbaren", fr: "Planifier un entretien stratégique" })}</a>
             </Button>
           </div>
         </div>

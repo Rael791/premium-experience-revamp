@@ -1,6 +1,29 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
+import { LANG, t, switchLangUrl } from "@/i18n";
+
+const LangSwitch = ({ className = "" }: { className?: string }) => (
+  <div className={`flex items-center text-sm font-medium ${className}`}>
+    {(["de", "fr"] as const).map((l, i) => (
+      <span key={l} className="flex items-center">
+        {i > 0 && <span className="mx-2 text-muted-foreground">|</span>}
+        {LANG === l ? (
+          <span className="text-primary">{l.toUpperCase()}</span>
+        ) : (
+          <a
+            href={switchLangUrl(l)}
+            className="text-muted-foreground hover:text-primary transition-colors"
+            hrefLang={l}
+            title={l === "fr" ? "Version française (Maroc)" : "Deutsche Version"}
+          >
+            {l.toUpperCase()}
+          </a>
+        )}
+      </span>
+    ))}
+  </div>
+);
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,13 +38,15 @@ const Navigation = () => {
   }, []);
 
   const navItems = [
-    { href: "/", label: "Home" },
-    { href: "/#ueber-uns", label: "Über uns" },
+    { href: "/", label: t({ de: "Home", fr: "Accueil" }) },
+    { href: "/#ueber-uns", label: t({ de: "Über uns", fr: "À propos" }) },
     { href: "/#expertise", label: "Expertise" },
-    { href: "/#leistungen", label: "Leistungen" },
-    { href: "/training", label: "Training" },
-    { href: "/#kontakt", label: "Kontakt" },
+    { href: "/#leistungen", label: t({ de: "Leistungen", fr: "Services" }) },
+    { href: "/training", label: t({ de: "Training", fr: "Formations" }) },
+    { href: "/#kontakt", label: t({ de: "Kontakt", fr: "Contact" }) },
   ];
+
+  const ctaLabel = t({ de: "Strategisches Erstgespräch", fr: "Entretien stratégique" });
 
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-300 ${
@@ -35,7 +60,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center space-x-7">
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -45,23 +70,28 @@ const Navigation = () => {
                 {item.label}
               </a>
             ))}
+            <LangSwitch />
             <Button variant="hero" size="lg" asChild>
-              <a href="/#kontakt">Strategisches Erstgespräch</a>
+              <a href="/#kontakt">{ctaLabel}</a>
             </Button>
           </div>
 
           {/* Mobile Menu Button */}
-          <button
-            className="md:hidden text-foreground hover:text-primary"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-          </button>
+          <div className="lg:hidden flex items-center space-x-4">
+            <LangSwitch />
+            <button
+              className="text-foreground hover:text-primary"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              aria-label="Menu"
+            >
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 space-y-4 glass-effect rounded-lg p-6">
+          <div className="lg:hidden mt-4 space-y-4 glass-effect rounded-lg p-6">
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -74,7 +104,7 @@ const Navigation = () => {
             ))}
             <Button variant="hero" size="lg" className="w-full" asChild>
               <a href="/#kontakt" onClick={() => setIsMobileMenuOpen(false)}>
-                Strategisches Erstgespräch
+                {ctaLabel}
               </a>
             </Button>
           </div>

@@ -1,26 +1,27 @@
 import { AlertTriangle, TrendingDown, Shield, Users } from "lucide-react";
+import { t } from "@/i18n";
 
 const ProblemsSection = () => {
   const problems = [
     {
       icon: TrendingDown,
-      title: "Systeme, die bei Wachstum kollabieren",
-      description: "Fehlende Skalierbarkeit führt zu kritischen Ausfällen in entscheidenden Momenten"
+      title: t({ de: "Systeme, die bei Wachstum kollabieren", fr: "Des systèmes qui cèdent face à la croissance" }),
+      description: t({ de: "Fehlende Skalierbarkeit führt zu kritischen Ausfällen in entscheidenden Momenten", fr: "Le manque d'évolutivité provoque des pannes critiques aux moments décisifs" })
     },
     {
       icon: AlertTriangle,
-      title: "Prozesse, die nicht kompatibel sind",
-      description: "Inkompatible Workflows blockieren die digitale Transformation"
+      title: t({ de: "Prozesse, die nicht kompatibel sind", fr: "Des processus incompatibles" }),
+      description: t({ de: "Inkompatible Workflows blockieren die digitale Transformation", fr: "Des workflows incompatibles freinent la transformation digitale" })
     },
     {
       icon: Shield,
-      title: "Daten, denen niemand traut",
-      description: "Mangelnde Datenqualität untergräbt Entscheidungsfindung und Compliance"
+      title: t({ de: "Daten, denen niemand traut", fr: "Des données auxquelles personne ne se fie" }),
+      description: t({ de: "Mangelnde Datenqualität untergräbt Entscheidungsfindung und Compliance", fr: "Une qualité de données insuffisante fragilise les décisions et la conformité" })
     },
     {
       icon: Users,
-      title: "Kulturen, die nicht zueinander finden",
-      description: "Interkulturelle Missverständnisse verzögern internationale Projekte"
+      title: t({ de: "Kulturen, die nicht zueinander finden", fr: "Des cultures qui ne se comprennent pas" }),
+      description: t({ de: "Interkulturelle Missverständnisse verzögern internationale Projekte", fr: "Les malentendus interculturels retardent les projets internationaux" })
     }
   ];
 
@@ -29,11 +30,13 @@ const ProblemsSection = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto text-center mb-16 animate-fade-in-up">
           <h2 className="heading-section mb-6">
-            Die Lücken, die <span className="text-primary">niemand schließt</span> – bis jetzt
+            {t({ de: "Die Lücken, die", fr: "Les failles que" })} <span className="text-primary">{t({ de: "niemand schließt", fr: "personne ne comble" })}</span> {t({ de: "– bis jetzt", fr: "– jusqu'à maintenant" })}
           </h2>
           <p className="text-premium">
-            Digitale Beschaffung und EDI sind zum Pflichtprogramm geworden. Doch während alle von Integration sprechen, 
-            redet fast niemand über das, was Projekte wirklich scheitern lässt:
+            {t({
+              de: "Digitale Beschaffung und EDI sind zum Pflichtprogramm geworden. Doch während alle von Integration sprechen, redet fast niemand über das, was Projekte wirklich scheitern lässt:",
+              fr: "Les achats digitaux et l'EDI sont devenus incontournables. Mais si tout le monde parle d'intégration, presque personne ne parle de ce qui fait réellement échouer les projets :",
+            })}
           </p>
         </div>
 
@@ -68,10 +71,10 @@ const ProblemsSection = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-accent/20"></div>
             <div className="relative z-10">
               <h3 className="text-4xl font-bold text-background mb-6 drop-shadow-lg">
-                Wir schließen genau diese Lücken
+                {t({ de: "Wir schließen genau diese Lücken", fr: "Nous comblons précisément ces failles" })}
               </h3>
               <div className="flex flex-wrap justify-center gap-4">
-                {["strategisch", "skalierbar", "nachhaltig"].map((word, idx) => (
+                {t({ de: ["strategisch", "skalierbar", "nachhaltig"], fr: ["stratégique", "évolutif", "durable"] }).map((word, idx) => (
                   <span 
                     key={idx}
                     className="inline-block bg-background/20 backdrop-blur-sm text-background font-bold text-xl px-6 py-3 rounded-full border border-background/30 shadow-lg"

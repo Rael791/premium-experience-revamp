@@ -4,40 +4,45 @@ import businessTeamImage from "@/assets/business-team-1.jpg";
 import businessOfficeImage from "@/assets/business-office-1.jpg";
 import businessMeetingImage from "@/assets/business-meeting-1.jpg";
 import businessStrategyImage from "@/assets/business-strategy-1.jpg";
+import { t } from "@/i18n";
 
 const ExpertiseSection = () => {
   const expertiseAreas = [
     {
       icon: Code,
+      slug: "edi-excellence",
       title: "EDI Excellence",
-      description: "Architektur, Skalierung, Performance – wir machen Ihre EDI-Landschaft zukunftsfähig.",
+      description: t({ de: "Architektur, Skalierung, Performance – wir machen Ihre EDI-Landschaft zukunftsfähig.", fr: "Architecture, montée en charge, performance – nous préparons votre paysage EDI pour l'avenir." }),
       image: businessOfficeImage,
       color: "primary",
-      features: ["Systemarchitektur & Migration", "Datenqualitäts-Frameworks", "Performance-Monitoring", "Business Rules Engine"]
+      features: t({ de: ["Systemarchitektur & Migration", "Datenqualitäts-Frameworks", "Performance-Monitoring", "Business Rules Engine"], fr: ["Architecture système & migration", "Cadres de qualité des données", "Suivi de la performance", "Moteur de règles métier"] })
     },
     {
       icon: ShoppingCart,
+      slug: "eprocurement-mastery",
       title: "eProcurement Mastery",
-      description: "Vom operativen Einkauf zur strategischen Wertschöpfung.",
+      description: t({ de: "Vom operativen Einkauf zur strategischen Wertschöpfung.", fr: "Des achats opérationnels à la création de valeur stratégique." }),
       image: businessStrategyImage,
       color: "accent",
-      features: ["Prozessdesign & Automatisierung", "Lieferanten-Onboarding", "Compliance-Strategien", "Self-Service-Portale"]
+      features: t({ de: ["Prozessdesign & Automatisierung", "Lieferanten-Onboarding", "Compliance-Strategien", "Self-Service-Portale"], fr: ["Conception & automatisation des processus", "Intégration des fournisseurs", "Stratégies de conformité", "Portails libre-service"] })
     },
     {
       icon: Globe2,
-      title: "Interkulturelle Integration",
-      description: "Geschäftsprozesse und Kommunikation, die in jeder Kultur funktionieren.",
+      slug: "interkulturelle-integration",
+      title: t({ de: "Interkulturelle Integration", fr: "Intégration interculturelle" }),
+      description: t({ de: "Geschäftsprozesse und Kommunikation, die in jeder Kultur funktionieren.", fr: "Des processus et une communication qui fonctionnent dans chaque culture." }),
       image: businessMeetingImage,
       color: "secondary",
-      features: ["Cross-Cultural Process Design", "Stakeholder-Management", "DACH ↔ GCC Projektkommunikation", "Kulturelle Compliance"]
+      features: t({ de: ["Cross-Cultural Process Design", "Stakeholder-Management", "DACH ↔ GCC Projektkommunikation", "Kulturelle Compliance"], fr: ["Conception de processus interculturels", "Gestion des parties prenantes", "Communication de projet Europe ↔ Maroc", "Conformité culturelle"] })
     },
     {
       icon: Users2,
+      slug: "leadership-und-transformation",
       title: "Leadership & Transformation",
-      description: "Befähigung Ihrer Schlüsselrollen, komplexe Veränderungen zu steuern.",
+      description: t({ de: "Befähigung Ihrer Schlüsselrollen, komplexe Veränderungen zu steuern.", fr: "Donner à vos rôles clés les moyens de piloter des changements complexes." }),
       image: businessTeamImage,
       color: "primary",
-      features: ["Executive Sparring", "Projektsteuerung", "Agile Transformation", "Training & Empowerment"]
+      features: t({ de: ["Executive Sparring", "Projektsteuerung", "Agile Transformation", "Training & Empowerment"], fr: ["Accompagnement des dirigeants", "Pilotage de projets", "Transformation agile", "Formation & montée en compétences"] })
     }
   ];
 
@@ -46,11 +51,13 @@ const ExpertiseSection = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="heading-section mb-6">
-            Unsere <span className="text-primary">Expertise</span>
+            {t({ de: "Unsere", fr: "Notre" })} <span className="text-primary">{t({ de: "Expertise", fr: "expertise" })}</span>
           </h2>
           <p className="text-premium max-w-3xl mx-auto">
-            Vier Kernkompetenzen, die Ihre digitale Beschaffung auf das nächste Level bringen. 
-            Von technischer Exzellenz bis zu kultureller Intelligenz.
+            {t({
+              de: "Vier Kernkompetenzen, die Ihre digitale Beschaffung auf das nächste Level bringen. Von technischer Exzellenz bis zu kultureller Intelligenz.",
+              fr: "Quatre compétences clés pour faire passer vos achats digitaux au niveau supérieur. De l'excellence technique à l'intelligence culturelle.",
+            })}
           </p>
         </div>
 
@@ -73,7 +80,7 @@ const ExpertiseSection = () => {
                 <div className="aspect-[4/3] lg:aspect-auto lg:h-full relative">
                   <img 
                     src={area.image} 
-                    alt={`${area.title} professional environment`}
+                    alt={area.title}
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-br from-transparent via-background/20 to-background/40"></div>
@@ -115,8 +122,8 @@ const ExpertiseSection = () => {
                       className={`group/btn hover:border-${area.color}/40 hover:text-${area.color}`}
                       asChild
                     >
-                      <a href={`/expertise/${area.title.toLowerCase().replace(/\s+/g, '-').replace('&', 'und')}`}>
-                        Mehr erfahren
+                      <a href={`/expertise/${area.slug}`}>
+                        {t({ de: "Mehr erfahren", fr: "En savoir plus" })}
                         <span className="ml-2 transform group-hover/btn:translate-x-1 transition-transform">→</span>
                       </a>
                     </Button>
@@ -131,13 +138,13 @@ const ExpertiseSection = () => {
         <div className="text-center mt-16 animate-fade-in-up">
           <div className="max-w-2xl mx-auto glass-effect rounded-2xl p-8">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Bereit für die nächste Stufe?
+              {t({ de: "Bereit für die nächste Stufe?", fr: "Prêt pour l'étape suivante ?" })}
             </h3>
             <p className="text-muted-foreground mb-6">
-              Lassen Sie uns in einem strategischen Erstgespräch erkunden, wie unsere Expertise Ihr Unternehmen voranbringt.
+              {t({ de: "Lassen Sie uns in einem strategischen Erstgespräch erkunden, wie unsere Expertise Ihr Unternehmen voranbringt.", fr: "Explorons ensemble, lors d'un entretien stratégique, comment notre expertise peut faire avancer votre entreprise." })}
             </p>
             <Button variant="hero" size="xl" asChild>
-              <a href="#kontakt">Strategisches Erstgespräch vereinbaren</a>
+              <a href="#kontakt">{t({ de: "Strategisches Erstgespräch vereinbaren", fr: "Planifier un entretien stratégique" })}</a>
             </Button>
           </div>
         </div>
