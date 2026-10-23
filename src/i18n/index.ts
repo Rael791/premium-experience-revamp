@@ -9,6 +9,13 @@ export type Lang = "de" | "fr";
 const FR_DOMAIN = "raeldata.com";
 const DE_DOMAIN = "raeldata.de";
 
+/**
+ * Ist raeldata.com schon mit dieser Website verbunden?
+ * false = Französisch läuft auf raeldata.de über ?lang=fr (der Umschalter bleibt auf raeldata.de).
+ * Sobald raeldata.com in Hostinger verbunden ist, auf true setzen.
+ */
+const FR_DOMAIN_ACTIVE = false;
+
 const detectLang = (): Lang => {
   if (typeof window === "undefined") return "de";
   try {
@@ -35,11 +42,14 @@ export const t = <T,>(content: { de: T; fr: T }): T => content[LANG];
 export const switchLangUrl = (target: Lang): string => {
   const { hostname, pathname, hash } = window.location;
   const onLiveDomain = hostname.endsWith(FR_DOMAIN) || hostname.endsWith(DE_DOMAIN);
-  if (onLiveDomain) {
+  if (FR_DOMAIN_ACTIVE && onLiveDomain) {
     const domain = target === "fr" ? FR_DOMAIN : DE_DOMAIN;
     return `https://${domain}${pathname}${hash}`;
   }
   return `${pathname}?lang=${target}${hash}`;
 };
 
-export const SITE_URL = isFR ? `https://${FR_DOMAIN}` : `https://${DE_DOMAIN}`;
+export const SITE_URL = isFR && FR_DOMAIN_ACTIVE ? `https://${FR_DOMAIN}` : `https://${DE_DOMAIN}`;
+
+/** Zusatz für Canonical-Links, solange Französisch über ?lang=fr läuft */
+export const LANG_QUERY = isFR && !FR_DOMAIN_ACTIVE ? "?lang=fr" : "";

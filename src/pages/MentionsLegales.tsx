@@ -45,8 +45,8 @@ const MentionsLegales = () => (
           <Globe className="w-4 h-4 text-primary shrink-0" />
           <span>
             Site :{" "}
-            <a href="https://raeldata.com" className="text-primary hover:underline">
-              raeldata.com
+            <a href="https://raeldata.de" className="text-primary hover:underline">
+              raeldata.de
             </a>
           </span>
         </div>

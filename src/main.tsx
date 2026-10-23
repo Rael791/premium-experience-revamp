@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client'
 import App from './App.tsx'
 import './index.css'
-import { isFR, SITE_URL } from './i18n'
+import { isFR, SITE_URL, LANG_QUERY } from './i18n'
 
 // Sprache, Titel und Beschreibung passend zur Domain setzen
 if (isFR) {
@@ -13,7 +13,7 @@ if (isFR) {
   document.querySelector('meta[property="og:description"]')?.setAttribute('content', description);
   document.querySelector('meta[property="og:title"]')?.setAttribute('content', 'RAELDATA – EDI, eProcurement & facture électronique');
 }
-document.querySelector('link[rel="canonical"]')?.setAttribute('href', `${SITE_URL}${window.location.pathname}`);
-document.querySelector('meta[property="og:url"]')?.setAttribute('content', `${SITE_URL}${window.location.pathname}`);
+document.querySelector('link[rel="canonical"]')?.setAttribute('href', `${SITE_URL}${window.location.pathname}${LANG_QUERY}`);
+document.querySelector('meta[property="og:url"]')?.setAttribute('content', `${SITE_URL}${window.location.pathname}${LANG_QUERY}`);
 
 createRoot(document.getElementById("root")!).render(<App />);
