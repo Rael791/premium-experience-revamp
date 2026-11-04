@@ -1,7 +1,7 @@
 import { Scale, FileText, Mail, Phone, Globe, Linkedin, Server, MapPin, AlertCircle } from "lucide-react";
 import LegalLayout, { LegalBlock, LegalSub } from "@/components/LegalLayout";
 
-/* Französische Fassung des Impressums (raeldata.com) */
+/* Französische Fassung des Impressums (raeldata.ma) */
 const MentionsLegales = () => (
   <LegalLayout
     badgeIcon={<Scale className="w-4 h-4 text-primary" />}
@@ -45,8 +45,8 @@ const MentionsLegales = () => (
           <Globe className="w-4 h-4 text-primary shrink-0" />
           <span>
             Site :{" "}
-            <a href="https://raeldata.de" className="text-primary hover:underline">
-              raeldata.de
+            <a href="https://raeldata.ma" className="text-primary hover:underline">
+              raeldata.ma
             </a>
           </span>
         </div>

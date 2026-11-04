@@ -28,7 +28,7 @@ import { t } from "@/i18n";
  * PREISE & EINSTELLUNGEN – hier zentral anpassen
  * ------------------------------------------------------------------ */
 const BOOKING_EMAIL = "contact@raeldata.de";
-// Deutschland (raeldata.de) in Euro – Marokko (raeldata.com) in Dirham
+// Deutschland (raeldata.de) in Euro – Marokko (raeldata.ma) in Dirham
 const PRICE_COURSE = t({ de: "890 €", fr: "3 900 MAD" }); // Kompaktkurs, 2 × 4 Std., pro Person
 const PRICE_MODULE = t({ de: "490 €", fr: "2 200 MAD" }); // Einzelmodul, 4 Std., pro Person
 const PRICE_COACHING = t({ de: "160 €", fr: "750 MAD" }); // 1:1-Coaching pro Stunde

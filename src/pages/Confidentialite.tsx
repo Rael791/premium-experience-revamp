@@ -1,7 +1,7 @@
 import { ShieldCheck, Server, Info, Database } from "lucide-react";
 import LegalLayout, { LegalBlock, LegalSub } from "@/components/LegalLayout";
 
-/* Französische Fassung der Datenschutzerklärung (raeldata.com) */
+/* Französische Fassung der Datenschutzerklärung (raeldata.ma) */
 const Confidentialite = () => (
   <LegalLayout
     badgeIcon={<ShieldCheck className="w-4 h-4 text-primary" />}

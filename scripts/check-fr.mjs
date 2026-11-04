@@ -14,7 +14,9 @@ const allow = [/Landesbeauftragte/, /Lautenschlagerstraße/, /Merkelbuckel/, /§
 
 import { mkdirSync } from "fs";
 mkdirSync("screenshots", { recursive: true });
-const browser = await chromium.launch();
+const browser = await chromium.launch({
+  args: ["--host-resolver-rules=MAP raeldata.ma 127.0.0.1, MAP raeldata.de 127.0.0.1"],
+});
 let problems = 0;
 for (const lang of ["fr", "de"]) {
   for (const route of routes) {
@@ -57,5 +59,30 @@ for (const lang of ["fr", "de"]) {
     await page.close();
   }
 }
+// Domain-Erkennung: raeldata.ma → FR, raeldata.de → DE, und wohin der Umschalter führt
+for (const [host, marker, switchLabel, expected] of [
+  ["raeldata.ma", "Accueil", "DE", "https://raeldata.de/training"],
+  ["raeldata.de", "Leistungen", "FR", "/training?lang=fr"],
+]) {
+  const page = await browser.newPage();
+  await page.goto(`http://${host}:4173/training`, { waitUntil: "networkidle" });
+  const text = await page.evaluate(() => document.body.innerText);
+  const href = await page.evaluate(
+    (label) => [...document.querySelectorAll("nav a")].find((a) => a.textContent.trim() === label)?.getAttribute("href"),
+    switchLabel,
+  );
+  if (!text.includes(marker)) {
+    problems++;
+    console.log(`::error title=Domain ${host}::Sprache falsch, "${marker}" nicht gefunden`);
+  }
+  if (href !== expected) {
+    problems++;
+    console.log(`::error title=Umschalter auf ${host}::${switchLabel} führt zu "${href}", erwartet "${expected}"`);
+  } else {
+    console.log(`::notice title=Domain ${host}::OK – Sprache korrekt, ${switchLabel} → ${href}`);
+  }
+  await page.close();
+}
+
 await browser.close();
 console.log(`::notice title=FR-Prüfung::${problems} Auffälligkeiten`);
